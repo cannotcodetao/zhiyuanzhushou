@@ -42,11 +42,43 @@
                     <div class="form-group">
                         <label for="score">高考总分 <span class="required">*</span></label>
                         <input type="number" id="score" min="0" max="750" placeholder="如：620" required>
+                        <small class="hint">满分750分（语数英各150 + 选考3门各100）</small>
                     </div>
                     <div class="form-group">
                         <label for="rank">全省位次 <span class="required">*</span></label>
                         <input type="number" id="rank" min="1" placeholder="如：15000" required>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label>各科成绩（选填，用于专业适配分析）</label>
+                    <div class="subject-scores">
+                        <div class="score-input">
+                            <label>语文</label>
+                            <input type="number" id="scoreChinese" min="0" max="150" placeholder="0-150">
+                        </div>
+                        <div class="score-input">
+                            <label>数学</label>
+                            <input type="number" id="scoreMath" min="0" max="150" placeholder="0-150">
+                        </div>
+                        <div class="score-input">
+                            <label>英语</label>
+                            <input type="number" id="scoreEnglish" min="0" max="150" placeholder="0-150">
+                        </div>
+                        <div class="score-input">
+                            <label>选考1</label>
+                            <input type="number" id="scoreElective1" min="0" max="100" placeholder="0-100">
+                        </div>
+                        <div class="score-input">
+                            <label>选考2</label>
+                            <input type="number" id="scoreElective2" min="0" max="100" placeholder="0-100">
+                        </div>
+                        <div class="score-input">
+                            <label>选考3</label>
+                            <input type="number" id="scoreElective3" min="0" max="100" placeholder="0-100">
+                        </div>
+                    </div>
+                    <small class="hint">选填。填写各科分数后，系统会分析你的单科优势，给出更精准的专业推荐</small>
                 </div>
 
                 <div class="form-group">

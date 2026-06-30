@@ -80,7 +80,24 @@ function getFormData() {
     const interestRadio = document.querySelector('#interestSelector input[name="interest"]:checked');
     const interest = interestRadio ? interestRadio.value : '';
 
-    return { score, rank, subjects, category, cityPref, batch, interest };
+    const scoreChinese = parseInt(document.getElementById('scoreChinese').value) || null;
+    const scoreMath = parseInt(document.getElementById('scoreMath').value) || null;
+    const scoreEnglish = parseInt(document.getElementById('scoreEnglish').value) || null;
+    const scoreElective1 = parseInt(document.getElementById('scoreElective1').value) || null;
+    const scoreElective2 = parseInt(document.getElementById('scoreElective2').value) || null;
+    const scoreElective3 = parseInt(document.getElementById('scoreElective3').value) || null;
+
+    return {
+        score, rank, subjects, category, cityPref, batch, interest,
+        subjectScores: {
+            chinese: scoreChinese,
+            math: scoreMath,
+            english: scoreEnglish,
+            elective1: scoreElective1,
+            elective2: scoreElective2,
+            elective3: scoreElective3
+        }
+    };
 }
 
 // 表单验证
@@ -94,6 +111,27 @@ function validateForm(data) {
     if (data.subjects.length !== 3) {
         return '请选择3门选考科目';
     }
+
+    const sc = data.subjectScores;
+    if (sc.chinese !== null && (sc.chinese < 0 || sc.chinese > 150)) {
+        return '语文分数需在0-150之间';
+    }
+    if (sc.math !== null && (sc.math < 0 || sc.math > 150)) {
+        return '数学分数需在0-150之间';
+    }
+    if (sc.english !== null && (sc.english < 0 || sc.english > 150)) {
+        return '英语分数需在0-150之间';
+    }
+    if (sc.elective1 !== null && (sc.elective1 < 0 || sc.elective1 > 100)) {
+        return '选考1分数需在0-100之间';
+    }
+    if (sc.elective2 !== null && (sc.elective2 < 0 || sc.elective2 > 100)) {
+        return '选考2分数需在0-100之间';
+    }
+    if (sc.elective3 !== null && (sc.elective3 < 0 || sc.elective3 > 100)) {
+        return '选考3分数需在0-100之间';
+    }
+
     return null;
 }
 
@@ -173,7 +211,7 @@ function generateRecommendations(formData) {
     const { chong, wen, bao } = distributeTiers(uniqueBySchool, rank);
 
     // 生成专业选择建议
-    const advice = generateAdvice(candidates, subjects, formData.interest);
+    const advice = generateAdvice(candidates, subjects, formData.interest, formData.subjectScores);
 
     return { chong, wen, bao, advice, totalCount: candidates.length };
 }
@@ -342,8 +380,198 @@ function generateReason(school, major, majorRank, studentRank, prob) {
     return `${tagInfo}${school.city}的${school.name}${major.name}专业，${tierDesc}（${yearInfo}）`;
 }
 
-// 生成专业选择建议（三方向：政策/就业/兴趣 + 概览）
-function generateAdvice(candidates, subjects, userInterest) {
+// 分析单科优势与劣势，给出专业适配建议
+function analyzeSubjectStrengths(scores, subjects) {
+    if (!scores) return null;
+
+    const subjectsWithRates = [];
+
+    if (scores.chinese !== null) {
+        subjectsWithRates.push({ name: '语文', score: scores.chinese, full: 150, rate: scores.chinese / 150 });
+    }
+    if (scores.math !== null) {
+        subjectsWithRates.push({ name: '数学', score: scores.math, full: 150, rate: scores.math / 150 });
+    }
+    if (scores.english !== null) {
+        subjectsWithRates.push({ name: '英语', score: scores.english, full: 150, rate: scores.english / 150 });
+    }
+
+    const electiveScores = [scores.elective1, scores.elective2, scores.elective3].filter(s => s !== null);
+    if (electiveScores.length > 0 && subjects.length === 3) {
+        subjects.forEach((subj, i) => {
+            if (electiveScores[i] !== undefined) {
+                subjectsWithRates.push({
+                    name: subj,
+                    score: electiveScores[i],
+                    full: 100,
+                    rate: electiveScores[i] / 100
+                });
+            }
+        });
+    }
+
+    if (subjectsWithRates.length < 2) return null;
+
+    const avgRate = subjectsWithRates.reduce((s, x) => s + x.rate, 0) / subjectsWithRates.length;
+
+    const strong = subjectsWithRates.filter(s => s.rate >= avgRate + 0.05).sort((a, b) => b.rate - a.rate);
+    const weak = subjectsWithRates.filter(s => s.rate <= avgRate - 0.05).sort((a, b) => a.rate - b.rate);
+
+    const subjectMap = {
+        '数学': {
+            strong: [
+                { name: '计算机科学与技术', reason: '数学是编程与算法的基础，数学强的学生逻辑思维突出' },
+                { name: '人工智能/数据科学', reason: '机器学习、深度学习核心是线性代数与概率统计' },
+                { name: '金融学/金融工程', reason: '量化金融、衍生品定价高度依赖数学建模' },
+                { name: '电子信息工程', reason: '信号处理、通信原理需要扎实的数学功底' }
+            ],
+            weak: [
+                { name: '计算机/软件工程', reason: '算法设计与数据结构对数学要求较高，可能学习吃力' },
+                { name: '金融工程/量化金融', reason: '高度依赖数学建模，数学薄弱会很困难' }
+            ]
+        },
+        '物理': {
+            strong: [
+                { name: '机械工程/车辆工程', reason: '力学是机械设计的核心，物理基础扎实优势大' },
+                { name: '电气工程及其自动化', reason: '电磁学、电路分析是核心课程' },
+                { name: '土木工程/建筑', reason: '结构力学、材料力学离不开物理基础' },
+                { name: '航空航天工程', reason: '空气动力学、热力学都以物理为根基' }
+            ],
+            weak: [
+                { name: '工科类专业', reason: '大学物理、工程力学等课程可能成为学习障碍' },
+                { name: '电子信息/通信', reason: '电路分析、电磁场等课程物理基础要求高' }
+            ]
+        },
+        '化学': {
+            strong: [
+                { name: '化学工程与工艺', reason: '有机化学、物理化学是核心，化学优势明显' },
+                { name: '药学/药物制剂', reason: '药物化学、药剂学以化学为基础' },
+                { name: '材料科学与工程', reason: '材料合成、表征都需要化学知识' },
+                { name: '生物工程/生物技术', reason: '分子生物学、生化反应离不开化学' }
+            ],
+            weak: [
+                { name: '化学/化工类', reason: '四大化学（有机/无机/物化/分析）难度较大' },
+                { name: '药学/医学技术类', reason: '药物化学等课程对化学基础要求高' }
+            ]
+        },
+        '生物': {
+            strong: [
+                { name: '临床医学/口腔医学', reason: '生理学、病理学、药理学都以生物为基础' },
+                { name: '生物科学/生物技术', reason: '分子生物学、遗传学是核心' },
+                { name: '农学/园艺', reason: '植物学、动物学、微生物学为主干课程' },
+                { name: '生态学/环境科学', reason: '生态系统分析、环境监测依赖生物知识' }
+            ],
+            weak: [
+                { name: '医学/生物类专业', reason: '生物化学、分子生物学等课程难度较大' }
+            ]
+        },
+        '语文': {
+            strong: [
+                { name: '汉语言文学/中国语言文学', reason: '语言文字功底是核心竞争力' },
+                { name: '新闻传播学/网络与新媒体', reason: '内容创作、文案写作是基本功' },
+                { name: '法学', reason: '法律条文解读、文书写作对语文要求高' },
+                { name: '教育学（文科方向）', reason: '教育研究、文字表达能力很重要' }
+            ],
+            weak: []
+        },
+        '英语': {
+            strong: [
+                { name: '英语/翻译/商务英语', reason: '语言优势明显，就业面广' },
+                { name: '国际经济与贸易', reason: '外贸沟通、跨境商务需要良好英语' },
+                { name: '外交学/国际关系', reason: '外语能力是核心竞争力' },
+                { name: '计算机（涉外方向）', reason: '阅读英文文献、参与开源项目有优势' }
+            ],
+            weak: [
+                { name: '涉外专业/中外合作办学', reason: '全英文授课可能跟不上' }
+            ]
+        },
+        '历史': {
+            strong: [
+                { name: '历史学/考古学', reason: '历史思维与史料分析能力突出' },
+                { name: '法学', reason: '法制史、比较法研究有思维优势' },
+                { name: '新闻传播学', reason: '深度报道、非虚构写作有底蕴优势' },
+                { name: '公共管理/政治学', reason: '政治制度史、国际政治有知识积累' }
+            ],
+            weak: []
+        },
+        '地理': {
+            strong: [
+                { name: '地理信息科学/GIS', reason: '空间思维与地图学基础好' },
+                { name: '城乡规划', reason: '区域分析、空间规划有优势' },
+                { name: '环境科学与工程', reason: '自然地理、生态系统分析基础扎实' },
+                { name: '旅游管理', reason: '人文地理与区域认知有优势' }
+            ],
+            weak: []
+        },
+        '政治': {
+            strong: [
+                { name: '法学', reason: '政治理论与法律体系有相通之处' },
+                { name: '公共管理/行政管理', reason: '政治制度、公共政策理解深' },
+                { name: '马克思主义理论/思想政治教育', reason: '专业匹配度高' },
+                { name: '新闻传播学', reason: '时政新闻、政策解读有优势' }
+            ],
+            weak: []
+        },
+        '技术': {
+            strong: [
+                { name: '计算机科学与技术', reason: '信息技术基础好，编程入门快' },
+                { name: '软件工程/网络工程', reason: '动手实践能力强，适合工程方向' },
+                { name: '数字媒体技术', reason: '技术+艺术复合，创意与技术结合' },
+                { name: '电子信息工程', reason: '电路设计、单片机实践有基础' }
+            ],
+            weak: []
+        }
+    };
+
+    const strongRecs = [];
+    const weakRecs = [];
+
+    strong.forEach(s => {
+        if (subjectMap[s.name]) {
+            subjectMap[s.name].strong.forEach(r => {
+                if (!strongRecs.find(x => x.name === r.name)) {
+                    strongRecs.push({ ...r, subject: s.name, rate: s.rate });
+                }
+            });
+        }
+    });
+
+    weak.forEach(s => {
+        if (subjectMap[s.name]) {
+            subjectMap[s.name].weak.forEach(r => {
+                if (!weakRecs.find(x => x.name === r.name)) {
+                    weakRecs.push({ ...r, subject: s.name, rate: s.rate });
+                }
+            });
+        }
+    });
+
+    const sortedByRate = [...subjectsWithRates].sort((a, b) => b.rate - a.rate);
+    const topSubjects = sortedByRate.slice(0, Math.min(2, sortedByRate.length));
+    const bottomSubjects = [...sortedByRate].sort((a, b) => a.rate - b.rate).slice(0, Math.min(2, sortedByRate.length));
+
+    const summary =
+        `已分析你提供的${subjectsWithRates.length}科成绩：` +
+        `最强的是${topSubjects.map(s => `${s.name}（${Math.round(s.rate * 100)}%得分率）`).join('、')}；` +
+        (bottomSubjects.length > 0 && bottomSubjects[0].rate < avgRate - 0.05
+            ? `相对薄弱的是${bottomSubjects.map(s => `${s.name}（${Math.round(s.rate * 100)}%得分率）`).join('、')}。`
+            : `各科发展均衡。`);
+
+    const strongText = strongRecs.length > 0
+        ? `基于你的优势学科（${strong.map(s => s.name).join('、')}），以下专业方向你可能更有学习优势：` +
+          strongRecs.slice(0, 6).map(r => `${r.name}（${r.reason}）`).join('；') + '。'
+        : '';
+
+    const weakText = weakRecs.length > 0
+        ? `以下专业方向对${weak.map(s => s.name).join('、')}基础要求较高，你当前得分率偏低，报考时需谨慎考虑可能的学习难度：` +
+          weakRecs.slice(0, 5).map(r => `${r.name}（${r.reason}）`).join('；') + '。建议结合个人兴趣和学习毅力综合判断。'
+        : '';
+
+    return { summary, strongRecs, weakRecs, strongText, weakText };
+}
+
+// 生成专业选择建议（三方向：政策/就业/兴趣 + 概览 + 单科分析）
+function generateAdvice(candidates, subjects, userInterest, subjectScores) {
     // ===== 概览：原有分析 =====
     const overview = [];
 
@@ -386,6 +614,29 @@ function generateAdvice(candidates, subjects, userInterest) {
             title: '选科优势',
             content: '你选考了历史，适合报考文史类、法学、新闻传播、教育学等专业。建议结合自身兴趣和就业前景选择。'
         });
+    }
+
+    // ===== 单科优势分析（基于各科得分率） =====
+    const subjectAnalysis = analyzeSubjectStrengths(subjectScores, subjects);
+    if (subjectAnalysis) {
+        overview.push({
+            title: '单科优势分析',
+            content: subjectAnalysis.summary
+        });
+
+        if (subjectAnalysis.strongRecs.length > 0) {
+            overview.push({
+                title: '优势学科适配专业',
+                content: subjectAnalysis.strongText
+            });
+        }
+
+        if (subjectAnalysis.weakRecs.length > 0) {
+            overview.push({
+                title: '需谨慎选择的专业',
+                content: subjectAnalysis.weakText
+            });
+        }
     }
 
     overview.push({
