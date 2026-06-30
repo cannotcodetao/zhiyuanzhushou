@@ -255,6 +255,12 @@ body {
     color: var(--text-light);
 }
 
+.score-input input:disabled {
+    background: var(--card-bg);
+    cursor: not-allowed;
+    color: var(--text-light);
+}
+
 @media (max-width: 600px) {
     .subject-scores {
         grid-template-columns: repeat(2, 1fr);

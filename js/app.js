@@ -46,10 +46,33 @@ function populateCityFilter() {
 
 // ===== 2. 表单处理 =====
 
-// 选科数量校验
+// 选科数量校验 + 选考分数标签动态更新
 function setupSubjectSelector() {
     const checkboxes = document.querySelectorAll('#subjectSelector input[type="checkbox"]');
     const hint = document.getElementById('subjectHint');
+
+    function updateElectiveLabels() {
+        const checked = Array.from(document.querySelectorAll('#subjectSelector input:checked')).map(c => c.value);
+        const labels = document.querySelectorAll('.score-input.elective label');
+        const inputs = document.querySelectorAll('.score-input.elective input');
+
+        for (let i = 0; i < 3; i++) {
+            if (labels[i] && inputs[i]) {
+                if (checked[i]) {
+                    labels[i].textContent = checked[i];
+                    inputs[i].placeholder = '0-100';
+                    inputs[i].disabled = false;
+                    labels[i].style.opacity = '1';
+                } else {
+                    labels[i].textContent = `选考${i + 1}`;
+                    inputs[i].placeholder = '请先选科';
+                    inputs[i].disabled = true;
+                    inputs[i].value = '';
+                    labels[i].style.opacity = '0.5';
+                }
+            }
+        }
+    }
 
     checkboxes.forEach(cb => {
         cb.addEventListener('change', () => {
@@ -65,8 +88,11 @@ function setupSubjectSelector() {
                 hint.textContent = `已选择${checked.length}门，还需选择${3 - checked.length}门`;
                 hint.style.color = '#64748b';
             }
+            updateElectiveLabels();
         });
     });
+
+    updateElectiveLabels();
 }
 
 // 获取表单数据
