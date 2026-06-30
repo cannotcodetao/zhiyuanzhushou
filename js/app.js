@@ -77,8 +77,10 @@ function getFormData() {
     const category = document.getElementById('category').value;
     const cityPref = document.getElementById('cityPref').value;
     const batch = document.getElementById('batch').value;
+    const interestRadio = document.querySelector('#interestSelector input[name="interest"]:checked');
+    const interest = interestRadio ? interestRadio.value : '';
 
-    return { score, rank, subjects, category, cityPref, batch };
+    return { score, rank, subjects, category, cityPref, batch, interest };
 }
 
 // 表单验证
@@ -158,19 +160,20 @@ function generateRecommendations(formData) {
         });
     });
 
-    // 按位次排序（位次越小越难进）
+    // 按位次排序（位次越小越难进 → 从难到易）
     candidates.sort((a, b) => a.avgRank - b.avgRank);
 
-    // 分组：冲3 + 稳5 + 保3
-    const chong = candidates.filter(c => c.tier === 'chong').slice(0, 3);
-    const wen = candidates.filter(c => c.tier === 'wen').slice(0, 5);
-    const bao = candidates.filter(c => c.tier === 'bao').slice(0, 3);
+    // 按学校去重：每所学校只保留位次最接近考生的一个专业
+    const uniqueBySchool = dedupeBySchool(candidates, rank);
 
-    // 如果某档不足，从相邻档补
-    fillTiers(chong, wen, bao, candidates);
+    // 重新按位次排序（从难到易）
+    uniqueBySchool.sort((a, b) => a.avgRank - b.avgRank);
+
+    // 从去重后的列表中分配冲3 + 稳5 + 保3
+    const { chong, wen, bao } = distributeTiers(uniqueBySchool, rank);
 
     // 生成专业选择建议
-    const advice = generateAdvice(candidates, subjects);
+    const advice = generateAdvice(candidates, subjects, formData.interest);
 
     return { chong, wen, bao, advice, totalCount: candidates.length };
 }
@@ -203,72 +206,136 @@ function weightedAverageRank(scores) {
 }
 
 // 录取概率计算
+// ratio = majorRank / studentRank：
+//   ratio < 1 → 专业位次比学生好（更靠前）→ 难考 → 概率低
+//   ratio ≈ 1 → 位次接近 → 稳妥
+//   ratio > 1 → 专业位次比学生差（更靠后）→ 易考 → 概率高
 function calculateProbability(studentRank, majorRank) {
-    if (majorRank <= 0) return 0;
+    if (majorRank <= 0 || studentRank <= 0) return 0;
 
-    // 位次差比例
-    const ratio = studentRank / majorRank;
+    const ratio = majorRank / studentRank;
 
-    // ratio < 0.7: 考生位次远高于专业要求（位次数更小），录取概率极高
-    // ratio 0.7-0.95: 冲刺区间
-    // ratio 0.95-1.10: 稳妥区间
-    // ratio > 1.10: 保底区间
-
-    if (ratio < 0.5) return 98;
-    if (ratio < 0.7) return 90;
-    if (ratio < 0.85) return 70;
-    if (ratio < 0.95) return 45;
-    if (ratio < 1.0) return 60;
+    if (ratio < 0.3) return 5;
+    if (ratio < 0.5) return 15;
+    if (ratio < 0.7) return 30;
+    if (ratio < 0.85) return 45;
+    if (ratio < 0.95) return 60;
     if (ratio < 1.05) return 75;
-    if (ratio < 1.10) return 85;
-    if (ratio < 1.20) return 92;
-    if (ratio < 1.35) return 96;
+    if (ratio < 1.15) return 85;
+    if (ratio < 1.30) return 92;
+    if (ratio < 1.50) return 96;
     return 98;
 }
 
 // 判断冲稳保类别
+// ratio = majorRank / studentRank：
+//   ratio < 0.9 → 专业远好于学生 → 冲刺（难考）
+//   0.9 ≤ ratio < 1.2 → 位次接近 → 稳妥
+//   ratio ≥ 1.2 → 专业比学生差 → 保底（易考）
 function determineTier(studentRank, majorRank) {
-    const ratio = studentRank / majorRank;
+    const ratio = majorRank / studentRank;
 
-    // 冲刺：专业录取位次比考生位次高（更难进）
-    // ratio < 0.95 表示考生位次数 > 专业位次数 × 0.95，即专业要求更高
-    if (ratio < 0.95) return 'chong';
+    if (ratio < 0.9) return 'chong';
 
-    // 稳妥：位次相当
-    if (ratio >= 0.95 && ratio < 1.10) return 'wen';
+    if (ratio >= 0.9 && ratio < 1.2) return 'wen';
 
-    // 保底：专业录取位次比考生位次低（更容易进）
     return 'bao';
 }
 
-// 填充不足的档位
-function fillTiers(chong, wen, bao, all) {
-    // 如果冲刺不足3个，从稳妥中补
+// 按学校去重：每所学校只保留与考生位次最接近的一个专业
+function dedupeBySchool(candidates, studentRank) {
+    const schoolMap = new Map();
+
+    candidates.forEach(c => {
+        const key = c.schoolId;
+        if (!schoolMap.has(key)) {
+            schoolMap.set(key, c);
+        } else {
+            const existing = schoolMap.get(key);
+            const existingDiff = Math.abs(existing.avgRank - studentRank);
+            const currentDiff = Math.abs(c.avgRank - studentRank);
+            // 保留位次更接近考生的那个专业
+            if (currentDiff < existingDiff) {
+                schoolMap.set(key, c);
+            }
+        }
+    });
+
+    return Array.from(schoolMap.values());
+}
+
+// 分配冲稳保档位（基于学生位次的相对位置，无重叠）
+// 策略（按位次从好到差排序）：
+//   稳妥wen：位次最接近学生的5所（滑动窗口找平均差最小的）
+//   冲刺chong：稳妥之上紧邻的3所（比学生好）
+//   保底bao：稳妥之下紧邻的3所（比学生差）
+//   三者互不重叠，呈 chong(3) → wen(5) → bao(3) 连续分布
+function distributeTiers(uniqueCandidates, studentRank) {
+    const total = uniqueCandidates.length;
+
+    let wenStart = 0;
+    let minDiff = Infinity;
+
+    for (let i = 0; i <= total - 5; i++) {
+        const window = uniqueCandidates.slice(i, i + 5);
+        const avgDiff = window.reduce((sum, c) => sum + Math.abs(c.avgRank - studentRank), 0) / 5;
+        if (avgDiff < minDiff) {
+            minDiff = avgDiff;
+            wenStart = i;
+        }
+    }
+
+    let wen = uniqueCandidates.slice(wenStart, wenStart + 5);
+
+    let chongEnd = wenStart;
+    let chongStart = Math.max(0, chongEnd - 3);
+    let chong = uniqueCandidates.slice(chongStart, chongEnd);
+
+    let baoStartIdx = wenStart + 5;
+    let baoEnd = Math.min(total, baoStartIdx + 3);
+    let bao = uniqueCandidates.slice(baoStartIdx, baoEnd);
+
     if (chong.length < 3) {
         const need = 3 - chong.length;
-        const fromWen = wen.splice(0, need);
-        chong.push(...fromWen);
+        const extraWenStart = wenStart + 5;
+        const extraWenEnd = Math.min(extraWenStart + need, total);
+        const extra = uniqueCandidates.slice(extraWenStart, extraWenEnd);
+        wen = wen.concat(extra);
+        const newBaoStart = extraWenEnd;
+        const newBaoEnd = Math.min(total, newBaoStart + 3);
+        bao = uniqueCandidates.slice(newBaoStart, newBaoEnd);
     }
-    // 如果保底不足3个，从稳妥中补
+
     if (bao.length < 3) {
         const need = 3 - bao.length;
-        const fromWen = wen.splice(-need, need);
-        bao.unshift(...fromWen);
+        const extraWenEnd = wenStart;
+        const extraWenStart = Math.max(0, extraWenEnd - need);
+        const extra = uniqueCandidates.slice(extraWenStart, extraWenEnd);
+        wen = extra.concat(wen);
+        const newChongEnd = extraWenStart;
+        const newChongStart = Math.max(0, newChongEnd - 3);
+        chong = uniqueCandidates.slice(newChongStart, newChongEnd);
     }
+
+    chong.forEach(c => c.tier = 'chong');
+    wen.forEach(c => c.tier = 'wen');
+    bao.forEach(c => c.tier = 'bao');
+
+    return { chong, wen, bao };
 }
 
 // 生成推荐理由
 function generateReason(school, major, majorRank, studentRank, prob) {
-    const ratio = studentRank / majorRank;
+    const ratio = majorRank / studentRank;
     const yearInfo = major.scores.map(s => `${s.year}年最低位次${s.min_rank}`).join('，');
 
     let tierDesc = '';
-    if (ratio < 0.95) {
-        tierDesc = `该专业近3年平均录取位次为${majorRank}，高于你的位次${studentRank}，有一定冲刺难度，录取概率约${prob}%。`;
-    } else if (ratio < 1.10) {
-        tierDesc = `该专业近3年平均录取位次为${majorRank}，与你的位次${studentRank}相当，录取概率约${prob}%，较为稳妥。`;
+    if (ratio < 0.9) {
+        tierDesc = `该专业近3年平均录取位次为${majorRank}名，你的位次为${studentRank}名，专业要求更高，有一定冲刺难度，录取概率约${prob}%。`;
+    } else if (ratio < 1.2) {
+        tierDesc = `该专业近3年平均录取位次为${majorRank}名，与你的位次${studentRank}名相当，录取概率约${prob}%，较为稳妥。`;
     } else {
-        tierDesc = `该专业近3年平均录取位次为${majorRank}，低于你的位次${studentRank}，录取概率约${prob}%，可作为保底选择。`;
+        tierDesc = `该专业近3年平均录取位次为${majorRank}名，低于你的位次${studentRank}名，录取概率约${prob}%，可作为保底选择。`;
     }
 
     const tagInfo = school.tags.length > 0 ? `【${school.tags.join('/')}】` : '';
@@ -276,7 +343,7 @@ function generateReason(school, major, majorRank, studentRank, prob) {
 }
 
 // 生成专业选择建议（三方向：政策/就业/兴趣 + 概览）
-function generateAdvice(candidates, subjects) {
+function generateAdvice(candidates, subjects, userInterest) {
     // ===== 概览：原有分析 =====
     const overview = [];
 
@@ -396,109 +463,163 @@ function generateAdvice(candidates, subjects) {
         trendNote: '重要趋势：计算机科学与技术、软件工程已跌出2025届高薪Top10。互联网行业进入成熟期，供给过剩（2024年计算机类毕业生近70万），而电子信息类（微电子/电子科学/光电/通信）全面霸榜。'
     };
 
-    // ===== 方向三：兴趣导向（基于选科推导） =====
+    // ===== 方向三：兴趣导向 =====
     let interestTrack = '';
     let interestDesc = '';
     let interestRecommendations = [];
+    let isUserSelected = false;
 
-    if (hasPhysics && hasChemistry && hasBio) {
-        interestTrack = '医学/科研方向';
-        interestDesc = '你的选科（物+化+生）是医学和生命科学的标准配置，适合对生命现象、疾病诊疗、科学探究有强烈兴趣的考生。';
-        interestRecommendations = [
-            { name: '临床医学', reason: '直接救死扶伤，专业壁垒高，社会需求刚性' },
-            { name: '口腔医学', reason: '工作节奏可控，自主创业空间大' },
-            { name: '生物科学', reason: '科研导向，可深造读博进入高校或研究所' },
-            { name: '基础医学', reason: '适合热爱科研、愿长期投入的考生' },
-            { name: '药学', reason: '医药产业人才缺口大，研发方向薪资优' }
-        ];
-    } else if (hasPhysics && hasChemistry && hasGeo) {
-        interestTrack = '工科应用方向';
-        interestDesc = '你的选科（物+化+地）兼具理工基础与地理视野，适合对工程技术、自然资源、地球科学感兴趣的考生。';
-        interestRecommendations = [
-            { name: '计算机科学与技术', reason: '逻辑思维导向，创造数字产品' },
-            { name: '电子信息工程', reason: '软硬件结合，万物互联时代核心' },
-            { name: '土木工程', reason: '空间建构兴趣，基础设施建设刚需' },
-            { name: '地质工程', reason: '结合地理优势，能源与矿产勘查' },
-            { name: '环境工程', reason: '生态保护导向，双碳时代新机遇' }
-        ];
-    } else if (hasPhysics && hasChemistry && hasTech) {
-        interestTrack = '信息技术方向';
-        interestDesc = '你的选科（物+化+技）是信息技术时代的黄金组合，适合对编程、算法、智能系统有浓厚兴趣的考生。';
-        interestRecommendations = [
-            { name: '人工智能', reason: '前沿技术，AI for Science 新范式' },
-            { name: '软件工程', reason: '系统化构建数字产品，创业门槛低' },
-            { name: '网络空间安全', reason: '数字时代守护者，国家战略急需' },
-            { name: '数据科学与大数据技术', reason: '数据驱动决策，各行各业都需要' },
-            { name: '物联网工程', reason: '连接物理与数字世界，应用场景广' }
-        ];
-    } else if (hasPhysics && hasGeo && hasTech) {
-        interestTrack = '地理信息方向';
-        interestDesc = '你的选科（物+地+技）适合对空间数据、智慧城市、地理技术感兴趣的考生。';
-        interestRecommendations = [
-            { name: '地理信息科学', reason: 'GIS技术核心，地图/导航/智慧城市基础' },
-            { name: '遥感科学与技术', reason: '对地观测，自然资源与环境监测' },
-            { name: '城乡规划', reason: '空间规划创造宜居城市' },
-            { name: '测绘工程', reason: '精准定位，北斗产业核心' },
-            { name: '智能建造', reason: '建筑+AI，传统行业升级' }
-        ];
-    } else if (hasHistory && hasGeo && hasPol) {
-        interestTrack = '人文社科方向';
-        interestDesc = '你的选科（史+地+政）是传统文科核心组合，适合对社会、文化、治理有深度兴趣的考生。';
-        interestRecommendations = [
-            { name: '法学', reason: '逻辑与正义结合，司法考试是关键门槛（注意：近5年红牌，需谨慎）' },
-            { name: '新闻传播学', reason: '信息时代的内容创造者与传播者' },
-            { name: '汉语言文学', reason: '文化底蕴深厚，教育/传媒/文秘通吃' },
-            { name: '国际政治', reason: '全球视野，外交/智库/国际组织方向' },
-            { name: '社会学', reason: '理解社会运行，适合做调研与政策研究' }
-        ];
-    } else if (hasHistory && hasBio && hasGeo) {
-        interestTrack = '教育/心理方向';
-        interestDesc = '你的选科（史+生+地）适合对人的发展、教育、自然环境感兴趣的考生。';
-        interestRecommendations = [
-            { name: '教育学', reason: '热爱教育事业，师范类首选' },
-            { name: '心理学', reason: '理解人心，咨询/HR/用户体验皆可' },
-            { name: '学前教育', reason: '低龄教育，耐心与创意并重' },
-            { name: '社会工作', reason: '助人专业，社区/公益/民政方向' },
-            { name: '旅游管理', reason: '地理优势+人文素养，文旅融合新机遇' }
-        ];
-    } else if (hasChemistry && hasBio && hasGeo) {
-        interestTrack = '环境/生态方向';
-        interestDesc = '你的选科（化+生+地）适合对生态环境保护、农业、生命科学感兴趣的考生。';
-        interestRecommendations = [
-            { name: '环境科学', reason: '双碳时代核心，污染防治与生态修复' },
-            { name: '生态学', reason: '生态文明建设基础学科' },
-            { name: '农学', reason: '粮食安全国之大者，乡村振兴战略' },
-            { name: '食品科学与工程', reason: '民以食为天，食品安全刚需' },
-            { name: '园林', reason: '植物+设计，城市绿化与景观营造' }
-        ];
-    } else if (hasPhysics && hasChemistry) {
-        interestTrack = '理工科方向';
-        interestDesc = '你的选科（含物+化）是理工科的万能钥匙，适合对工程、技术、物质科学感兴趣的考生。';
-        interestRecommendations = [
-            { name: '机械工程', reason: '工业之母，智能制造升级核心' },
-            { name: '材料科学与工程', reason: '一切制造的根基，2025届高薪第9（7304元）' },
-            { name: '化学工程与工艺', reason: '物质转化之学，新能源材料必备' },
-            { name: '电气工程及其自动化', reason: '近5年4次绿牌，电网/能源稳定就业' },
-            { name: '能源与动力工程', reason: '能源转型主力，近5年3次绿牌' }
-        ];
-    } else if (hasHistory) {
-        interestTrack = '文史方向';
-        interestDesc = '你的选科（含历史）适合对人文、社会、文化有深度兴趣的考生。建议结合就业前景理性选择。';
-        interestRecommendations = [
-            { name: '汉语言文学', reason: '文科基础专业，就业面相对广' },
-            { name: '历史学', reason: '学术深耕方向，适合深造' },
-            { name: '新闻学', reason: '内容创作能力迁移性强' },
-            { name: '广告学', reason: '创意+商业，互联网营销需求' },
-            { name: '文化产业管理', reason: '文旅融合新赛道' }
-        ];
+    const interestMap = {
+        it: {
+            track: '信息技术方向',
+            desc: '你选择了信息技术/编程方向，适合对软件开发、人工智能、网络安全、数据分析有浓厚兴趣的考生。建议结合数理基础，选择技术壁垒高、成长空间大的方向。',
+            recs: [
+                { name: '人工智能', reason: '前沿技术，AI for Science 新范式，国家战略急需' },
+                { name: '软件工程', reason: '系统化构建数字产品，就业面广，创业门槛低' },
+                { name: '计算机科学与技术', reason: '基础扎实，算法/开发/研究全方向通吃' },
+                { name: '网络空间安全', reason: '数字时代守护者，国家战略急需，人才缺口大' },
+                { name: '数据科学与大数据技术', reason: '数据驱动决策，各行各业都需要' }
+            ]
+        },
+        medicine: {
+            track: '医学/生命科学方向',
+            desc: '你选择了医学/生命科学方向，适合对生命现象、疾病诊疗、科学探究有强烈兴趣的考生。医学专业学习周期长、壁垒高，但社会需求刚性、职业成就感强。',
+            recs: [
+                { name: '临床医学', reason: '直接救死扶伤，专业壁垒高，社会需求刚性' },
+                { name: '口腔医学', reason: '工作节奏可控，自主创业空间大，收入稳定' },
+                { name: '药学', reason: '医药产业人才缺口大，研发方向薪资优' },
+                { name: '生物医学工程', reason: '医工交叉，医疗器械/影像/AI医疗方向' },
+                { name: '预防医学', reason: '公共卫生领域，后疫情时代持续受重视' }
+            ]
+        },
+        engineering: {
+            track: '工程制造方向',
+            desc: '你选择了工程制造/机械方向，适合对动手实践、机械结构、工业制造、智能装备感兴趣的考生。制造业是实体经济根基，高端制造人才需求旺盛。',
+            recs: [
+                { name: '机械工程', reason: '工业之母，智能制造升级核心方向' },
+                { name: '电气工程及其自动化', reason: '近5年4次绿牌专业，电网/能源稳定就业' },
+                { name: '机械电子工程', reason: '机电一体化，近5年3次绿牌' },
+                { name: '机器人工程', reason: '近5年首入绿牌，工业机器人普及' },
+                { name: '车辆工程', reason: '近5年首次绿牌，新能源汽车产业爆发' }
+            ]
+        },
+        finance: {
+            track: '金融/经济方向',
+            desc: '你选择了金融/经济方向，适合对数字敏感、对资本市场和商业运作有兴趣的考生。金融行业薪资水平高，但竞争激烈，建议结合数学基础和行业证书规划。',
+            recs: [
+                { name: '金融学', reason: '金融核心专业，银行/证券/基金/保险全覆盖' },
+                { name: '经济学', reason: '理论基础扎实，适合深造或政策研究' },
+                { name: '会计学', reason: '商业通用语言，就业稳定，考证路径清晰' },
+                { name: '金融工程', reason: '量化金融方向，数学+编程+金融复合人才' },
+                { name: '国际经济与贸易', reason: '外向型经济，外贸/跨境电商方向' }
+            ]
+        },
+        design: {
+            track: '设计/创意方向',
+            desc: '你选择了设计/创意方向，适合有艺术感知力、喜欢创造视觉作品的考生。设计行业覆盖面广，从传统平面设计到数字创意、产品设计均有需求。',
+            recs: [
+                { name: '数字媒体技术', reason: '技术+艺术，游戏/影视/交互设计方向' },
+                { name: '工业设计', reason: '产品外观与体验设计，制造业升级刚需' },
+                { name: '视觉传达设计', reason: '平面/品牌/UI设计，就业面广' },
+                { name: '建筑学', reason: '空间设计，技术+艺术+人文复合' },
+                { name: '广告学', reason: '创意+商业，互联网营销需求旺盛' }
+            ]
+        },
+        humanities: {
+            track: '人文/社科方向',
+            desc: '你选择了人文/社科方向，适合对社会、文化、历史、治理有深度兴趣的考生。建议选择就业面较广的专业，并通过实习和技能拓展增强竞争力。',
+            recs: [
+                { name: '汉语言文学', reason: '文科基础专业，教育/传媒/文秘通吃' },
+                { name: '新闻传播学', reason: '信息时代的内容创造者与传播者' },
+                { name: '法学', reason: '逻辑与正义结合，司法考试是关键门槛（注意：近5年红牌，需谨慎）' },
+                { name: '翻译', reason: '语言+专业复合人才，涉外领域有需求' },
+                { name: '社会学', reason: '理解社会运行，适合做调研与政策研究' }
+            ]
+        },
+        education: {
+            track: '教育/心理方向',
+            desc: '你选择了教育/心理方向，适合对人的成长、教育规律、心理健康有兴趣的考生。教育行业稳定，心理领域需求增长快，但需注意专业认证和实践积累。',
+            recs: [
+                { name: '教育学', reason: '热爱教育事业，师范类首选' },
+                { name: '心理学', reason: '理解人心，咨询/HR/用户体验皆可' },
+                { name: '学前教育', reason: '低龄教育，耐心与创意并重' },
+                { name: '小学教育', reason: '基础教育，教师编制竞争相对温和' },
+                { name: '应用心理学', reason: '应用导向，企业EAP/用户研究方向' }
+            ]
+        },
+        energy: {
+            track: '新能源/环境方向',
+            desc: '你选择了新能源/环境方向，适合对可持续发展、清洁能源、生态保护有热情的考生。双碳目标下，新能源与环保产业高速增长，政策支持力度大。',
+            recs: [
+                { name: '新能源科学与工程', reason: '近5年首入绿牌，双碳目标核心驱动' },
+                { name: '储能科学与工程', reason: '新型储能战略产业，宁德时代/比亚迪等企业高薪抢人' },
+                { name: '环境科学与工程', reason: '污染防治与生态修复，环保产业持续升温' },
+                { name: '碳中和科学与工程', reason: '教育部2025年新增专业，双碳战略急需' },
+                { name: '能源与动力工程', reason: '能源转型主力，近5年3次绿牌' }
+            ]
+        },
+        business: {
+            track: '管理/创业方向',
+            desc: '你选择了管理/创业方向，适合对商业运营、组织管理、创业创新有兴趣的考生。管理类专业建议结合具体行业知识，避免"泛而不专"。',
+            recs: [
+                { name: '工商管理', reason: '商业通用知识体系，适合多元兴趣' },
+                { name: '市场营销', reason: '企业核心职能，数字营销方向需求大' },
+                { name: '人力资源管理', reason: '组织发展核心，各行业均有需求' },
+                { name: '供应链管理', reason: '物流/电商/制造业刚需，数字化升级' },
+                { name: '创业管理', reason: '适合有创业意愿，或进入创新型企业' }
+            ]
+        }
+    };
+
+    if (userInterest && interestMap[userInterest]) {
+        isUserSelected = true;
+        const info = interestMap[userInterest];
+        interestTrack = info.track;
+        interestDesc = info.desc;
+        interestRecommendations = info.recs;
     } else {
-        interestTrack = '综合方向';
-        interestDesc = '根据你的选科组合，建议结合自身兴趣与就业前景综合考量，重点关注交叉学科。';
-        interestRecommendations = [
-            { name: '数据科学与大数据技术', reason: '跨学科热门，各行各业需要' },
-            { name: '工商管理', reason: '商业通用，适合多元兴趣' },
-            { name: '新闻传播学', reason: '内容创作能力迁移性强' }
-        ];
+        if (hasPhysics && hasChemistry && hasBio) {
+            interestTrack = '医学/科研方向（选科推导）';
+            interestDesc = '你的选科（物+化+生）是医学和生命科学的标准配置，适合对生命现象、疾病诊疗、科学探究有强烈兴趣的考生。你也可以在上方选择具体的兴趣方向，获得更精准的建议。';
+            interestRecommendations = [
+                { name: '临床医学', reason: '直接救死扶伤，专业壁垒高，社会需求刚性' },
+                { name: '口腔医学', reason: '工作节奏可控，自主创业空间大' },
+                { name: '生物科学', reason: '科研导向，可深造读博进入高校或研究所' },
+                { name: '药学', reason: '医药产业人才缺口大，研发方向薪资优' }
+            ];
+        } else if (hasPhysics && hasChemistry) {
+            interestTrack = '理工科方向（选科推导）';
+            interestDesc = '你的选科（含物+化）是理工科的万能钥匙，专业选择面广。建议结合自身兴趣进一步缩小范围——你可以在上方选择具体的兴趣方向。';
+            interestRecommendations = [
+                { name: '机械工程', reason: '工业之母，智能制造升级核心' },
+                { name: '电气工程及其自动化', reason: '近5年4次绿牌，电网/能源稳定就业' },
+                { name: '计算机科学与技术', reason: '就业面广，薪资水平高' },
+                { name: '材料科学与工程', reason: '一切制造的根基' }
+            ];
+        } else if (hasPhysics) {
+            interestTrack = '工科方向（选科推导）';
+            interestDesc = '你选考了物理，可报考大部分理工科专业。建议结合兴趣进一步明确方向——信息技术、工程制造、新能源等都是不错的选择。';
+            interestRecommendations = [
+                { name: '计算机科学与技术', reason: '逻辑思维导向，创造数字产品' },
+                { name: '机械工程', reason: '工业之母，就业稳定' },
+                { name: '土木工程', reason: '基础设施建设刚需' }
+            ];
+        } else if (hasHistory) {
+            interestTrack = '文史方向（选科推导）';
+            interestDesc = '你选考了历史，适合报考文史类、法学、新闻传播、教育学等专业。建议结合就业前景和个人兴趣理性选择。';
+            interestRecommendations = [
+                { name: '汉语言文学', reason: '文科基础专业，就业面相对广' },
+                { name: '新闻学', reason: '内容创作能力迁移性强' },
+                { name: '教育学', reason: '师范类稳定就业方向' }
+            ];
+        } else {
+            interestTrack = '综合方向（选科推导）';
+            interestDesc = '根据你的选科组合，建议结合自身兴趣与就业前景综合考量。在上方选择你感兴趣的方向，获得更有针对性的专业推荐。';
+            interestRecommendations = [
+                { name: '数据科学与大数据技术', reason: '跨学科热门，各行各业需要' },
+                { name: '工商管理', reason: '商业通用，适合多元兴趣' }
+            ];
+        }
     }
 
     const interest = {
@@ -506,7 +627,9 @@ function generateAdvice(candidates, subjects) {
         icon: 'interest',
         track: interestTrack,
         description: interestDesc,
-        source: '霍兰德职业兴趣理论 + 教育部学科认知指南（选科-专业对应关系）',
+        source: isUserSelected
+            ? '用户兴趣选择 + 霍兰德职业兴趣理论 + 教育部学科专业目录'
+            : '霍兰德职业兴趣理论 + 教育部学科认知指南（选科-专业对应关系）',
         recommendations: interestRecommendations
     };
 

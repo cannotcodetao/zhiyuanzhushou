@@ -255,6 +255,45 @@ body {
     border-color: var(--negative);
 }
 
+/* ===== 兴趣选择芯片 ===== */
+.interest-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interest-chip {
+    cursor: pointer;
+    user-select: none;
+}
+
+.interest-chip input[type="radio"] {
+    display: none;
+}
+
+.interest-chip span {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-pill);
+    font-size: 14px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--text);
+    background: var(--bg);
+    transition: all 0.2s;
+}
+
+.interest-chip:hover span {
+    border-color: var(--primary);
+}
+
+.interest-chip input:checked + span {
+    background: var(--primary);
+    color: var(--bg);
+    border-color: var(--primary);
+}
+
 /* ===== 按钮系统 ===== */
 .btn-primary {
     display: inline-block;
