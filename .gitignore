@@ -1,0 +1,46 @@
+# ===== 原始数据与脚本（保留 data/ 下结构化 JSON 与文档，但排除 raw/ 大文件） =====
+data/raw/
+
+# ===== 数据备份 =====
+data/zhejiang-data-mock-backup.json
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.Python
+build/
+dist/
+.eggs/
+
+# ===== 虚拟环境 =====
+venv/
+env/
+.venv/
+ENV/
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# ===== 编辑器 =====
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ===== 日志 =====
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== 临时文件 =====
+*.tmp
+*.bak
+*.cache

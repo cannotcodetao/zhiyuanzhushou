@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志愿智选 — 高考志愿智能规划系统</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 页头 -->
+    <header class="site-header no-print">
+        <div class="container">
+            <h1 class="logo">志愿智选</h1>
+            <p class="tagline">输入分数，智能推荐冲稳保方案</p>
+        </div>
+    </header>
+
+    <!-- PDF报告头（仅打印时显示） -->
+    <div class="report-header print-only">
+        <h1>高考志愿填报推荐方案</h1>
+        <p class="report-subtitle">志愿智选 — 智能规划系统生成</p>
+        <p class="report-date" id="reportDate"></p>
+    </div>
+
+    <main class="container">
+        <!-- 第一步：输入表单 -->
+        <section id="inputSection" class="section no-print">
+            <h2 class="section-title">填写考生信息</h2>
+            <p class="data-source-eyebrow">数据来源：浙江省教育考试院 · 2023-2025 · 83所高校 · 2358专业 · 5927条录取记录</p>
+            <form id="studentForm" class="form-card">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="province">省份 <span class="required">*</span></label>
+                        <select id="province" disabled>
+                            <option value="浙江" selected>浙江（新高考3+3）</option>
+                        </select>
+                        <small class="hint">当前版本支持浙江省，更多省份即将上线</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="score">高考总分 <span class="required">*</span></label>
+                        <input type="number" id="score" min="0" max="750" placeholder="如：620" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rank">全省位次 <span class="required">*</span></label>
+                        <input type="number" id="rank" min="1" placeholder="如：15000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>选考科目（3门）<span class="required">*</span></label>
+                    <div class="subject-selector" id="subjectSelector">
+                        <label class="subject-chip"><input type="checkbox" value="物理"><span>物理</span></label>
+                        <label class="subject-chip"><input type="checkbox" value="化学"><span>化学</span></label>
+                        <label class="subject-chip"><input type="checkbox" value="生物"><span>生物</span></label>
+                        <label class="subject-chip"><input type="checkbox" value="历史"><span>历史</span></label>
+                        <label class="subject-chip"><input type="checkbox" value="地理"><span>地理</span></label>
+                        <label class="subject-chip"><input type="checkbox" value="政治"><span>政治</span></label>
+                        <label class="subject-chip"><input type="checkbox" value="技术"><span>技术</span></label>
+                    </div>
+                    <small class="hint" id="subjectHint">请选择3门选考科目</small>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">意向专业类别（可选）</label>
+                        <select id="category">
+                            <option value="">全部类别</option>
+                            <option value="工学">工学</option>
+                            <option value="理学">理学</option>
+                            <option value="文学">文学</option>
+                            <option value="经济学">经济学</option>
+                            <option value="管理学">管理学</option>
+                            <option value="法学">法学</option>
+                            <option value="教育学">教育学</option>
+                            <option value="医学">医学</option>
+                            <option value="农学">农学</option>
+                            <option value="艺术学">艺术学</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cityPref">意向城市（可选）</label>
+                        <select id="cityPref">
+                            <option value="">全部城市</option>
+                            <option value="杭州">杭州</option>
+                            <option value="宁波">宁波</option>
+                            <option value="温州">温州</option>
+                            <option value="上海">上海</option>
+                            <option value="北京">北京</option>
+                            <option value="南京">南京</option>
+                            <option value="武汉">武汉</option>
+                            <option value="成都">成都</option>
+                            <option value="广州">广州</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="batch">录取批次</label>
+                        <select id="batch">
+                            <option value="平行录取一段">平行录取一段</option>
+                            <option value="平行录取二段">平行录取二段</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary" id="submitBtn">生成推荐方案</button>
+            </form>
+            <p class="loading-text" id="loadingText" style="display:none;">正在加载录取数据...</p>
+            <p class="error-text" id="errorText" style="display:none;"></p>
+        </section>
+
+        <!-- 第二步：结果展示 -->
+        <section id="resultSection" class="section" style="display:none;">
+            <!-- 考生信息摘要（打印时显示） -->
+            <div class="student-summary print-only">
+                <p><strong>省份：</strong>浙江</p>
+                <p><strong>总分：</strong><span id="printScore"></span></p>
+                <p><strong>位次：</strong><span id="printRank"></span></p>
+                <p><strong>选科：</strong><span id="printSubjects"></span></p>
+            </div>
+
+            <!-- 操作栏 -->
+            <div class="action-bar no-print">
+                <h2 class="section-title">推荐方案</h2>
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="filterBtn" onclick="toggleFilter()">筛选专业</button>
+                    <button class="btn-secondary" id="wishListBtn" onclick="toggleWishList()">志愿表模拟</button>
+                    <button class="btn-primary" onclick="window.print()">导出PDF</button>
+                    <button class="btn-text" onclick="resetForm()">重新填写</button>
+                </div>
+            </div>
+
+            <!-- 专业筛选面板 -->
+            <div id="filterPanel" class="filter-panel no-print" style="display:none;">
+                <h3>按条件筛选</h3>
+                <div class="filter-row">
+                    <label>专业类别：</label>
+                    <select id="filterCategory" onchange="applyFilter()">
+                        <option value="">全部</option>
+                        <option value="工学">工学</option>
+                        <option value="理学">理学</option>
+                        <option value="文学">文学</option>
+                        <option value="经济学">经济学</option>
+                        <option value="管理学">管理学</option>
+                        <option value="法学">法学</option>
+                        <option value="教育学">教育学</option>
+                        <option value="医学">医学</option>
+                        <option value="农学">农学</option>
+                        <option value="艺术学">艺术学</option>
+                    </select>
+                    <label>学校层次：</label>
+                    <select id="filterLevel" onchange="applyFilter()">
+                        <option value="">全部</option>
+                        <option value="985">985</option>
+                        <option value="211">211</option>
+                        <option value="双一流">双一流</option>
+                    </select>
+                    <label>城市：</label>
+                    <select id="filterCity" onchange="applyFilter()">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 志愿表模拟面板 -->
+            <div id="wishListPanel" class="wishlist-panel no-print" style="display:none;">
+                <h3>志愿表模拟</h3>
+                <p class="hint">从下方推荐中点击"加入志愿表"来模拟填报</p>
+                <div id="wishListContent" class="wishlist-content">
+                    <p class="empty-text">志愿表为空</p>
+                </div>
+            </div>
+
+            <!-- 冲刺院校 -->
+            <div class="recommend-group" id="chongGroup">
+                <h3 class="group-title chong-title">
+                    <span class="badge chong-badge">冲</span>
+                    冲刺院校（3所）
+                </h3>
+                <div class="recommend-list" id="chongList"></div>
+            </div>
+
+            <!-- 稳妥院校 -->
+            <div class="recommend-group" id="wenGroup">
+                <h3 class="group-title wen-title">
+                    <span class="badge wen-badge">稳</span>
+                    稳妥院校（5所）
+                </h3>
+                <div class="recommend-list" id="wenList"></div>
+            </div>
+
+            <!-- 保底院校 -->
+            <div class="recommend-group" id="baoGroup">
+                <h3 class="group-title bao-title">
+                    <span class="badge bao-badge">保</span>
+                    保底院校（3所）
+                </h3>
+                <div class="recommend-list" id="baoList"></div>
+            </div>
+
+            <!-- 专业选择建议 -->
+            <div class="advice-section" id="adviceSection">
+                <h3 class="section-title">专业选择建议</h3>
+                <div id="adviceContent"></div>
+            </div>
+
+            <!-- 免责声明 -->
+            <div class="disclaimer">
+                <p>⚠️ 免责声明：本推荐方案基于浙江省教育考试院官方发布的2023-2025年投档分数线数据，通过位次法算法生成。仅供参考，不构成最终填报建议。实际录取结果受当年招生计划、报考人数等多种因素影响。请考生结合自身情况，参考浙江省教育考试院（www.zjzs.net）官方信息进行填报决策。</p>
+            </div>
+        </section>
+
+        <!-- FAQ 部分 -->
+        <section id="faqSection" class="section no-print">
+            <h2 class="section-title">常见问题</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>推荐方案是如何生成的？</summary>
+                    <p>系统基于浙江省近3年高考录取数据，根据您的分数、位次和选科，通过位次法计算每所院校专业的录取概率，分为冲刺、稳妥、保底三档推荐。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>什么是"冲稳保"策略？</summary>
+                    <p>"冲稳保"是平行志愿填报的经典策略：冲刺校有一定风险但值得尝试；稳妥校录取概率较高；保底校确保不滑档。建议按照冲3-稳5-保3的比例填报。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>位次和分数哪个更重要？</summary>
+                    <p>位次更重要。每年高考试题难度不同，分数线会波动，但高校的录取位次相对稳定。系统以位次为核心进行推荐。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>选科不匹配的专业会出现吗？</summary>
+                    <p>不会。系统会自动过滤掉与您选科不匹配的专业，只推荐符合选科要求的专业。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>数据准确吗？</summary>
+                    <p>本系统数据100%来自浙江省教育考试院官方发布的投档分数线表（2023-2025年），覆盖83所在浙招生高校、2358个专业、5927条录取记录。选科要求和学科门类依据教育部公开标准推导。数据仅供参考，最终以各省考试院公告为准。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>如何导出PDF方案？</summary>
+                    <p>点击"导出PDF"按钮，在弹出的打印对话框中选择"另存为PDF"即可保存完整的推荐方案报告。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer no-print">
+        <div class="container">
+            <p>志愿智选 © 2026 | 仅供参考，不构成填报建议 | 数据来源：浙江省教育考试院官方数据（2023-2025）</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
