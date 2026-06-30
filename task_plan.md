@@ -56,8 +56,8 @@
   - 34个DOM ID全部保留，js/app.js 无需修改
   - HTTP 测试通过，所有资源 200 OK
 
-### Phase 8: 专业建议三方向增强 ⬅️ 当前
-- **状态**: in_progress
+### Phase 8: 专业建议三方向增强 ✅ 完成
+- **状态**: complete
 - **目标**: 在专业选择建议中融入三个方向：政策导向/就业导向/兴趣导向
 - **数据来源（可查可验证）**：
   - **政策方向**：
@@ -73,27 +73,39 @@
     - 2025届高薪Top10：微电子(7814元)、电子科学(7752)、自动化(7573)、信息安全、光电信息(7525)、采矿工程(7448)、机械工程(7401)、测控(7348)、材料科学(7304)、通信工程(7249)
   - **兴趣方向**：
     - 基于选科组合推导兴趣倾向（霍兰德职业兴趣理论+教育部学科认知）
-- **实现方式**：
-  - 修改 js/app.js 的 generateAdvice() 函数，生成三组建议
-  - 修改 renderAdvice() 渲染三个分组卡片
-  - 修改 index.html 的 adviceSection 结构（保留 ID）
-  - 修改 css/style.css 添加三方向卡片样式（Blue Professional 风格）
+- **实现完成**：
+  - 重写 `js/app.js` 的 `generateAdvice()` 返回 `{overview, policy, employment, interest}` 对象
+  - 重写 `renderAdvice()` + 新增 `renderPolicyCard/renderEmploymentCard/renderInterestCard` 三个渲染函数
+  - `css/style.css` 新增 ~270 行：`.advice-grid`（3列响应式网格）+ `.advice-card` + `.emp-tag-item` 等
+  - 修复 CSS 类名冲突：`.emp-salary` → `.emp-highsalary`（容器）+ `.emp-salary-value`（子元素）
+  - index.html 无需修改（renderAdvice 动态生成内容）
 
-### Phase 9: GitHub 仓库部署上线
-- **状态**: pending
-- **目标**: 初始化 git、连接 GitHub 仓库、部署 GitHub Pages
-- **环境**：git 已装(2.49.0)，gh CLI 未装
-- **流程**：
-  1. 创建 .gitignore（排除 raw/、__pycache__、备份文件等）
-  2. git init + add + commit
-  3. 用户在 github.com 手动创建空仓库
-  4. git remote add + push
-  5. 启用 GitHub Pages（main 分支 / root）
-- **待用户确认**：GitHub 仓库名/归属
+### Phase 9: GitHub 仓库部署上线 ✅ 完成
+- **状态**: complete
+- **目标**: 初始化 git、连接 GitHub 仓库、推送代码
+- **环境**：git 已装(2.49.0)，gh CLI 未装（改用原生 git 命令）
+- **执行步骤**：
+  1. ✅ 创建 `.gitignore`（排除 data/raw/、mock备份、Python缓存、OS/编辑器临时文件）
+  2. ✅ `git init` 初始化本地仓库
+  3. ✅ 仓库级 git 配置（不影响全局）：user.name=cannotcodetao, user.email=892452605@qq.com
+  4. ✅ `git add .` → 14个文件，60942行插入
+  5. ✅ `git commit -F .git/COMMIT_MSG.txt`（PowerShell 不支持 heredoc，改用文件方式）
+  6. ✅ `git branch -M main` 重命名分支匹配 GitHub 默认
+  7. ✅ `git remote add origin https://github.com/cannotcodetao/zhiyuanzhushou.git`
+  8. ✅ 首次 push 被拒（远程有 GitHub 自动生成的 README）
+  9. ✅ `git pull origin main --allow-unrelated-histories -X ours` 自动用本地 README 解决冲突
+  10. ✅ `git push -u origin main` 成功推送 130.94 KiB（git 压缩后）
+- **代码仓库**：https://github.com/cannotcodetao/zhiyuanzhushou
 
-### Phase 10: 测试与上线
-- **状态**: pending
-- **目标**: 测试推荐准确性，部署上线
+### Phase 10: GitHub Pages 上线 ⬅️ 当前
+- **状态**: in_progress（等待用户在 GitHub 网页端开启）
+- **目标**: 启用 GitHub Pages，网站正式上线
+- **用户操作步骤**：
+  1. 访问 https://github.com/cannotcodetao/zhiyuanzhushou/settings/pages
+  2. Source 选择 `Deploy from a branch`
+  3. Branch 选择 `main` / `/ (root)`
+  4. 点击 Save，等待 1-3 分钟
+- **预期上线地址**：https://cannotcodetao.github.io/zhiyuanzhushou/
 
 ## 关键决策点（修订）
 

@@ -112,3 +112,50 @@ zhiyuan-zhixuan/
 - 设计优化完成 ✅
 - 服务器运行中：http://localhost:8080/
 - 下一步：用户浏览器测试完整流程 → Phase 8 测试与上线
+
+---
+
+## 2026-06-30 会话 4 — 专业建议三方向增强 + GitHub 部署
+
+### Phase 8: 专业建议三方向增强 ✅
+1. 重写 `generateAdvice()` 函数：从返回数组改为返回 `{overview, policy, employment, interest}` 对象
+2. 新增三方向数据：
+   - **政策导向**：10个国家战略急需专业（集成电路/人工智能/量子科技/新能源/低空经济/具身智能/碳中和等）
+     - 数据来源：教育部《普通高等学校本科专业目录（2025/2026年）》、工信部直属高校2026年新增专业
+     - 智能筛选：根据用户选科自动匹配可报专业
+   - **就业导向**：麦可思《2025年中国本科生就业报告》
+     - 绿牌6个（电气/微电子/机械电子/新能源/车辆/机器人）
+     - 高薪Top10（微电子7814元/电子科学7752/自动化7573等）
+     - 红牌5个（公共事业管理/音乐表演/绘画/法学/美术学）
+     - 趋势洞察：计算机跌出Top10，电子信息类霸榜
+   - **兴趣导向**：10条选科组合兴趣方向（霍兰德职业兴趣理论）
+     - 物化生→医学/科研、物化地→工科、物化技→信息技术等
+3. 重写 `renderAdvice()` + 新增三个渲染函数：
+   - `renderPolicyCard()` — ◆ 图标 + 推荐列表 + 数据来源
+   - `renderEmploymentCard()` — ▲ 图标 + 绿牌/高薪/红牌三段 + 趋势注解
+   - `renderInterestCard()` — ● 图标 + 兴趣方向 + 推荐列表
+4. CSS 新增 ~270 行：`.advice-grid`（3列响应式网格）+ `.advice-card` + `.emp-tag-item` 等
+5. 修复 CSS 类名冲突：`.emp-salary` 同时用于容器和子元素 → 改为 `.emp-highsalary`（容器）+ `.emp-salary-value`（子元素）
+
+### Phase 9: GitHub 部署上线 ✅
+1. 创建 `.gitignore`：排除 `data/raw/`（XLS原始数据）、mock备份、Python缓存、OS/编辑器临时文件
+2. `git init` 初始化本地仓库
+3. 仓库级 git 配置：user.name=cannotcodetao, user.email=892452605@qq.com（不影响全局）
+4. `git add .` → 14个文件，60942行插入
+5. `git commit -F .git/COMMIT_MSG.txt` — PowerShell 不支持 heredoc，改用文件方式
+6. `git branch -M main` — 重命名分支匹配 GitHub 默认
+7. `git remote add origin https://github.com/cannotcodetao/zhiyuanzhushou.git`
+8. 首次 push 被拒（远程有 GitHub 自动生成的 README）
+9. `git pull origin main --allow-unrelated-histories -X ours` — 自动用本地 README 解决冲突
+10. `git push -u origin main` — 成功推送 130.94 KiB（git 压缩后）
+
+### 上线信息
+- **GitHub 仓库**：https://github.com/cannotcodetao/zhiyuanzhushou
+- **GitHub Pages 地址**（待用户在 Settings → Pages 开启）：https://cannotcodetao.github.io/zhiyuanzhushou/
+- 部署源：main 分支根目录
+
+### 当前状态
+- 三方向专业建议增强完成 ✅
+- 代码已推送到 GitHub ✅
+- 待用户在 GitHub Pages 设置中开启部署
+- 测试验证：HTTP 服务器所有资源 200 OK，无 JS 错误
