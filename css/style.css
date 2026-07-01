@@ -310,6 +310,30 @@ body {
     border-color: var(--negative);
 }
 
+/* ===== 3+1+2 模式分层选科 ===== */
+.subject-group {
+    margin-bottom: 16px;
+}
+
+.subject-group:last-child {
+    margin-bottom: 0;
+}
+
+.subject-group-label {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+}
+
+.subject-selector-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 /* ===== 兴趣选择芯片 ===== */
 .interest-selector {
     display: flex;

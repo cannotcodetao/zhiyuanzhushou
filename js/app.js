@@ -17,17 +17,36 @@ async function loadData() {
     errorText.style.display = 'none';
 
     try {
-        const response = await fetch('data/zhejiang-data.json');
+        const config = getCurrentProvinceConfig();
+        const response = await fetch(config.dataFile);
         if (!response.ok) throw new Error('数据加载失败');
         allData = await response.json();
         loadingText.style.display = 'none';
         populateCityFilter();
+        // 同步更新数据来源描述（包含真实统计）
+        updateDataSourceEyebrow();
         return true;
     } catch (err) {
         loadingText.style.display = 'none';
         errorText.textContent = '数据加载失败：' + err.message + '。请确保通过本地服务器访问（不要直接打开HTML文件）。';
         errorText.style.display = 'block';
         return false;
+    }
+}
+
+// 根据实际加载数据更新数据来源描述（含真实统计）
+function updateDataSourceEyebrow() {
+    if (!allData) return;
+    const config = getCurrentProvinceConfig();
+    const schoolCount = allData.schools.length;
+    const majorCount = allData.schools.reduce((sum, s) => sum + s.majors.length, 0);
+    const scoreCount = allData.schools.reduce((sum, s) =>
+        sum + s.majors.reduce((ms, m) => ms + m.scores.length, 0), 0);
+    const years = [...new Set(allData.schools.flatMap(s => s.majors.flatMap(m => m.scores.map(sc => sc.year))))].sort();
+    const yearRange = years.length > 0 ? `${years[0]}-${years[years.length - 1]}` : '';
+    const eyebrow = document.getElementById('dataSourceEyebrow');
+    if (eyebrow) {
+        eyebrow.textContent = `数据来源：${config.officialName} · ${yearRange} · ${schoolCount}所高校 · ${majorCount}专业 · ${scoreCount}条录取记录`;
     }
 }
 
@@ -46,60 +65,182 @@ function populateCityFilter() {
 
 // ===== 2. 表单处理 =====
 
-// 选科数量校验 + 选考分数标签动态更新
+// ===== 选科选择器（动态生成，支持 3+3 / 3+1+2 两种模式） =====
+
+// 根据当前省份配置动态生成选科 UI
+function buildSubjectSelector() {
+    const config = getCurrentProvinceConfig();
+    const container = document.getElementById('subjectSelector');
+    container.innerHTML = '';
+
+    if (config.electiveMode === 'free') {
+        // 3+3 模式：所有科目并列，多选限 electiveCount 门
+        config.subjects.forEach(subj => {
+            const label = document.createElement('label');
+            label.className = 'subject-chip';
+            label.innerHTML = `<input type="checkbox" value="${subj}"><span>${subj}</span>`;
+            container.appendChild(label);
+        });
+    } else if (config.electiveMode === 'layered') {
+        // 3+1+2 模式：首选区（单选）+ 再选区（多选）
+        const firstGroup = document.createElement('div');
+        firstGroup.className = 'subject-group';
+        firstGroup.innerHTML = '<div class="subject-group-label">首选科目（2选1）</div>';
+        const firstContainer = document.createElement('div');
+        firstContainer.className = 'subject-selector-row';
+        config.firstChoice.forEach(subj => {
+            const label = document.createElement('label');
+            label.className = 'subject-chip';
+            label.innerHTML = `<input type="radio" name="firstChoice" value="${subj}"><span>${subj}</span>`;
+            firstContainer.appendChild(label);
+        });
+        firstGroup.appendChild(firstContainer);
+        container.appendChild(firstGroup);
+
+        const secondGroup = document.createElement('div');
+        secondGroup.className = 'subject-group';
+        secondGroup.innerHTML = '<div class="subject-group-label">再选科目（4选2）</div>';
+        const secondContainer = document.createElement('div');
+        secondContainer.className = 'subject-selector-row';
+        config.secondChoice.forEach(subj => {
+            const label = document.createElement('label');
+            label.className = 'subject-chip';
+            label.innerHTML = `<input type="checkbox" name="secondChoice" value="${subj}"><span>${subj}</span>`;
+            secondContainer.appendChild(label);
+        });
+        secondGroup.appendChild(secondContainer);
+        container.appendChild(secondGroup);
+    }
+
+    setupSubjectSelector();
+}
+
+// 选科事件绑定（适配两种模式）+ 选考分数标签动态更新
 function setupSubjectSelector() {
-    const checkboxes = document.querySelectorAll('#subjectSelector input[type="checkbox"]');
+    const config = getCurrentProvinceConfig();
     const hint = document.getElementById('subjectHint');
 
-    function updateElectiveLabels() {
-        const checked = Array.from(document.querySelectorAll('#subjectSelector input:checked')).map(c => c.value);
-        const labels = document.querySelectorAll('.score-input.elective label');
-        const inputs = document.querySelectorAll('.score-input.elective input');
-
-        for (let i = 0; i < 3; i++) {
-            if (labels[i] && inputs[i]) {
-                if (checked[i]) {
-                    labels[i].textContent = checked[i];
-                    inputs[i].placeholder = '0-100';
-                    inputs[i].disabled = false;
-                    labels[i].style.opacity = '1';
+    if (config.electiveMode === 'free') {
+        const checkboxes = document.querySelectorAll('#subjectSelector input[type="checkbox"]');
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const checked = document.querySelectorAll('#subjectSelector input[type="checkbox"]:checked');
+                if (checked.length > config.electiveCount) {
+                    cb.checked = false;
+                    hint.textContent = `最多只能选择${config.electiveCount}门科目`;
+                    hint.style.color = '#dc2626';
                 } else {
-                    labels[i].textContent = `选考${i + 1}`;
-                    inputs[i].placeholder = '请先选科';
-                    inputs[i].disabled = true;
-                    inputs[i].value = '';
-                    labels[i].style.opacity = '0.5';
+                    updateSubjectHint();
                 }
+                updateElectiveLabels();
+            });
+        });
+    } else if (config.electiveMode === 'layered') {
+        const radios = document.querySelectorAll('#subjectSelector input[name="firstChoice"]');
+        const checkboxes = document.querySelectorAll('#subjectSelector input[name="secondChoice"]');
+        radios.forEach(r => r.addEventListener('change', () => { updateSubjectHint(); updateElectiveLabels(); }));
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const checked = document.querySelectorAll('#subjectSelector input[name="secondChoice"]:checked');
+                if (checked.length > config.secondChoiceCount) {
+                    cb.checked = false;
+                    hint.textContent = `再选科目最多选择${config.secondChoiceCount}门`;
+                    hint.style.color = '#dc2626';
+                } else {
+                    updateSubjectHint();
+                }
+                updateElectiveLabels();
+            });
+        });
+    }
+
+    updateSubjectHint();
+    updateElectiveLabels();
+}
+
+// 更新选科提示文字
+function updateSubjectHint() {
+    const config = getCurrentProvinceConfig();
+    const hint = document.getElementById('subjectHint');
+
+    if (config.electiveMode === 'free') {
+        const checked = Array.from(document.querySelectorAll('#subjectSelector input[type="checkbox"]:checked')).map(c => c.value);
+        if (checked.length === config.electiveCount) {
+            hint.textContent = '已选择' + config.electiveCount + '门：' + checked.join('、');
+            hint.style.color = '#16a34a';
+        } else {
+            hint.textContent = `已选择${checked.length}门，还需选择${config.electiveCount - checked.length}门`;
+            hint.style.color = '#64748b';
+        }
+    } else if (config.electiveMode === 'layered') {
+        const first = document.querySelector('#subjectSelector input[name="firstChoice"]:checked');
+        const second = Array.from(document.querySelectorAll('#subjectSelector input[name="secondChoice"]:checked')).map(c => c.value);
+        const firstText = first ? first.value : '未选';
+        const secondText = second.length > 0 ? second.join('、') : '未选';
+        const complete = first && second.length === config.secondChoiceCount;
+        hint.textContent = `首选：${firstText} | 再选：${secondText}（${second.length}/${config.secondChoiceCount}）`;
+        hint.style.color = complete ? '#16a34a' : '#64748b';
+    }
+}
+
+// 获取当前选中的选考科目（适配两种模式）
+function getSelectedSubjects() {
+    const config = getCurrentProvinceConfig();
+    if (config.electiveMode === 'free') {
+        return Array.from(document.querySelectorAll('#subjectSelector input[type="checkbox"]:checked')).map(c => c.value);
+    } else if (config.electiveMode === 'layered') {
+        const first = document.querySelector('#subjectSelector input[name="firstChoice"]:checked');
+        const second = Array.from(document.querySelectorAll('#subjectSelector input[name="secondChoice"]:checked')).map(c => c.value);
+        const result = [];
+        if (first) result.push(first.value);
+        result.push(...second);
+        return result;
+    }
+    return [];
+}
+
+// 选考分数输入框标签动态更新（按选科顺序填充）
+function updateElectiveLabels() {
+    const checked = getSelectedSubjects();
+    const labels = document.querySelectorAll('.score-input.elective label');
+    const inputs = document.querySelectorAll('.score-input.elective input');
+
+    for (let i = 0; i < 3; i++) {
+        if (labels[i] && inputs[i]) {
+            if (checked[i]) {
+                labels[i].textContent = checked[i];
+                inputs[i].placeholder = '0-100';
+                inputs[i].disabled = false;
+                labels[i].style.opacity = '1';
+            } else {
+                labels[i].textContent = `选考${i + 1}`;
+                inputs[i].placeholder = '请先选科';
+                inputs[i].disabled = true;
+                inputs[i].value = '';
+                labels[i].style.opacity = '0.5';
             }
         }
     }
+}
 
-    checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-            const checked = document.querySelectorAll('#subjectSelector input:checked');
-            if (checked.length > 3) {
-                cb.checked = false;
-                hint.textContent = '最多只能选择3门科目';
-                hint.style.color = '#dc2626';
-            } else if (checked.length === 3) {
-                hint.textContent = '已选择3门：' + Array.from(checked).map(c => c.value).join('、');
-                hint.style.color = '#16a34a';
-            } else {
-                hint.textContent = `已选择${checked.length}门，还需选择${3 - checked.length}门`;
-                hint.style.color = '#64748b';
-            }
-            updateElectiveLabels();
-        });
+// 重置选考分数输入框
+function resetElectiveScoreInputs() {
+    document.querySelectorAll('.score-input.elective input').forEach(input => {
+        input.value = '';
+        input.disabled = true;
+        input.placeholder = '请先选科';
     });
-
-    updateElectiveLabels();
+    document.querySelectorAll('.score-input.elective label').forEach((label, i) => {
+        label.textContent = `选考${i + 1}`;
+        label.style.opacity = '0.5';
+    });
 }
 
 // 获取表单数据
 function getFormData() {
     const score = parseInt(document.getElementById('score').value);
     const rank = parseInt(document.getElementById('rank').value);
-    const subjects = Array.from(document.querySelectorAll('#subjectSelector input:checked')).map(c => c.value);
+    const subjects = getSelectedSubjects();
     const category = document.getElementById('category').value;
     const cityPref = document.getElementById('cityPref').value;
     const batch = document.getElementById('batch').value;
@@ -115,6 +256,7 @@ function getFormData() {
 
     return {
         score, rank, subjects, category, cityPref, batch, interest,
+        province: currentProvince,
         subjectScores: {
             chinese: scoreChinese,
             math: scoreMath,
@@ -126,16 +268,27 @@ function getFormData() {
     };
 }
 
-// 表单验证
+// 表单验证（适配 3+3 / 3+1+2 两种模式）
 function validateForm(data) {
-    if (!data.score || data.score < 0 || data.score > 750) {
-        return '请输入有效的高考总分（0-750）';
+    const config = getCurrentProvinceConfig();
+
+    if (!data.score || data.score < 0 || data.score > config.totalScore) {
+        return `请输入有效的高考总分（0-${config.totalScore}）`;
     }
     if (!data.rank || data.rank < 1) {
         return '请输入有效的全省位次';
     }
-    if (data.subjects.length !== 3) {
-        return '请选择3门选考科目';
+
+    // 选科校验：按模式
+    if (config.electiveMode === 'free') {
+        if (data.subjects.length !== config.electiveCount) {
+            return `请选择${config.electiveCount}门选考科目`;
+        }
+    } else if (config.electiveMode === 'layered') {
+        const first = document.querySelector('#subjectSelector input[name="firstChoice"]:checked');
+        const second = document.querySelectorAll('#subjectSelector input[name="secondChoice"]:checked');
+        if (!first) return '请选择首选科目（物理或历史）';
+        if (second.length !== config.secondChoiceCount) return `请选择${config.secondChoiceCount}门再选科目`;
     }
 
     const sc = data.subjectScores;
@@ -159,6 +312,82 @@ function validateForm(data) {
     }
 
     return null;
+}
+
+// ===== 省份切换处理 =====
+
+// 省份切换：重新加载、重新生成选科、更新文案
+async function onProvinceChange() {
+    currentProvince = document.getElementById('province').value;
+    window.currentProvince = currentProvince;
+
+    // 更新UI文案
+    updateProvinceUI();
+
+    // 重新生成批次选项
+    buildBatchOptions();
+
+    // 重置选考分数输入
+    resetElectiveScoreInputs();
+
+    // 重新生成选科选择器（会触发 setupSubjectSelector）
+    buildSubjectSelector();
+
+    // 重置已有结果区
+    document.getElementById('resultSection').style.display = 'none';
+    document.getElementById('inputSection').style.display = 'block';
+    wishList = [];
+    recommendResult = null;
+
+    // 重新加载数据
+    allData = null;
+    await loadData();
+}
+
+// 更新所有省份相关文案
+function updateProvinceUI() {
+    const config = getCurrentProvinceConfig();
+
+    // 数据来源 eyebrow（初版，加载数据后会由 updateDataSourceEyebrow 覆盖为真实统计）
+    const eyebrow = document.getElementById('dataSourceEyebrow');
+    if (eyebrow && !allData) {
+        eyebrow.textContent = `数据来源：${config.officialName} · ${config.dataScope}`;
+    }
+
+    // 省份提示
+    document.getElementById('provinceHint').textContent =
+        `${currentProvince}：${getExamModeDescription(config.examMode)}`;
+
+    // 打印省份
+    const printProvince = document.getElementById('printProvince');
+    if (printProvince) printProvince.textContent = currentProvince;
+
+    // 免责声明
+    document.getElementById('disclaimerText').textContent =
+        `⚠️ 免责声明：本推荐方案基于${config.officialName}官方发布的投档分数线数据，通过位次法算法生成。仅供参考，不构成最终填报建议。实际录取结果受当年招生计划、报考人数等多种因素影响。请考生结合自身情况，参考${config.officialName}（${config.officialUrl}）官方信息进行填报决策。`;
+
+    // FAQ 答案
+    document.getElementById('faqAnswer1').textContent =
+        `系统基于${currentProvince}近3年高考录取数据，根据您的分数、位次和选科，通过位次法计算每所院校专业的录取概率，分为冲刺、稳妥、保底三档推荐。`;
+    document.getElementById('faqAnswer5').textContent =
+        `本系统数据100%来自${config.officialName}官方发布的投档分数线表。选科要求和学科门类依据教育部公开标准推导。数据仅供参考，最终以${config.officialName}公告为准。`;
+
+    // 页脚
+    document.getElementById('footerText').textContent =
+        `志愿智选 © 2026 | 仅供参考，不构成填报建议 | 数据来源：${config.officialName}官方数据（2023-2025）`;
+}
+
+// 根据省份配置生成批次选项
+function buildBatchOptions() {
+    const config = getCurrentProvinceConfig();
+    const select = document.getElementById('batch');
+    select.innerHTML = '';
+    config.batches.forEach(b => {
+        const opt = document.createElement('option');
+        opt.value = b;
+        opt.textContent = b;
+        select.appendChild(opt);
+    });
 }
 
 // ===== 3. 推荐算法 =====
@@ -1250,7 +1479,13 @@ function resetForm() {
 // ===== 8. 初始化 =====
 
 document.addEventListener('DOMContentLoaded', async () => {
-    setupSubjectSelector();
+    // 初始化省份相关 UI
+    updateProvinceUI();
+    buildBatchOptions();
+    buildSubjectSelector();
+
+    // 省份切换事件
+    document.getElementById('province').addEventListener('change', onProvinceChange);
 
     // 预加载数据
     await loadData();

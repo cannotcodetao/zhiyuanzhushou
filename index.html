@@ -29,15 +29,17 @@
         <!-- 第一步：输入表单 -->
         <section id="inputSection" class="section no-print">
             <h2 class="section-title">填写考生信息</h2>
-            <p class="data-source-eyebrow">数据来源：浙江省教育考试院 · 2023-2025 · 83所高校 · 2358专业 · 5927条录取记录</p>
+            <p class="data-source-eyebrow" id="dataSourceEyebrow">数据来源：加载中...</p>
             <form id="studentForm" class="form-card">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="province">省份 <span class="required">*</span></label>
-                        <select id="province" disabled>
+                        <select id="province">
                             <option value="浙江" selected>浙江（新高考3+3）</option>
+                            <option value="山东">山东（新高考3+3）</option>
+                            <option value="江苏">江苏（新高考3+1+2）</option>
                         </select>
-                        <small class="hint">当前版本支持浙江省，更多省份即将上线</small>
+                        <small class="hint" id="provinceHint">浙江：7选3（物化生史地政技）</small>
                     </div>
                     <div class="form-group">
                         <label for="score">高考总分 <span class="required">*</span></label>
@@ -84,13 +86,7 @@
                 <div class="form-group">
                     <label>选考科目（3门）<span class="required">*</span></label>
                     <div class="subject-selector" id="subjectSelector">
-                        <label class="subject-chip"><input type="checkbox" value="物理"><span>物理</span></label>
-                        <label class="subject-chip"><input type="checkbox" value="化学"><span>化学</span></label>
-                        <label class="subject-chip"><input type="checkbox" value="生物"><span>生物</span></label>
-                        <label class="subject-chip"><input type="checkbox" value="历史"><span>历史</span></label>
-                        <label class="subject-chip"><input type="checkbox" value="地理"><span>地理</span></label>
-                        <label class="subject-chip"><input type="checkbox" value="政治"><span>政治</span></label>
-                        <label class="subject-chip"><input type="checkbox" value="技术"><span>技术</span></label>
+                        <!-- 由 JS 根据当前省份动态生成 -->
                     </div>
                     <small class="hint" id="subjectHint">请选择3门选考科目</small>
                 </div>
@@ -266,7 +262,7 @@
             <div class="faq-list">
                 <details class="faq-item">
                     <summary>推荐方案是如何生成的？</summary>
-                    <p>系统基于浙江省近3年高考录取数据，根据您的分数、位次和选科，通过位次法计算每所院校专业的录取概率，分为冲刺、稳妥、保底三档推荐。</p>
+                    <p id="faqAnswer1">系统基于当前省份近3年高考录取数据，根据您的分数、位次和选科，通过位次法计算每所院校专业的录取概率，分为冲刺、稳妥、保底三档推荐。</p>
                 </details>
                 <details class="faq-item">
                     <summary>什么是"冲稳保"策略？</summary>
@@ -282,7 +278,11 @@
                 </details>
                 <details class="faq-item">
                     <summary>数据准确吗？</summary>
-                    <p>本系统数据100%来自浙江省教育考试院官方发布的投档分数线表（2023-2025年），覆盖83所在浙招生高校、2358个专业、5927条录取记录。选科要求和学科门类依据教育部公开标准推导。数据仅供参考，最终以各省考试院公告为准。</p>
+                    <p id="faqAnswer5">本系统数据100%来自各省教育考试院官方发布的投档分数线表。选科要求和学科门类依据教育部公开标准推导。数据仅供参考，最终以各省考试院公告为准。</p>
+                </details>
+                <details class="faq-item">
+                    <summary>不同省份的高考模式有何差异？</summary>
+                    <p>本系统支持三种高考模式：①新高考3+3（如浙江、山东）：语数英+选考3门自由组合；②新高考3+1+2（如江苏）：语数英+首选物理/历史+再选化生政地4选2；③老高考文理分科（规划中）。切换省份后，选科规则、数据、批次会自动适配。</p>
                 </details>
                 <details class="faq-item">
                     <summary>如何导出PDF方案？</summary>

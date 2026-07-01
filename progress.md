@@ -240,3 +240,99 @@ zhiyuan-zhixuan/
 - 单科优势分析完成 ✅
 - 选考分数动态对应完成 ✅
 - 待：GitHub Pages 开启部署
+
+---
+
+## 2026-06-30 会话 6 — Phase 13 多省份支持（浙江/山东/江苏，3种高考模式）
+
+### Phase 13: 多省份支持 ✅ 完成
+**目标**：从浙江省扩展到全国主要省份，支持三种高考模式（3+3 / 3+1+2 / 老高考）
+
+#### 13.1 架构改造 ✅
+- 新建 `js/province-config.js`：PROVINCE_CONFIG 集中配置 3 省数据
+- 数据加载从硬编码 `data/zhejiang-data.json` 改为 `fetch(config.dataFile)`
+- 算法层无需任何修改（配置驱动，零分支 if-else）
+- 全局函数：`getCurrentProvinceConfig()` / `getExamModeDescription()` / `currentProvince`
+
+#### 13.2 选科动态化 ✅
+完全重写 `buildSubjectSelector()` + `getSelectedSubjects()`，支持两种模式：
+
+- **free 模式（3+3）**：所有科目并列 checkbox，限制 electiveCount 个
+  - 浙江：7选3（物化生史地政技）
+  - 山东：6选3（物化生史地政，无"技术"）
+- **layered 模式（3+1+2）**：分层结构
+  - 首选区 radio（物理/历史 限1）
+  - 再选区 checkbox（化生政地 限2）
+  - 江苏：3+1+2
+
+#### 13.3 文案动态化 ✅
+6 处硬编码"浙江省"文案改为 `updateProvinceUI()` 动态生成：
+- data-source-eyebrow（数据来源小字）
+- provinceHint（省份提示）
+- printProvince（打印标题）
+- disclaimerText（免责声明）
+- faqAnswer1 / faqAnswer5（FAQ回答）
+- footerText（页脚）
+- 新增 FAQ 项："不同省份的高考模式有何差异？"
+
+#### 13.4 江苏省数据 ✅
+- **数据规模**：53所高校 / 764专业 / 1137条记录（2023-2025）
+- **主数据源**：江苏省教育考试院 2023-2025 投档线 XLS（www.jseea.cn）
+- **关键挑战**：江苏投档表只公布分数不公布位次
+  - 解决方案：通过同年官方"一分一段表"反查 score→rank
+  - 位次补全率：97.9%（1113/1137）
+  - 24条未补全：顶尖高分段超出一分一段表公布范围
+- **数据可追溯**：每条记录可对应到省考试院 XLS 原始行
+
+#### 13.5 山东省数据 ✅
+- **数据规模**：64所高校 / 2198专业 / 5507条记录（2023-2025）
+- **主数据源 A**：山东省教育招生考试院 2023-2025 投档情况表 XLS（www.sdzk.cn）
+- **主数据源 B**：山东一分一段表 XLS
+  - 山东投档表只有位次无分数（与江苏镜像），需 rank→score 反查
+- **选科规则**：6选3（不含"技术"，与浙江 7选3 的关键差异）
+
+#### 13.6 老高考接口预留 ✅
+- PROVINCE_CONFIG 中预留 `examMode: "old"` 配置位
+- 待后续补充老高考省份（四川/河南/安徽等约17省）数据后启用
+
+### 端到端测试 ✅
+测试脚本：`data/raw/test_multi_province.js`（Node.js）
+测试用例：选科均为物化生，rank 分别为 15000/30000/50000
+
+| 省份 | 模式 | 学校/专业/记录 | 测试位次 | 冲/稳/保 | 位次单调性 |
+|------|------|---------------|----------|---------|-----------|
+| 浙江 | 3+3 | 83/2358/5927 | 15000 | 29/13/41 | ✅ |
+| 山东 | 3+3 | 64/2198/5507 | 30000 | 30/12/22 | ✅ |
+| 江苏 | 3+1+2 | 53/764/1137 | 50000 | 35/12/4 | ✅ |
+
+验证项：数据结构、字段完整性、选科匹配、推荐算法、位次单调性（冲<稳<保）全部通过。
+
+### 关键技术决策
+1. **配置驱动 vs if-else 分支**：选择 PROVINCE_CONFIG 集中配置，算法层零修改，扩展新省份只需加配置 + 数据文件
+2. **选科 UI 双模式**：free（checkbox 多选）/ layered（radio + checkbox 分层），由 electiveMode 字段驱动
+3. **位次反查策略**：
+   - 山东：投档表有 rank 无 score → 一分一段表 rank→score 反查
+   - 江苏：投档表有 score 无 rank → 一分一段表 score→rank 反查（镜像）
+4. **数据可追溯性**：DATA_SOURCES.md 完整记录每个 XLS 的发布机构、URL、下载时间、字段映射规则
+
+### 文件变更清单
+**新建**：
+- `js/province-config.js` — 核心架构文件，3省配置 + 全局函数
+- `data/jiangsu-data.json` — 江苏 53所/764专业/1137记录
+- `data/shandong-data.json` — 山东 64所/2198专业/5507记录
+- `data/raw/test_multi_province.js` — 端到端测试脚本（.gitignore 排除）
+
+**修改**：
+- `index.html` — 省份选择器启用、选科容器动态化、6处文案加 id、新增 FAQ 项
+- `js/app.js` — loadData 动态化、buildSubjectSelector/getSelectedSubjects 双模式、onProvinceChange/updateProvinceUI
+- `css/style.css` — 新增 .subject-group / .subject-group-label / .subject-selector-row 分层选科样式
+- `data/DATA_SOURCES.md` — 追加江苏、山东数据来源完整说明
+- `task_plan.md` — Phase 13 标记为 ✅ 完成
+
+### 当前状态
+- 多省份架构完成 ✅
+- 浙江/山东/江苏三省数据上线 ✅
+- 三种高考模式支持 ✅
+- 端到端测试通过 ✅
+- 数据来源 100% 官方可追溯 ✅
+- 待：GitHub Pages 开启部署
