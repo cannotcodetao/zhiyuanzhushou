@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>志愿智选 · 项目介绍</title>
+
+    <!-- ===========================================
+         Fonts: 思源黑体 Noto Sans SC (700 标题/数字) + 思源宋体 Noto Serif SC (400 正文)
+         Blue Professional CJK 配对 — Strategy A
+         =========================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===========================================
+           CSS CUSTOM PROPERTIES (Blue Professional · CJK)
+           奶油画布 #fdfae7 + 钴蓝主色 #1e2bfa
+           单一强调色系统：cobalt 承担所有 emphasis
+           =========================================== */
+        :root {
+            /* Colors */
+            --bg: #fdfae7;
+            --primary: #1e2bfa;
+            --text: #111111;
+            --text-muted: #6b6b6b;
+            --text-light: #9a9a9a;
+            --accent-light: rgba(30, 43, 250, 0.08);
+            --accent-medium: rgba(30, 43, 250, 0.15);
+            --border: rgba(30, 43, 250, 0.2);
+            --card-bg: rgba(30, 43, 250, 0.04);
+            --positive: #059669;
+            --negative: #dc2626;
+            --stage-bg: #fdfae7;
+            --slide-bg: #fdfae7;
+
+            /* Typography — 思源黑体 700 标题/数字, 思源宋体 400 正文 */
+            --font-display: 'Noto Sans SC', sans-serif;
+            --font-body: 'Noto Serif SC', serif;
+
+            /* Stage padding (translated from vw/vh to 1920×1080 px) */
+            --pad-slide-x: 76px;
+            --pad-slide-y-top: 67px;
+            --pad-slide-y-bottom: 92px;
+        }
+
+        /* === BASE RESET === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ===========================================
+           FIXED 16:9 STAGE: MANDATORY BASE STYLES
+           viewport-base.css 完整内容（不可裁剪）
+           =========================================== */
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+        .deck-viewport {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: var(--stage-bg, #000);
+        }
+        .deck-stage {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            transform-origin: 0 0;
+            background: var(--slide-bg, #fff);
+        }
+        .slide {
+            position: absolute;
+            inset: 0;
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            background: var(--slide-bg, #fff);
+        }
+        .slide.active, .slide.visible {
+            visibility: visible;
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 1;
+        }
+        img, video, canvas, svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .deck-controls {
+            position: fixed;
+            left: 50%;
+            bottom: 22px;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+        @media print {
+            html, body { width: 1920px; height: auto; overflow: visible; background: #fff; }
+            .deck-viewport { position: static; overflow: visible; background: #fff; }
+            .deck-stage { position: static; width: auto; height: auto; transform: none !important; background: none; }
+            .slide { position: relative; display: block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important; width: 1920px; height: 1080px; break-after: page; page-break-after: always; }
+            .slide:last-child { break-after: auto; page-break-after: auto; }
+            .deck-controls { display: none !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.2s !important; }
+        }
+
+        /* ===========================================
+           SLIDE TRANSITION (opacity + translateX 40px→0, 500ms ease)
+           未来幻灯片默认 +40px / 当前幻灯片 0 / 已看 -40px
+           =========================================== */
+        .slide {
+            transform: translateX(40px);
+            transition: opacity 500ms ease, transform 500ms ease, visibility 0s linear 500ms;
+        }
+        .slide.active,
+        .slide.visible {
+            transform: translateX(0);
+            transition: opacity 500ms ease, transform 500ms ease, visibility 0s;
+        }
+        .slide.prev {
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-40px);
+        }
+
+        /* ===========================================
+           TYPOGRAPHY (CJK 适配)
+           关键调整：letter-spacing 0 / 不用 uppercase / body line-height 1.75
+           标题用思源黑体 700（颜色 #111111 近黑，非钴蓝）
+           正文用思源宋体 400
+           数字用思源黑体 700 钴蓝色
+           =========================================== */
+        .eyebrow {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.1;
+            color: var(--primary);
+            letter-spacing: 0;
+            text-transform: none;
+        }
+        h2.slide-h2 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 52px;
+            line-height: 1.25;
+            color: var(--text);
+            letter-spacing: 0;
+            margin-top: 24px;
+            margin-bottom: 48px;
+        }
+        .meta-text {
+            font-family: var(--font-display);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.4;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+        }
+
+        /* ===========================================
+           PERSISTENT CHROME (固定到视口，不随舞台缩放)
+           左下角计数器 / 右下角导航按钮 / 底部进度条
+           =========================================== */
+        .slide-counter {
+            position: fixed;
+            left: 32px;
+            bottom: 28px;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            z-index: 1001;
+        }
+        .nav-controls {
+            position: fixed;
+            right: 32px;
+            bottom: 22px;
+            display: flex;
+            gap: 12px;
+            z-index: 1001;
+        }
+        .nav-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border);
+            background: var(--bg);
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 200ms ease, color 200ms ease, opacity 200ms ease;
+            font-family: var(--font-display);
+        }
+        .nav-btn:hover {
+            background: var(--primary);
+            color: var(--bg);
+        }
+        .progress-track {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background: transparent;
+            z-index: 1001;
+        }
+        .progress-bar {
+            height: 100%;
+            width: 0;
+            background: var(--primary);
+            transition: width 400ms ease;
+        }
+
+        /* ===========================================
+           SLIDE INNER PADDING + SLIDE-HEADER
+           =========================================== */
+        .slide-inner {
+            position: absolute;
+            inset: 0;
+            padding: var(--pad-slide-y-top) var(--pad-slide-x) var(--pad-slide-y-bottom);
+        }
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+        .tag-pill {
+            background: var(--accent-light);
+            color: var(--primary);
+            padding: 7px 18px;
+            border-radius: 100px;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+
+        /* ===========================================
+           COVER SLIDE (Slide 1)
+           右侧对角线裁切面板 + 左下 3×3 点阵 + 底部 meta
+           =========================================== */
+        .cover-decoration {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 60%;
+            height: 100%;
+            background: var(--accent-light);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .cover-dots {
+            position: absolute;
+            left: var(--pad-slide-x);
+            bottom: 140px;
+            display: grid;
+            grid-template-columns: repeat(3, 6px);
+            grid-template-rows: repeat(3, 6px);
+            gap: 12px;
+            opacity: 0.25;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .cover-dots span {
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: block;
+        }
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1180px;
+            padding-top: 80px;
+        }
+        .cover-eyebrow-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+        .cover-eyebrow-row .accent-line { margin-bottom: 0; }
+        .cover-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 168px;
+            color: var(--text);
+            line-height: 1.05;
+            letter-spacing: 0;
+            margin-bottom: 32px;
+        }
+        .cover-subtitle {
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 34px;
+            color: var(--text);
+            margin-bottom: 28px;
+            letter-spacing: 0;
+        }
+        .cover-positioning {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 22px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 820px;
+        }
+        .cover-meta {
+            position: absolute;
+            left: var(--pad-slide-x);
+            bottom: var(--pad-slide-y-bottom);
+            z-index: 2;
+        }
+
+        /* ===========================================
+           CARD GRID 3×2 (Slide 2) — card-tinted 6 张
+           钴蓝 4% 填充 + 1.5px 钴蓝 20% 边框 + 14px 圆角
+           =========================================== */
+        .card-grid-3x2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 24px;
+            height: calc(100% - 180px);
+        }
+        .card-tinted {
+            background: var(--card-bg);
+            border: 1.5px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 30px;
+            transition: background 200ms ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-tinted:hover { background: var(--accent-light); }
+        .card-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
+        }
+        .card-h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 1.3;
+            color: var(--text);
+            letter-spacing: 0;
+            margin-bottom: 14px;
+        }
+        .card-body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* ===========================================
+           SPLIT LAYOUT (Slide 3) — 1.05fr / 1fr
+           左侧 4 步流程 / 右侧 split-highlight-block
+           =========================================== */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 48px;
+            height: calc(100% - 180px);
+        }
+        .step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+        .step-item {
+            display: flex;
+            gap: 22px;
+            align-items: flex-start;
+        }
+        .step-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--bg);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        /* 步骤圆圈透明度递减：1.0 → 0.85 → 0.7 → 0.55 */
+        .step-item:nth-child(1) .step-circle { opacity: 1.0; }
+        .step-item:nth-child(2) .step-circle { opacity: 0.85; }
+        .step-item:nth-child(3) .step-circle { opacity: 0.7; }
+        .step-item:nth-child(4) .step-circle { opacity: 0.55; }
+        .step-content { flex: 1; padding-top: 4px; }
+        .step-title {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 22px;
+            color: var(--text);
+            margin-bottom: 8px;
+            line-height: 1.3;
+            letter-spacing: 0;
+        }
+        .step-desc {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+        .split-highlight-block {
+            background: var(--accent-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 40px 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 28px;
+        }
+        .split-highlight-big {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1.55;
+            color: var(--text);
+            letter-spacing: 0;
+        }
+        .ratio-chip {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .split-highlight-desc {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--text-muted);
+        }
+
+        /* ===========================================
+           METRIC GRID 4 (Slide 4) — 大数字钴蓝思源黑体 700
+           =========================================== */
+        .metric-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        .metric-card {
+            background: var(--card-bg);
+            border: 1.5px solid var(--border);
+            border-radius: 14px;
+            padding: 36px 28px;
+        }
+        .metric-value {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 72px;
+            line-height: 1;
+            color: var(--primary);
+            margin-bottom: 16px;
+            letter-spacing: 0;
+        }
+        .metric-label {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.3;
+            color: var(--text);
+            margin-bottom: 12px;
+            letter-spacing: 0;
+        }
+        .metric-desc {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--text-muted);
+        }
+
+        /* ===========================================
+           BELOW DESC CALLOUT (Slide 4 & 5)
+           钴蓝左竖线 + 8% 填充，与 split-highlight-block 同款
+           =========================================== */
+        .below-desc {
+            background: var(--accent-light);
+            border-left: 4px solid var(--primary);
+            border-radius: 12px;
+            padding: 24px 30px;
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--text);
+        }
+
+        /* ===========================================
+           3-COLUMN CONFIG CARDS (Slide 5)
+           =========================================== */
+        .cards-3col {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 36px;
+        }
+        .config-card {
+            background: var(--card-bg);
+            border: 1.5px solid var(--border);
+            border-radius: 14px;
+            padding: 32px 30px;
+        }
+        .config-tag {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--primary);
+            padding: 5px 14px;
+            border-radius: 100px;
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 13px;
+            margin-bottom: 18px;
+            letter-spacing: 0;
+        }
+        .config-h3 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 28px;
+            color: var(--text);
+            margin-bottom: 14px;
+            letter-spacing: 0;
+            line-height: 1.3;
+        }
+        .config-body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* ===========================================
+           DETAIL BLOCKS 2×2 (Slide 6)
+           =========================================== */
+        .detail-grid-2x2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 24px;
+            height: calc(100% - 180px);
+        }
+        .detail-block {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px 32px;
+        }
+        .detail-num {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary);
+            margin-bottom: 14px;
+            letter-spacing: 0.05em;
+        }
+        .detail-h3 {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 26px;
+            color: var(--text);
+            margin-bottom: 14px;
+            line-height: 1.3;
+            letter-spacing: 0;
+        }
+        .detail-body {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        /* ===========================================
+           CLOSING SLIDE (Slide 7)
+           居中布局 + 同心圆装饰 (500px / 360px)
+           =========================================== */
+        .closing-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .closing-circles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .closing-circle-outer {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            top: -250px;
+            left: -250px;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+        .closing-circle-inner {
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            top: -180px;
+            left: -180px;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
+        .closing-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            padding: 0 80px;
+        }
+        .closing-eyebrow {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 28px;
+            letter-spacing: 0;
+        }
+        .closing-title {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 96px;
+            color: var(--text);
+            line-height: 1.2;
+            margin-bottom: 28px;
+            letter-spacing: 0;
+        }
+        .closing-subtitle {
+            font-family: var(--font-display);
+            font-weight: 500;
+            font-size: 22px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            letter-spacing: 0;
+            word-break: break-all;
+        }
+        .closing-guide {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.75;
+            color: var(--text-muted);
+            margin-bottom: 44px;
+        }
+        .closing-cta-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: var(--bg);
+            padding: 16px 38px;
+            border-radius: 100px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            transition: transform 200ms ease, box-shadow 200ms ease;
+            letter-spacing: 0;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(30, 43, 250, 0.25);
+        }
+        .cta-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            color: var(--primary);
+            border: 1.5px solid var(--border);
+            padding: 16px 38px;
+            border-radius: 100px;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 17px;
+            text-decoration: none;
+            transition: background 200ms ease;
+            letter-spacing: 0;
+        }
+        .cta-outline:hover { background: var(--accent-light); }
+        .closing-meta {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: var(--font-display);
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="deck-viewport">
+        <main class="deck-stage" id="deckStage">
+
+            <!-- ========== Slide 1 · 封面 ========== -->
+            <section class="slide active visible">
+                <div class="cover-decoration"></div>
+                <div class="cover-dots">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+                <div class="slide-inner">
+                    <div class="cover-content">
+                        <div class="cover-eyebrow-row">
+                            <div class="accent-line"></div>
+                            <span class="eyebrow">志愿填报 · 智能规划</span>
+                        </div>
+                        <h1 class="cover-title">志愿智选</h1>
+                        <div class="cover-subtitle">高考志愿智能规划系统</div>
+                        <p class="cover-positioning">基于官方数据 · 配置驱动 · 覆盖全国 31 省</p>
+                    </div>
+                </div>
+                <div class="cover-meta">
+                    <span class="meta-text">2026 · v1.0 · 开源项目</span>
+                </div>
+            </section>
+
+            <!-- ========== Slide 2 · 六大核心功能 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">核心能力</span>
+                        <span class="tag-pill">6 大功能</span>
+                    </div>
+                    <h2 class="slide-h2">为志愿填报而生的完整工具链</h2>
+                    <div class="card-grid-3x2">
+                        <div class="card-tinted">
+                            <div class="card-num">01</div>
+                            <h3 class="card-h3">智能推荐</h3>
+                            <p class="card-body">位次法计算录取概率，自动分配冲 3 / 稳 5 / 保 3 三档。</p>
+                        </div>
+                        <div class="card-tinted">
+                            <div class="card-num">02</div>
+                            <h3 class="card-h3">展开专业</h3>
+                            <p class="card-body">点击大学查看历史能上的所有专业，近 3 年合并去重。</p>
+                        </div>
+                        <div class="card-tinted">
+                            <div class="card-num">03</div>
+                            <h3 class="card-h3">专业建议</h3>
+                            <p class="card-body">政策导向 / 就业导向 / 兴趣导向三方向推荐。</p>
+                        </div>
+                        <div class="card-tinted">
+                            <div class="card-num">04</div>
+                            <h3 class="card-h3">单科优势分析</h3>
+                            <p class="card-body">得分率法横向比较各科，识别优势学科。</p>
+                        </div>
+                        <div class="card-tinted">
+                            <div class="card-num">05</div>
+                            <h3 class="card-h3">兴趣导向</h3>
+                            <p class="card-body">10 个兴趣方向芯片，优先推荐匹配专业。</p>
+                        </div>
+                        <div class="card-tinted">
+                            <div class="card-num">06</div>
+                            <h3 class="card-h3">志愿表管理</h3>
+                            <p class="card-body">一键加入志愿表，支持打印导出 PDF。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 3 · 位次法推荐引擎 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">推荐算法</span>
+                        <span class="tag-pill">位次法</span>
+                    </div>
+                    <h2 class="slide-h2">基于位次的科学推荐</h2>
+                    <div class="split-layout">
+                        <div class="step-list">
+                            <div class="step-item">
+                                <div class="step-circle">1</div>
+                                <div class="step-content">
+                                    <div class="step-title">收集候选</div>
+                                    <p class="step-desc">筛选选科匹配 + 近 3 年有录取数据的专业。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">2</div>
+                                <div class="step-content">
+                                    <div class="step-title">加权位次</div>
+                                    <p class="step-desc">按年份权重计算平均位次（最近年份权重高）。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">3</div>
+                                <div class="step-content">
+                                    <div class="step-title">概率计算</div>
+                                    <p class="step-desc">ratio = 专业位次 / 学生位次，越小越难考。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">4</div>
+                                <div class="step-content">
+                                    <div class="step-title">冲稳保分配</div>
+                                    <p class="step-desc">滑动窗口找最接近学生位次的 5 所做稳妥，上下各取 3 所做冲保。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="split-highlight-block">
+                            <div class="split-highlight-big">
+                                <span class="ratio-chip">ratio &lt; 0.9</span>　冲刺<br>
+                                <span class="ratio-chip">0.9 – 1.2</span>　稳妥<br>
+                                <span class="ratio-chip">≥ 1.2</span>　保底
+                            </div>
+                            <p class="split-highlight-desc">位次法是各省考试院官方投档依据，比分数法更精确（同分不同年份位次差很大）。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 4 · 全国 31 省官方数据 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">数据规模</span>
+                        <span class="tag-pill">100% 官方</span>
+                    </div>
+                    <h2 class="slide-h2">覆盖全国 31 省高考数据</h2>
+                    <div class="metric-grid-4">
+                        <div class="metric-card">
+                            <div class="metric-value">31</div>
+                            <div class="metric-label">省</div>
+                            <p class="metric-desc">6 省 3+3 / 23 省 3+1+2 / 2 省老高考</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">~1100</div>
+                            <div class="metric-label">所高校</div>
+                            <p class="metric-desc">本科 + 专科全覆盖</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">~38000</div>
+                            <div class="metric-label">专业</div>
+                            <p class="metric-desc">各校各专业方向全量收录</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-value">~96000</div>
+                            <div class="metric-label">条录取记录</div>
+                            <p class="metric-desc">近 3 年投档线 / 位次 / 选科要求</p>
+                        </div>
+                    </div>
+                    <div class="below-desc">
+                        数据来源 100% 官方可追溯，每条记录可对应到省考试院原始 XLS。湖南等省份通过一分一段表反查补全位次数据。
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 5 · 配置驱动架构 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">技术架构</span>
+                        <span class="tag-pill">配置驱动</span>
+                    </div>
+                    <h2 class="slide-h2">三种高考模式统一支持</h2>
+                    <div class="cards-3col">
+                        <div class="config-card">
+                            <span class="config-tag">3+3 模式 · free</span>
+                            <h3 class="config-h3">6 省</h3>
+                            <p class="config-body">checkbox 多选 3 门。浙江 7 选 3 / 山东 6 选 3 / 上海 6 选 3（总分 660）/ 海南 6 选 3（总分 900）。</p>
+                        </div>
+                        <div class="config-card">
+                            <span class="config-tag">3+1+2 模式 · layered</span>
+                            <h3 class="config-h3">23 省</h3>
+                            <p class="config-body">radio 首选物理 / 历史 + checkbox 再选 2 门。第三批 8 省（2021 起）/ 第四批 7 省（2024 起）/ 第五批 8 省（2025 首届）。</p>
+                        </div>
+                        <div class="config-card">
+                            <span class="config-tag">老高考 · old</span>
+                            <h3 class="config-h3">2 省</h3>
+                            <p class="config-body">新疆 / 西藏，radio 选文科 / 理科，文综 / 理综 300 分。</p>
+                        </div>
+                    </div>
+                    <div class="below-desc">
+                        通过 province-config.js 集中配置 31 省，算法层零修改，扩展新省份只需加配置 + 数据文件。
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 6 · 为信任而设计 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">产品优势</span>
+                        <span class="tag-pill">4 大保障</span>
+                    </div>
+                    <h2 class="slide-h2">每一个数字都可追溯</h2>
+                    <div class="detail-grid-2x2">
+                        <div class="detail-block">
+                            <div class="detail-num">01</div>
+                            <h3 class="detail-h3">官方数据第一</h3>
+                            <p class="detail-body">数据来源 100% 官方可追溯，每条记录可回溯到省考试院 XLS 原始行。</p>
+                        </div>
+                        <div class="detail-block">
+                            <div class="detail-num">02</div>
+                            <h3 class="detail-h3">Blue Professional 设计</h3>
+                            <p class="detail-body">咨询级专业感，奶油画布 + 钴蓝主色，印刷品级视觉。</p>
+                        </div>
+                        <div class="detail-block">
+                            <div class="detail-num">03</div>
+                            <h3 class="detail-h3">零依赖纯前端</h3>
+                            <p class="detail-body">单 HTML 文件，无需后端，GitHub Pages 一键部署。</p>
+                        </div>
+                        <div class="detail-block">
+                            <div class="detail-num">04</div>
+                            <h3 class="detail-h3">端到端验证</h3>
+                            <p class="detail-body">31 省数据完整性 + 配置一致性 + 代码适配 + HTML 结构四层验证。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 7 · 开始你的志愿规划（结尾页） ========== -->
+            <section class="slide closing-slide">
+                <div class="closing-circles">
+                    <div class="closing-circle-outer"></div>
+                    <div class="closing-circle-inner"></div>
+                </div>
+                <div class="closing-content">
+                    <div class="closing-eyebrow">开源 · 免费 · 即用</div>
+                    <h1 class="closing-title">开始你的志愿规划</h1>
+                    <div class="closing-subtitle">https://github.com/cannotcodetao/zhiyuanzhushou</div>
+                    <p class="closing-guide">如果这个项目对你有帮助，欢迎在 GitHub 点个 Star ⭐，让更多考生看到。</p>
+                    <div class="closing-cta-row">
+                        <a href="index.html" class="cta-button">立即体验</a>
+                        <a href="https://github.com/cannotcodetao/zhiyuanzhushou" class="cta-outline">查看仓库</a>
+                    </div>
+                </div>
+                <div class="closing-meta">MIT License · 2026 · made with ❤️ for 高考志愿</div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ===========================================
+         持久 CHROME（固定到视口，不随舞台缩放）
+         左下：幻灯片计数器  /  右下：圆形导航按钮  /  底部：进度条
+         =========================================== -->
+    <div class="slide-counter">01 / 07</div>
+    <div class="nav-controls">
+        <button class="nav-btn nav-prev" aria-label="上一张">←</button>
+        <button class="nav-btn nav-next" aria-label="下一张">→</button>
+    </div>
+    <div class="progress-track">
+        <div class="progress-bar"></div>
+    </div>
+
+    <script>
+        /* ===========================================
+           SLIDE PRESENTATION CONTROLLER
+           键盘箭头 / 空格 / PageUp-Down 切换 + 触摸滑动 + 舞台等比缩放
+           =========================================== */
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.current = 0;
+                this.total = this.slides.length;
+                this.stage = document.querySelector('.deck-stage');
+                this.counter = document.querySelector('.slide-counter');
+                this.progressBar = document.querySelector('.progress-bar');
+                this.prevBtn = document.querySelector('.nav-prev');
+                this.nextBtn = document.querySelector('.nav-next');
+                this.init();
+            }
+            init() {
+                this.scaleStage();
+                this.goTo(0);
+                window.addEventListener('resize', () => this.scaleStage());
+                document.addEventListener('keydown', (e) => this.handleKey(e));
+                this.prevBtn?.addEventListener('click', () => this.prev());
+                this.nextBtn?.addEventListener('click', () => this.next());
+                // 触摸滑动
+                let touchStartX = 0;
+                document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+                document.addEventListener('touchend', (e) => {
+                    const dx = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(dx) > 50) { dx < 0 ? this.next() : this.prev(); }
+                });
+            }
+            scaleStage() {
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                const scale = Math.min(vw / 1920, vh / 1080);
+                this.stage.style.transform = `translate(${(vw - 1920 * scale) / 2}px, ${(vh - 1080 * scale) / 2}px) scale(${scale})`;
+            }
+            goTo(index) {
+                if (index < 0 || index >= this.total) return;
+                this.slides.forEach((s, i) => {
+                    s.classList.remove('active', 'visible', 'prev');
+                    if (i === index) s.classList.add('active', 'visible');
+                    else if (i < index) s.classList.add('prev');
+                });
+                this.current = index;
+                this.updateChrome();
+            }
+            next() { this.goTo(this.current + 1); }
+            prev() { this.goTo(this.current - 1); }
+            handleKey(e) {
+                if (['ArrowRight', 'Space', 'PageDown'].includes(e.code)) { e.preventDefault(); this.next(); }
+                else if (['ArrowLeft', 'PageUp'].includes(e.code)) { e.preventDefault(); this.prev(); }
+                else if (e.code === 'Home') { this.goTo(0); }
+                else if (e.code === 'End') { this.goTo(this.total - 1); }
+            }
+            updateChrome() {
+                if (this.counter) this.counter.textContent = `${String(this.current + 1).padStart(2, '0')} / ${String(this.total).padStart(2, '0')}`;
+                if (this.progressBar) this.progressBar.style.width = `${((this.current + 1) / this.total) * 100}%`;
+                if (this.prevBtn) this.prevBtn.style.opacity = this.current === 0 ? '0.3' : '1';
+                if (this.nextBtn) this.nextBtn.style.opacity = this.current === this.total - 1 ? '0.3' : '1';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => new SlidePresentation());
+    </script>
+</body>
+</html>

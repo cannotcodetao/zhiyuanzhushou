@@ -4,6 +4,13 @@ data/raw/
 # ===== 数据备份 =====
 data/zhejiang-data-mock-backup.json
 
+# ===== 测试脚本（本地验证用，不上传仓库）=====
+data/e2e_test.js
+data/config_validate.js
+data/test_expand_majors.js
+data/quick_check.py
+data/validate_data.py
+
 # ===== Python =====
 __pycache__/
 *.py[cod]
