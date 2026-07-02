@@ -10,6 +10,16 @@ data/config_validate.js
 data/test_expand_majors.js
 data/quick_check.py
 data/validate_data.py
+data/demo_flow.js
+data/verify_intro.js
+
+# ===== 演示截图（本地验证用）=====
+data/screenshots/
+
+# ===== Node.js 依赖（Playwright 等本地工具）=====
+node_modules/
+package.json
+package-lock.json
 
 # ===== Python =====
 __pycache__/

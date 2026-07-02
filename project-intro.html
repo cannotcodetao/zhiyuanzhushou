@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>志愿智选 · 项目介绍</title>
+    <title>志愿填报助手 · 项目介绍</title>
 
     <!-- ===========================================
          Fonts: 思源黑体 Noto Sans SC (700 标题/数字) + 思源宋体 Noto Serif SC (400 正文)
@@ -342,7 +342,7 @@
         }
 
         /* ===========================================
-           CARD GRID 3×2 (Slide 2) — card-tinted 6 张
+           CARD GRID 3×2 — card-tinted 卡片样式
            钴蓝 4% 填充 + 1.5px 钴蓝 20% 边框 + 14px 圆角
            =========================================== */
         .card-grid-3x2 {
@@ -388,8 +388,8 @@
         }
 
         /* ===========================================
-           SPLIT LAYOUT (Slide 3) — 1.05fr / 1fr
-           左侧 4 步流程 / 右侧 split-highlight-block
+           SPLIT LAYOUT — 1.05fr / 1fr
+           左侧 step-list 流程 / 右侧 split-highlight-block
            =========================================== */
         .split-layout {
             display: grid;
@@ -475,7 +475,7 @@
         }
 
         /* ===========================================
-           METRIC GRID 4 (Slide 4) — 大数字钴蓝思源黑体 700
+           METRIC GRID 4 — 大数字钴蓝思源黑体 700
            =========================================== */
         .metric-grid-4 {
             display: grid;
@@ -516,7 +516,7 @@
         }
 
         /* ===========================================
-           BELOW DESC CALLOUT (Slide 4 & 5)
+           BELOW DESC CALLOUT
            钴蓝左竖线 + 8% 填充，与 split-highlight-block 同款
            =========================================== */
         .below-desc {
@@ -532,7 +532,7 @@
         }
 
         /* ===========================================
-           3-COLUMN CONFIG CARDS (Slide 5)
+           3-COLUMN CONFIG CARDS (cards-3col)
            =========================================== */
         .cards-3col {
             display: grid;
@@ -576,7 +576,7 @@
         }
 
         /* ===========================================
-           DETAIL BLOCKS 2×2 (Slide 6)
+           DETAIL BLOCKS 2×2 (detail-grid-2x2)
            =========================================== */
         .detail-grid-2x2 {
             display: grid;
@@ -617,7 +617,7 @@
         }
 
         /* ===========================================
-           CLOSING SLIDE (Slide 7)
+           CLOSING SLIDE
            居中布局 + 同心圆装饰 (500px / 360px)
            =========================================== */
         .closing-slide {
@@ -767,8 +767,8 @@
                             <div class="accent-line"></div>
                             <span class="eyebrow">志愿填报 · 智能规划</span>
                         </div>
-                        <h1 class="cover-title">志愿智选</h1>
-                        <div class="cover-subtitle">高考志愿智能规划系统</div>
+                        <h1 class="cover-title">志愿填报助手</h1>
+                        <div class="cover-subtitle">全国 31 省高考志愿智能规划工具</div>
                         <p class="cover-positioning">基于官方数据 · 配置驱动 · 覆盖全国 31 省</p>
                     </div>
                 </div>
@@ -777,50 +777,189 @@
                 </div>
             </section>
 
-            <!-- ========== Slide 2 · 六大核心功能 ========== -->
+            <!-- ========== Slide 2 · 展开专业 ========== -->
             <section class="slide">
                 <div class="slide-inner">
                     <div class="slide-header">
-                        <span class="eyebrow">核心能力</span>
-                        <span class="tag-pill">6 大功能</span>
+                        <span class="eyebrow">功能详解 · 1/5</span>
+                        <span class="tag-pill">展开专业</span>
                     </div>
-                    <h2 class="slide-h2">为志愿填报而生的完整工具链</h2>
-                    <div class="card-grid-3x2">
-                        <div class="card-tinted">
-                            <div class="card-num">01</div>
-                            <h3 class="card-h3">智能推荐</h3>
-                            <p class="card-body">位次法计算录取概率，自动分配冲 3 / 稳 5 / 保 3 三档。</p>
+                    <h2 class="slide-h2">点击大学，查看历史能上的所有专业</h2>
+                    <div class="split-layout">
+                        <div class="step-list">
+                            <div class="step-item">
+                                <div class="step-circle">1</div>
+                                <div class="step-content">
+                                    <div class="step-title">位次法筛选</div>
+                                    <p class="step-desc">用户位次 ≤ 专业 min_rank 即「能上」，与推荐算法一致。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">2</div>
+                                <div class="step-content">
+                                    <div class="step-title">选科匹配</div>
+                                    <p class="step-desc">复用现有选科器，仅显示选科匹配的专业。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">3</div>
+                                <div class="step-content">
+                                    <div class="step-title">近 3 年合并去重</div>
+                                    <p class="step-desc">任一年能上即显示该专业，标注可报年份徽章。</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-tinted">
-                            <div class="card-num">02</div>
-                            <h3 class="card-h3">展开专业</h3>
-                            <p class="card-body">点击大学查看历史能上的所有专业，近 3 年合并去重。</p>
-                        </div>
-                        <div class="card-tinted">
-                            <div class="card-num">03</div>
-                            <h3 class="card-h3">专业建议</h3>
-                            <p class="card-body">政策导向 / 就业导向 / 兴趣导向三方向推荐。</p>
-                        </div>
-                        <div class="card-tinted">
-                            <div class="card-num">04</div>
-                            <h3 class="card-h3">单科优势分析</h3>
-                            <p class="card-body">得分率法横向比较各科，识别优势学科。</p>
-                        </div>
-                        <div class="card-tinted">
-                            <div class="card-num">05</div>
-                            <h3 class="card-h3">兴趣导向</h3>
-                            <p class="card-body">10 个兴趣方向芯片，优先推荐匹配专业。</p>
-                        </div>
-                        <div class="card-tinted">
-                            <div class="card-num">06</div>
-                            <h3 class="card-h3">志愿表管理</h3>
-                            <p class="card-body">一键加入志愿表，支持打印导出 PDF。</p>
+                        <div class="split-highlight-block">
+                            <div class="split-highlight-big">每位考生都能看到完整的专业选择空间</div>
+                            <p class="split-highlight-desc">在推荐结果的冲/稳/保卡片上，点击「展开专业」按钮即可查看该大学所有位次达标 + 选科匹配的专业列表。每个专业显示近 3 年录取分数 / 位次 / 选科要求 / 可报年份。</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- ========== Slide 3 · 位次法推荐引擎 ========== -->
+            <!-- ========== Slide 3 · 单科优势分析 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">功能详解 · 2/5</span>
+                        <span class="tag-pill">单科优势</span>
+                    </div>
+                    <h2 class="slide-h2">基于得分率横向比较各科</h2>
+                    <div class="split-layout">
+                        <div class="step-list">
+                            <div class="step-item">
+                                <div class="step-circle">1</div>
+                                <div class="step-content">
+                                    <div class="step-title">得分率法</div>
+                                    <p class="step-desc">各科分数 ÷ 满分，实现不同满分科目横向比较（语数英 150 / 选考 100）。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">2</div>
+                                <div class="step-content">
+                                    <div class="step-title">优势识别</div>
+                                    <p class="step-desc">高于平均分 +5% 为优势学科，低于 -5% 为薄弱学科。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">3</div>
+                                <div class="step-content">
+                                    <div class="step-title">针对性推荐</div>
+                                    <p class="step-desc">10 门学科各对应 4 个优势专业方向 + 风险专业提示。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="split-highlight-block">
+                            <div class="split-highlight-big">让强项真正发挥价值</div>
+                            <p class="split-highlight-desc">输入各科成绩，系统自动识别优势学科和薄弱学科。例如物理得分率 85% 被识别为优势 → 推荐工科/物理类方向；历史得分率 62% 被识别为薄弱 → 提示避免历史学等相关专业。少于 2 科不触发分析（优雅降级），各科均衡时不强加推荐。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 4 · 专业建议原理 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">功能详解 · 3/5</span>
+                        <span class="tag-pill">三方向建议</span>
+                    </div>
+                    <h2 class="slide-h2">政策 / 就业 / 兴趣三方向专业建议</h2>
+                    <div class="cards-3col">
+                        <div class="config-card">
+                            <span class="config-tag">教育部权威</span>
+                            <h3 class="config-h3">政策导向</h3>
+                            <p class="config-body">基于教育部《本科专业目录（2025/2026 年）》、国家战略性新兴产业 9 大方向、工信部直属高校 2026 年新增 74 个专业（低空经济 / 具身智能 / 量子信息 / 集成电路等）。根据用户选科自动匹配可报专业。</p>
+                        </div>
+                        <div class="config-card">
+                            <span class="config-tag">麦可思报告</span>
+                            <h3 class="config-h3">就业导向</h3>
+                            <p class="config-body">基于麦可思《2025 年中国本科生就业报告》。绿牌 6 个（电气 / 微电子 / 机械电子 / 新能源 / 车辆 / 机器人），红牌 5 个（公共事业管理 / 音乐表演 / 绘画 / 法学 / 美术学），高薪 Top10（微电子 7814 元 / 电子科学 7752 / 自动化 7573 等）。</p>
+                        </div>
+                        <div class="config-card">
+                            <span class="config-tag">霍兰德理论</span>
+                            <h3 class="config-h3">兴趣导向</h3>
+                            <p class="config-body">基于选科组合推导兴趣倾向（霍兰德职业兴趣理论 + 教育部学科认知）。物化生 → 医学 / 科研，物化地 → 工科，物化技 → 信息技术等 10 条选科组合兴趣方向。用户也可主动选择 10 个兴趣方向芯片。</p>
+                        </div>
+                    </div>
+                    <div class="below-desc">
+                        三方向建议互补而非互斥。政策导向看未来趋势，就业导向看现实回报，兴趣导向看个人适配。系统综合三者给出立体化的专业推荐。
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 5 · 兴趣导向推荐 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">功能详解 · 4/5</span>
+                        <span class="tag-pill">兴趣导向</span>
+                    </div>
+                    <h2 class="slide-h2">让兴趣成为选专业的第一驱动</h2>
+                    <div class="split-layout">
+                        <div class="step-list">
+                            <div class="step-item">
+                                <div class="step-circle">1</div>
+                                <div class="step-content">
+                                    <div class="step-title">主动选择优先</div>
+                                    <p class="step-desc">用户可从 10 个兴趣方向芯片中选择（IT / 医学 / 金融 / 教育 / 设计 / 机械 / 法律 / 经管 / 材料 / 传媒）。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">2</div>
+                                <div class="step-content">
+                                    <div class="step-title">选科推导 fallback</div>
+                                    <p class="step-desc">未选择时，基于选科组合智能推导（霍兰德职业兴趣理论）。</p>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-circle">3</div>
+                                <div class="step-content">
+                                    <div class="step-title">优先级推荐</div>
+                                    <p class="step-desc">系统优先推荐匹配用户兴趣的专业，未匹配专业不被过滤但靠后展示。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="split-highlight-block">
+                            <div class="split-highlight-big">兴趣是坚持的动力</div>
+                            <p class="split-highlight-desc">10 个兴趣方向覆盖主要职业领域。用户主动选择时系统优先推荐匹配专业；未选择时 fallback 到基于选科组合的智能推导。例如选科物化生 → 推导兴趣方向为医学 / 科研 / 工程。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 6 · 志愿表管理 ========== -->
+            <section class="slide">
+                <div class="slide-inner">
+                    <div class="slide-header">
+                        <span class="eyebrow">功能详解 · 5/5</span>
+                        <span class="tag-pill">志愿表</span>
+                    </div>
+                    <h2 class="slide-h2">一键管理你的志愿清单</h2>
+                    <div class="cards-3col">
+                        <div class="config-card">
+                            <span class="config-tag">快速操作</span>
+                            <h3 class="config-h3">一键加入</h3>
+                            <p class="config-body">在推荐结果的每个专业卡片上，点击「加入志愿表」按钮即可加入。已加入的显示「已加入志愿表」状态，可重复点击切换。</p>
+                        </div>
+                        <div class="config-card">
+                            <span class="config-tag">集中管理</span>
+                            <h3 class="config-h3">志愿表查看</h3>
+                            <p class="config-body">所有加入的专业集中展示在志愿表面板，按加入顺序排列。每个志愿显示学校名 / 专业名 / 录取概率 / 推荐档位（冲 / 稳 / 保）。</p>
+                        </div>
+                        <div class="config-card">
+                            <span class="config-tag">PDF 导出</span>
+                            <h3 class="config-h3">打印导出</h3>
+                            <p class="config-body">浏览器原生打印功能，支持导出 PDF。打印样式已优化，去除交互元素，保留核心信息（学校 / 专业 / 概率 / 理由），适合家长会商和线下参考。</p>
+                        </div>
+                    </div>
+                    <div class="below-desc">
+                        志愿表数据仅保存在本地浏览器，不上传任何服务器，保护考生隐私。关闭浏览器后志愿表清空，建议打印或导出 PDF 保存。
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========== Slide 7 · 位次法推荐引擎 ========== -->
             <section class="slide">
                 <div class="slide-inner">
                     <div class="slide-header">
@@ -871,7 +1010,7 @@
                 </div>
             </section>
 
-            <!-- ========== Slide 4 · 全国 31 省官方数据 ========== -->
+            <!-- ========== Slide 8 · 全国 31 省官方数据 ========== -->
             <section class="slide">
                 <div class="slide-inner">
                     <div class="slide-header">
@@ -907,7 +1046,7 @@
                 </div>
             </section>
 
-            <!-- ========== Slide 5 · 配置驱动架构 ========== -->
+            <!-- ========== Slide 9 · 配置驱动架构 ========== -->
             <section class="slide">
                 <div class="slide-inner">
                     <div class="slide-header">
@@ -938,7 +1077,7 @@
                 </div>
             </section>
 
-            <!-- ========== Slide 6 · 为信任而设计 ========== -->
+            <!-- ========== Slide 10 · 为信任而设计 ========== -->
             <section class="slide">
                 <div class="slide-inner">
                     <div class="slide-header">
@@ -971,7 +1110,7 @@
                 </div>
             </section>
 
-            <!-- ========== Slide 7 · 开始你的志愿规划（结尾页） ========== -->
+            <!-- ========== Slide 11 · 开始你的志愿规划（结尾页） ========== -->
             <section class="slide closing-slide">
                 <div class="closing-circles">
                     <div class="closing-circle-outer"></div>
@@ -981,7 +1120,7 @@
                     <div class="closing-eyebrow">开源 · 免费 · 即用</div>
                     <h1 class="closing-title">开始你的志愿规划</h1>
                     <div class="closing-subtitle">https://github.com/cannotcodetao/zhiyuanzhushou</div>
-                    <p class="closing-guide">如果这个项目对你有帮助，欢迎在 GitHub 点个 Star ⭐，让更多考生看到。</p>
+                    <p class="closing-guide">如果这个项目对你有帮助，欢迎在 GitHub 点个 Star ⭐，让更多考生看到</p>
                     <div class="closing-cta-row">
                         <a href="index.html" class="cta-button">立即体验</a>
                         <a href="https://github.com/cannotcodetao/zhiyuanzhushou" class="cta-outline">查看仓库</a>
@@ -997,7 +1136,7 @@
          持久 CHROME（固定到视口，不随舞台缩放）
          左下：幻灯片计数器  /  右下：圆形导航按钮  /  底部：进度条
          =========================================== -->
-    <div class="slide-counter">01 / 07</div>
+    <div class="slide-counter">01 / 11</div>
     <div class="nav-controls">
         <button class="nav-btn nav-prev" aria-label="上一张">←</button>
         <button class="nav-btn nav-next" aria-label="下一张">→</button>
@@ -1010,6 +1149,7 @@
         /* ===========================================
            SLIDE PRESENTATION CONTROLLER
            键盘箭头 / 空格 / PageUp-Down 切换 + 触摸滑动 + 舞台等比缩放
+           total 自动从 DOM 计算，无需硬编码
            =========================================== */
         class SlidePresentation {
             constructor() {
