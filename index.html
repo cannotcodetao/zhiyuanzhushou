@@ -35,9 +35,49 @@
                     <div class="form-group">
                         <label for="province">省份 <span class="required">*</span></label>
                         <select id="province">
-                            <option value="浙江" selected>浙江（新高考3+3）</option>
-                            <option value="山东">山东（新高考3+3）</option>
-                            <option value="江苏">江苏（新高考3+1+2）</option>
+                            <optgroup label="第一批 新高考3+3（2017起）">
+                                <option value="浙江" selected>浙江（3+3 · 7选3）</option>
+                                <option value="上海">上海（3+3 · 6选3 · 总分660）</option>
+                            </optgroup>
+                            <optgroup label="第二批 新高考3+3（2020起）">
+                                <option value="北京">北京（3+3 · 6选3）</option>
+                                <option value="天津">天津（3+3 · 6选3）</option>
+                                <option value="山东">山东（3+3 · 6选3）</option>
+                                <option value="海南">海南（3+3 · 6选3 · 总分900）</option>
+                            </optgroup>
+                            <optgroup label="第三批 新高考3+1+2（2021起）">
+                                <option value="河北">河北（3+1+2）</option>
+                                <option value="辽宁">辽宁（3+1+2）</option>
+                                <option value="江苏">江苏（3+1+2）</option>
+                                <option value="福建">福建（3+1+2）</option>
+                                <option value="湖北">湖北（3+1+2）</option>
+                                <option value="湖南">湖南（3+1+2）</option>
+                                <option value="广东">广东（3+1+2）</option>
+                                <option value="重庆">重庆（3+1+2）</option>
+                            </optgroup>
+                            <optgroup label="第四批 新高考3+1+2（2024首届）">
+                                <option value="安徽">安徽（3+1+2）</option>
+                                <option value="江西">江西（3+1+2）</option>
+                                <option value="广西">广西（3+1+2）</option>
+                                <option value="吉林">吉林（3+1+2）</option>
+                                <option value="黑龙江">黑龙江（3+1+2）</option>
+                                <option value="甘肃">甘肃（3+1+2）</option>
+                                <option value="贵州">贵州（3+1+2）</option>
+                            </optgroup>
+                            <optgroup label="第五批 新高考3+1+2（2025首届）">
+                                <option value="河南">河南（3+1+2）</option>
+                                <option value="四川">四川（3+1+2）</option>
+                                <option value="山西">山西（3+1+2）</option>
+                                <option value="陕西">陕西（3+1+2）</option>
+                                <option value="云南">云南（3+1+2）</option>
+                                <option value="内蒙古">内蒙古（3+1+2）</option>
+                                <option value="宁夏">宁夏（3+1+2）</option>
+                                <option value="青海">青海（3+1+2）</option>
+                            </optgroup>
+                            <optgroup label="老高考 文理分科">
+                                <option value="新疆">新疆（文理分科）</option>
+                                <option value="西藏">西藏（文理分科）</option>
+                            </optgroup>
                         </select>
                         <small class="hint" id="provinceHint">浙江：7选3（物化生史地政技）</small>
                     </div>
@@ -159,7 +199,7 @@
         <section id="resultSection" class="section" style="display:none;">
             <!-- 考生信息摘要（打印时显示） -->
             <div class="student-summary print-only">
-                <p><strong>省份：</strong>浙江</p>
+                <p><strong>省份：</strong><span id="printProvince">浙江</span></p>
                 <p><strong>总分：</strong><span id="printScore"></span></p>
                 <p><strong>位次：</strong><span id="printRank"></span></p>
                 <p><strong>选科：</strong><span id="printSubjects"></span></p>
@@ -252,7 +292,7 @@
 
             <!-- 免责声明 -->
             <div class="disclaimer">
-                <p>⚠️ 免责声明：本推荐方案基于浙江省教育考试院官方发布的2023-2025年投档分数线数据，通过位次法算法生成。仅供参考，不构成最终填报建议。实际录取结果受当年招生计划、报考人数等多种因素影响。请考生结合自身情况，参考浙江省教育考试院（www.zjzs.net）官方信息进行填报决策。</p>
+                <p id="disclaimerText">⚠️ 免责声明：本推荐方案基于各省教育考试院官方发布的投档分数线数据，通过位次法算法生成。仅供参考，不构成最终填报建议。实际录取结果受当年招生计划、报考人数等多种因素影响。请考生结合自身情况，参考各省教育考试院官方信息进行填报决策。</p>
             </div>
         </section>
 
@@ -282,7 +322,7 @@
                 </details>
                 <details class="faq-item">
                     <summary>不同省份的高考模式有何差异？</summary>
-                    <p>本系统支持三种高考模式：①新高考3+3（如浙江、山东）：语数英+选考3门自由组合；②新高考3+1+2（如江苏）：语数英+首选物理/历史+再选化生政地4选2；③老高考文理分科（规划中）。切换省份后，选科规则、数据、批次会自动适配。</p>
+                    <p>本系统已覆盖全国31个高考省份，支持三种高考模式：①新高考3+3（如浙江、上海、北京、天津、山东、海南）：语数英+选考3门自由组合；②新高考3+1+2（如江苏、河北、广东等23省）：语数英+首选物理/历史+再选化生政地4选2；③老高考文理分科（新疆、西藏）。切换省份后，选科规则、数据、批次会自动适配。上海总分660、海南总分900（标准分）。</p>
                 </details>
                 <details class="faq-item">
                     <summary>如何导出PDF方案？</summary>
@@ -295,7 +335,7 @@
     <!-- 页脚 -->
     <footer class="site-footer no-print">
         <div class="container">
-            <p>志愿智选 © 2026 | 仅供参考，不构成填报建议 | 数据来源：浙江省教育考试院官方数据（2023-2025）</p>
+            <p id="footerText">志愿智选 © 2026 | 仅供参考，不构成填报建议 | 数据来源：各省教育考试院官方数据</p>
         </div>
     </footer>
 

@@ -110,6 +110,21 @@ function buildSubjectSelector() {
         });
         secondGroup.appendChild(secondContainer);
         container.appendChild(secondGroup);
+    } else if (config.electiveMode === 'old') {
+        // 老高考文理分科：单选"文科"或"理科"
+        const oldGroup = document.createElement('div');
+        oldGroup.className = 'subject-group';
+        oldGroup.innerHTML = '<div class="subject-group-label">报考科类（2选1）</div>';
+        const oldContainer = document.createElement('div');
+        oldContainer.className = 'subject-selector-row';
+        config.subjects.forEach(subj => {
+            const label = document.createElement('label');
+            label.className = 'subject-chip';
+            label.innerHTML = `<input type="radio" name="oldChoice" value="${subj}"><span>${subj}</span>`;
+            oldContainer.appendChild(label);
+        });
+        oldGroup.appendChild(oldContainer);
+        container.appendChild(oldGroup);
     }
 
     setupSubjectSelector();
@@ -152,6 +167,10 @@ function setupSubjectSelector() {
                 updateElectiveLabels();
             });
         });
+    } else if (config.electiveMode === 'old') {
+        // 老高考：监听文/理科 radio
+        const radios = document.querySelectorAll('#subjectSelector input[name="oldChoice"]');
+        radios.forEach(r => r.addEventListener('change', () => { updateSubjectHint(); updateElectiveLabels(); }));
     }
 
     updateSubjectHint();
@@ -180,10 +199,19 @@ function updateSubjectHint() {
         const complete = first && second.length === config.secondChoiceCount;
         hint.textContent = `首选：${firstText} | 再选：${secondText}（${second.length}/${config.secondChoiceCount}）`;
         hint.style.color = complete ? '#16a34a' : '#64748b';
+    } else if (config.electiveMode === 'old') {
+        const selected = document.querySelector('#subjectSelector input[name="oldChoice"]:checked');
+        if (selected) {
+            hint.textContent = `已选择：${selected.value}（语数英 + ${selected.value === '文科' ? '文综' : '理综'}，总分${config.totalScore}）`;
+            hint.style.color = '#16a34a';
+        } else {
+            hint.textContent = '请选择报考科类：文科或理科';
+            hint.style.color = '#64748b';
+        }
     }
 }
 
-// 获取当前选中的选考科目（适配两种模式）
+// 获取当前选中的选考科目（适配三种模式）
 function getSelectedSubjects() {
     const config = getCurrentProvinceConfig();
     if (config.electiveMode === 'free') {
@@ -195,6 +223,9 @@ function getSelectedSubjects() {
         if (first) result.push(first.value);
         result.push(...second);
         return result;
+    } else if (config.electiveMode === 'old') {
+        const selected = document.querySelector('#subjectSelector input[name="oldChoice"]:checked');
+        return selected ? [selected.value] : [];
     }
     return [];
 }
@@ -268,7 +299,7 @@ function getFormData() {
     };
 }
 
-// 表单验证（适配 3+3 / 3+1+2 两种模式）
+// 表单验证（适配 3+3 / 3+1+2 / 老高考 三种模式）
 function validateForm(data) {
     const config = getCurrentProvinceConfig();
 
@@ -289,6 +320,10 @@ function validateForm(data) {
         const second = document.querySelectorAll('#subjectSelector input[name="secondChoice"]:checked');
         if (!first) return '请选择首选科目（物理或历史）';
         if (second.length !== config.secondChoiceCount) return `请选择${config.secondChoiceCount}门再选科目`;
+    } else if (config.electiveMode === 'old') {
+        if (data.subjects.length === 0) {
+            return '请选择报考科类（文科或理科）';
+        }
     }
 
     const sc = data.subjectScores;
@@ -358,6 +393,20 @@ function updateProvinceUI() {
     document.getElementById('provinceHint').textContent =
         `${currentProvince}：${getExamModeDescription(config.examMode)}`;
 
+    // 动态调整总分输入框上限与提示（上海660/海南900/其余750）
+    const scoreInput = document.getElementById('score');
+    if (scoreInput) {
+        scoreInput.max = config.totalScore;
+        scoreInput.placeholder = `如：${Math.round(config.totalScore * 0.8)}`;
+    }
+    const scoreHint = document.querySelector('label[for="score"]')?.nextElementSibling;
+    if (scoreHint && config.scoreLayout) {
+        const electivePart = config.electiveMode === 'old'
+            ? '文综/理综300'
+            : `选考3门各${config.scoreLayout.electiveFull}`;
+        scoreHint.textContent = `满分${config.totalScore}分（语数英各${config.scoreLayout.core[0].full} + ${electivePart}）`;
+    }
+
     // 打印省份
     const printProvince = document.getElementById('printProvince');
     if (printProvince) printProvince.textContent = currentProvince;
@@ -368,13 +417,13 @@ function updateProvinceUI() {
 
     // FAQ 答案
     document.getElementById('faqAnswer1').textContent =
-        `系统基于${currentProvince}近3年高考录取数据，根据您的分数、位次和选科，通过位次法计算每所院校专业的录取概率，分为冲刺、稳妥、保底三档推荐。`;
+        `系统基于${currentProvince}近年高考录取数据，根据您的分数、位次和选科，通过位次法计算每所院校专业的录取概率，分为冲刺、稳妥、保底三档推荐。`;
     document.getElementById('faqAnswer5').textContent =
         `本系统数据100%来自${config.officialName}官方发布的投档分数线表。选科要求和学科门类依据教育部公开标准推导。数据仅供参考，最终以${config.officialName}公告为准。`;
 
     // 页脚
     document.getElementById('footerText').textContent =
-        `志愿智选 © 2026 | 仅供参考，不构成填报建议 | 数据来源：${config.officialName}官方数据（2023-2025）`;
+        `志愿智选 © 2026 | 仅供参考，不构成填报建议 | 数据来源：${config.officialName}官方数据`;
 }
 
 // 根据省份配置生成批次选项
@@ -1469,7 +1518,8 @@ function resetForm() {
     document.getElementById('resultSection').style.display = 'none';
     document.getElementById('studentForm').reset();
     document.querySelectorAll('#subjectSelector input:checked').forEach(cb => cb.checked = false);
-    document.getElementById('subjectHint').textContent = '请选择3门选考科目';
+    // 重置提示文字（按当前省份模式适配）
+    updateSubjectHint();
     document.getElementById('subjectHint').style.color = '#64748b';
     wishList = [];
     recommendResult = null;

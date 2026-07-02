@@ -1,0 +1,4062 @@
+{
+  "province": "江西",
+  "exam_mode": "3+1+2",
+  "subjects": [
+    "物理",
+    "历史",
+    "化学",
+    "生物",
+    "政治",
+    "地理"
+  ],
+  "total_score": 750,
+  "batches": [
+    "本科批"
+  ],
+  "schools": [
+    {
+      "id": "1",
+      "name": "上海交通大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 652,
+              "min_rank": 60,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 653,
+              "min_rank": 51,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 679,
+              "min_rank": 45,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 681,
+              "min_rank": 28,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "中国人民大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "103专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 649,
+              "min_rank": 100,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 646,
+              "min_rank": 105,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "104专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 647,
+              "min_rank": 95,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 648,
+              "min_rank": 85,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "162专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 646,
+              "min_rank": 110,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "503专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 660,
+              "min_rank": 150,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "中国农业大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 610,
+              "min_rank": 1315,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 5000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "中国科学技术大学",
+      "city": "合肥",
+      "province": "安徽",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 675,
+              "min_rank": 100,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "中央民族大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 608,
+              "min_rank": 1472,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "中山大学",
+      "city": "广州",
+      "province": "广东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 620,
+              "min_rank": 800,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 648,
+              "min_rank": 1300,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "北京大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "103专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 661,
+              "min_rank": 21,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 661,
+              "min_rank": 21,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "161专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 651,
+              "min_rank": 75,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 680,
+              "min_rank": 35,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 684,
+              "min_rank": 32,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "北京师范大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 626,
+              "min_rank": 522,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 638,
+              "min_rank": 1500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "北京理工大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 619,
+              "min_rank": 825,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 657,
+              "min_rank": 350,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "北京航空航天大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 627,
+              "min_rank": 471,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 660,
+              "min_rank": 200,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "华东师范大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "104专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 623,
+              "min_rank": 657,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 640,
+              "min_rank": 1000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "华中科技大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 652,
+              "min_rank": 700,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "华南理工大学",
+      "city": "广州",
+      "province": "广东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 645,
+              "min_rank": 1500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "南京大学",
+      "city": "南京",
+      "province": "江苏",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 640,
+              "min_rank": 230,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "505专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 668,
+              "min_rank": 200,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "南开大学",
+      "city": "天津",
+      "province": "天津",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 630,
+              "min_rank": 413,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 648,
+              "min_rank": 1200,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "厦门大学",
+      "city": "厦门",
+      "province": "福建",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 616,
+              "min_rank": 1000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 638,
+              "min_rank": 2000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "吉林大学",
+      "city": "长春",
+      "province": "吉林",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 609,
+              "min_rank": 1442,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 624,
+              "min_rank": 4000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "同济大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 631,
+              "min_rank": 374,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 665,
+              "min_rank": 320,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "哈尔滨工业大学",
+      "city": "哈尔滨",
+      "province": "黑龙江",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 652,
+              "min_rank": 700,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "四川大学",
+      "city": "成都",
+      "province": "四川",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 1100,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 644,
+              "min_rank": 1800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "复旦大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 646,
+              "min_rank": 110,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 646,
+              "min_rank": 107,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "161专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 643,
+              "min_rank": 140,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 676,
+              "min_rank": 65,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 678,
+              "min_rank": 60,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "天津大学",
+      "city": "天津",
+      "province": "天津",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 1061,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 650,
+              "min_rank": 1000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "山东大学",
+      "city": "济南",
+      "province": "山东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 610,
+              "min_rank": 1300,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 630,
+              "min_rank": 3000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "武汉大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 628,
+              "min_rank": 480,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 655,
+              "min_rank": 600,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "浙江大学",
+      "city": "杭州",
+      "province": "浙江",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 644,
+              "min_rank": 130,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 670,
+              "min_rank": 180,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "清华大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "103专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 669,
+              "min_rank": 15,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 662,
+              "min_rank": 17,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "161专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 649,
+              "min_rank": 90,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 680,
+              "min_rank": 35,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "503专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 681,
+              "min_rank": 28,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 685,
+              "min_rank": 25,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "湖南大学",
+      "city": "长沙",
+      "province": "湖南",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 1000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 635,
+              "min_rank": 1800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "电子科技大学",
+      "city": "成都",
+      "province": "四川",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 650,
+              "min_rank": 800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "西安交通大学",
+      "city": "西安",
+      "province": "陕西",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 648,
+              "min_rank": 900,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "上海外国语大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 607,
+              "min_rank": 1548,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "上海大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 603,
+              "min_rank": 1868,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "上海财经大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 1054,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 635,
+              "min_rank": 1800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "东华大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 601,
+              "min_rank": 2036,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "name": "中国传媒大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 604,
+              "min_rank": 1789,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "中国地质大学(北京)",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 608,
+              "min_rank": 7000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "name": "中国政法大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 626,
+              "min_rank": 517,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 3500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "name": "中国石油大学(北京)",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 610,
+              "min_rank": 6500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "name": "中国矿业大学(北京)",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 5000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "name": "中央财经大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 1026,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 633,
+              "min_rank": 2000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "北京中医药大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 2111,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "name": "北京林业大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 602,
+              "min_rank": 2003,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "name": "北京邮电大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 635,
+              "min_rank": 1800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "name": "华东理工大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 620,
+              "min_rank": 4000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "name": "华中师范大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "105专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 603,
+              "min_rank": 1863,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 610,
+              "min_rank": 4000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "华北电力大学(北京)",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 598,
+              "min_rank": 2428,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 5000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "name": "华南师范大学",
+      "city": "广州",
+      "province": "广东",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 594,
+              "min_rank": 2861,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 6000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "name": "南京师范大学",
+      "city": "南京",
+      "province": "江苏",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 602,
+              "min_rank": 1976,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 612,
+              "min_rank": 3500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "name": "南昌大学",
+      "city": "南昌",
+      "province": "江西",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 578,
+              "min_rank": 4399,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 603,
+              "min_rank": 1925,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 583,
+              "min_rank": 4325,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "102专业组(历史·生物)",
+          "category": "综合",
+          "subject_req": [
+            "历史",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 6698,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "103专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 585,
+              "min_rank": 4028,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "104专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 589,
+              "min_rank": 3499,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "161专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 578,
+              "min_rank": 4483,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 577,
+              "min_rank": 5352,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "171专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 587,
+              "min_rank": 3671,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "172专业组(历史·生物)",
+          "category": "综合",
+          "subject_req": [
+            "历史",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 574,
+              "min_rank": 6011,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "181专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 585,
+              "min_rank": 3480,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 579,
+              "min_rank": 5094,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 569,
+              "min_rank": 26129,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 586,
+              "min_rank": 14066,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 573,
+              "min_rank": 20254,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 581,
+              "min_rank": 19135,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "503专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 590,
+              "min_rank": 14932,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "504专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 596,
+              "min_rank": 10298,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "504专业组(物理·化学、生物(2科必选))",
+          "category": "医学",
+          "subject_req": [
+            "物理",
+            "化学",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 605,
+              "min_rank": 9387,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "505专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 578,
+              "min_rank": 17620,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "505专业组(物理·生物)",
+          "category": "医学",
+          "subject_req": [
+            "物理",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 563,
+              "min_rank": 29989,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "506专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 574,
+              "min_rank": 19726,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "507专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 581,
+              "min_rank": 16491,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "508专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 545,
+              "min_rank": 38862,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "509专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 584,
+              "min_rank": 15199,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50B专业组(物理·生物)",
+          "category": "医学",
+          "subject_req": [
+            "物理",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 560,
+              "min_rank": 28135,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "561专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 581,
+              "min_rank": 19406,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 566,
+              "min_rank": 24506,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "562专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 590,
+              "min_rank": 14904,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 574,
+              "min_rank": 20022,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "563专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 560,
+              "min_rank": 27770,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "571专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 582,
+              "min_rank": 18760,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 571,
+              "min_rank": 21378,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "572专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 578,
+              "min_rank": 20517,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 587,
+              "min_rank": 13597,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "573专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 566,
+              "min_rank": 24331,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "581专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 575,
+              "min_rank": 22671,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 569,
+              "min_rank": 22671,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "582专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 581,
+              "min_rank": 19166,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 579,
+              "min_rank": 17355,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "583专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 564,
+              "min_rank": 25560,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "583专业组(物理·化学、生物(2科必选))",
+          "category": "医学",
+          "subject_req": [
+            "物理",
+            "化学",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 603,
+              "min_rank": 9899,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "584专业组(物理·化学、生物(2科必选))",
+          "category": "医学",
+          "subject_req": [
+            "物理",
+            "化学",
+            "生物"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 10623,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "name": "对外经济贸易大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 619,
+              "min_rank": 839,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "name": "西南大学",
+      "city": "重庆",
+      "province": "重庆",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "105专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 599,
+              "min_rank": 2223,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 605,
+              "min_rank": 5000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "name": "陕西师范大学",
+      "city": "西安",
+      "province": "陕西",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "107专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 2177,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 8000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "name": "东华理工大学",
+      "city": "南昌",
+      "province": "江西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 546,
+              "min_rank": 13818,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 27537,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 514,
+              "min_rank": 68093,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 495,
+              "min_rank": 75000,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 521,
+              "min_rank": 60390,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "503专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 86883,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "504专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 516,
+              "min_rank": 65997,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "506专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 71920,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "name": "华东交通大学",
+      "city": "南昌",
+      "province": "江西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 544,
+              "min_rank": 9000,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 568,
+              "min_rank": 7206,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 556,
+              "min_rank": 10526,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "104专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 552,
+              "min_rank": 11835,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 531,
+              "min_rank": 50875,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "506专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 556,
+              "min_rank": 30380,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "507专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 539,
+              "min_rank": 43114,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "508专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 510,
+              "min_rank": 54000,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 563,
+              "min_rank": 25874,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "name": "南昌工程学院",
+      "city": "南昌",
+      "province": "江西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 534,
+              "min_rank": 18667,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "501专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 504,
+              "min_rank": 79267,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 527,
+              "min_rank": 54616,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "503专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 507,
+              "min_rank": 76030,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "504专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 545,
+              "min_rank": 38190,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "505专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 530,
+              "min_rank": 51389,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "506专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 520,
+              "min_rank": 61476,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "508专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 501,
+              "min_rank": 81975,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "name": "江西师范大学",
+      "city": "南昌",
+      "province": "江西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "10A专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 569,
+              "min_rank": 5873,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "10B专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 540,
+              "min_rank": 13445,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "10C专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 552,
+              "min_rank": 9792,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "10D专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 543,
+              "min_rank": 12372,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "10E专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 576,
+              "min_rank": 4771,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 547,
+              "min_rank": 13703,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "10F专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 571,
+              "min_rank": 5656,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "161专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 568,
+              "min_rank": 6169,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "162专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 571,
+              "min_rank": 5602,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "509专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 544,
+              "min_rank": 43268,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50A专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 529,
+              "min_rank": 56114,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50B专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 538,
+              "min_rank": 48505,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50C专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 528,
+              "min_rank": 57086,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50D专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 562,
+              "min_rank": 30121,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 511,
+              "min_rank": 70766,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50E专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 550,
+              "min_rank": 38793,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50F专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 545,
+              "min_rank": 42674,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50G专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 28603,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "561专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 553,
+              "min_rank": 36414,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "562专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 560,
+              "min_rank": 31485,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "571专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 547,
+              "min_rank": 40786,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "572专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 28492,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "name": "江西财经大学",
+      "city": "南昌",
+      "province": "江西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 589,
+              "min_rank": 3169,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 593,
+              "min_rank": 2924,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 592,
+              "min_rank": 2856,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 591,
+              "min_rank": 3192,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "103专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 566,
+              "min_rank": 6468,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 578,
+              "min_rank": 5112,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "104专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 6790,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 579,
+              "min_rank": 4989,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "105专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 570,
+              "min_rank": 5830,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 576,
+              "min_rank": 5513,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "161专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 574,
+              "min_rank": 5090,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 5743,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "171专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 5784,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "181专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 576,
+              "min_rank": 4797,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 578,
+              "min_rank": 5185,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "502专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 567,
+              "min_rank": 27052,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 565,
+              "min_rank": 24798,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "503专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 533,
+              "min_rank": 52401,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 573,
+              "min_rank": 20461,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "504专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 557,
+              "min_rank": 29773,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "505专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 526,
+              "min_rank": 59126,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 552,
+              "min_rank": 33225,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "506专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 556,
+              "min_rank": 34705,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 549,
+              "min_rank": 35607,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "507专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 525,
+              "min_rank": 59662,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 526,
+              "min_rank": 55595,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "508专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 508,
+              "min_rank": 74045,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "508专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 570,
+              "min_rank": 25415,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "509专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 539,
+              "min_rank": 47273,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 16807,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50A专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 529,
+              "min_rank": 56286,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 572,
+              "min_rank": 20597,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50B专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 564,
+              "min_rank": 25625,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50C专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 543,
+              "min_rank": 40232,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50D专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 532,
+              "min_rank": 49360,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "50E专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 513,
+              "min_rank": 68935,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "561专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 564,
+              "min_rank": 29075,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 550,
+              "min_rank": 34701,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "562专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 576,
+              "min_rank": 21967,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 567,
+              "min_rank": 23689,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "571专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 558,
+              "min_rank": 32883,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 555,
+              "min_rank": 31232,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "572专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 574,
+              "min_rank": 23045,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 569,
+              "min_rank": 22722,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "581专业组(物理·不限)",
+          "category": "综合",
+          "subject_req": [
+            "物理"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 567,
+              "min_rank": 26923,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 551,
+              "min_rank": 34199,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "582专业组(物理·化学)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2024,
+              "min_score": 575,
+              "min_rank": 22263,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 571,
+              "min_rank": 21403,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "name": "上海对外经贸大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 593,
+              "min_rank": 3003,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "name": "上海海关学院",
+      "city": "上海",
+      "province": "上海",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "101专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 588,
+              "min_rank": 3526,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "name": "华东政法大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "102专业组(历史·不限)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 607,
+              "min_rank": 1587,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8251 @@
+{
+  "province": "山西",
+  "exam_mode": "3+1+2",
+  "subjects": [
+    "物理",
+    "历史",
+    "化学",
+    "生物",
+    "政治",
+    "地理"
+  ],
+  "total_score": 750,
+  "batches": [
+    "本科批"
+  ],
+  "schools": [
+    {
+      "id": "1",
+      "name": "上海交通大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 690,
+              "min_rank": 84,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 679,
+              "min_rank": 256,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 660,
+              "min_rank": 942,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 655,
+              "min_rank": 1278,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 661,
+              "min_rank": 37,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "中国人民大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 682,
+              "min_rank": 183,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 670,
+              "min_rank": 478,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 572,
+              "min_rank": 19992,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 634,
+              "min_rank": 3440,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 652,
+              "min_rank": 92,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 652,
+              "min_rank": 92,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 631,
+              "min_rank": 417,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第006组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 618,
+              "min_rank": 894,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "中国科学技术大学",
+      "city": "合肥",
+      "province": "安徽",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 674,
+              "min_rank": 368,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 647,
+              "min_rank": 2000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "中山大学",
+      "city": "广州",
+      "province": "广东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 640,
+              "min_rank": 2722,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 644,
+              "min_rank": 2292,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 588,
+              "min_rank": 14075,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 630,
+              "min_rank": 448,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 602,
+              "min_rank": 1770,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "北京大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 692,
+              "min_rank": 64,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 666,
+              "min_rank": 644,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 667,
+              "min_rank": 609,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 664,
+              "min_rank": 26,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 638,
+              "min_rank": 290,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "北京师范大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 622,
+              "min_rank": 5347,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 632,
+              "min_rank": 3698,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 610,
+              "min_rank": 7886,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 639,
+              "min_rank": 274,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 609,
+              "min_rank": 1321,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "北京理工大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 660,
+              "min_rank": 942,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 632,
+              "min_rank": 3698,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 631,
+              "min_rank": 3837,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 628,
+              "min_rank": 502,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "北京航空航天大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 664,
+              "min_rank": 724,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 646,
+              "min_rank": 2097,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 653,
+              "min_rank": 1415,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 641,
+              "min_rank": 232,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "华中科技大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 653,
+              "min_rank": 1415,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 654,
+              "min_rank": 1340,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 613,
+              "min_rank": 7158,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "华南理工大学",
+      "city": "广州",
+      "province": "广东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 623,
+              "min_rank": 5193,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 634,
+              "min_rank": 3440,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 631,
+              "min_rank": 3837,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 625,
+              "min_rank": 4813,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 601,
+              "min_rank": 10176,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 613,
+              "min_rank": 1127,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "南京大学",
+      "city": "南京",
+      "province": "江苏",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 671,
+              "min_rank": 449,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 637,
+              "min_rank": 3077,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 649,
+              "min_rank": 123,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "南开大学",
+      "city": "天津",
+      "province": "天津",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 642,
+              "min_rank": 2498,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 648,
+              "min_rank": 1896,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 638,
+              "min_rank": 2959,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 639,
+              "min_rank": 274,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "厦门大学",
+      "city": "厦门",
+      "province": "福建",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 631,
+              "min_rank": 3837,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 628,
+              "min_rank": 4305,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 630,
+              "min_rank": 3984,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 612,
+              "min_rank": 7414,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 630,
+              "min_rank": 448,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 628,
+              "min_rank": 502,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "同济大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 653,
+              "min_rank": 1415,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 647,
+              "min_rank": 2000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 650,
+              "min_rank": 1691,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 625,
+              "min_rank": 4813,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 639,
+              "min_rank": 274,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "哈尔滨工业大学",
+      "city": "哈尔滨",
+      "province": "黑龙江",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 617,
+              "min_rank": 6298,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 677,
+              "min_rank": 305,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 670,
+              "min_rank": 478,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 618,
+              "min_rank": 6102,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 618,
+              "min_rank": 6102,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 613,
+              "min_rank": 7158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 624,
+              "min_rank": 649,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "四川大学",
+      "city": "成都",
+      "province": "四川",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 617,
+              "min_rank": 6298,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 619,
+              "min_rank": 5917,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 644,
+              "min_rank": 2292,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 661,
+              "min_rank": 876,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 550,
+              "min_rank": 29847,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 623,
+              "min_rank": 681,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 583,
+              "min_rank": 3513,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "复旦大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 677,
+              "min_rank": 305,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 650,
+              "min_rank": 1691,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 653,
+              "min_rank": 84,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 612,
+              "min_rank": 1173,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "天津大学",
+      "city": "天津",
+      "province": "天津",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 633,
+              "min_rank": 3572,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 640,
+              "min_rank": 2722,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 611,
+              "min_rank": 7657,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 621,
+              "min_rank": 765,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "山东大学",
+      "city": "济南",
+      "province": "山东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 640,
+              "min_rank": 2722,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 634,
+              "min_rank": 3440,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 617,
+              "min_rank": 6298,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 626,
+              "min_rank": 4626,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 6693,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 630,
+              "min_rank": 3984,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 613,
+              "min_rank": 7158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 620,
+              "min_rank": 807,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 618,
+              "min_rank": 894,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 619,
+              "min_rank": 847,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第006组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 620,
+              "min_rank": 807,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "武汉大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 641,
+              "min_rank": 2601,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 655,
+              "min_rank": 1278,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 647,
+              "min_rank": 2000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 650,
+              "min_rank": 1691,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 592,
+              "min_rank": 12790,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 614,
+              "min_rank": 6939,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 556,
+              "min_rank": 26991,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 642,
+              "min_rank": 214,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 642,
+              "min_rank": 214,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 607,
+              "min_rank": 1446,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "浙江大学",
+      "city": "杭州",
+      "province": "浙江",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 676,
+              "min_rank": 322,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 635,
+              "min_rank": 3325,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 644,
+              "min_rank": 2292,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 647,
+              "min_rank": 140,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 609,
+              "min_rank": 1321,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "清华大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 684,
+              "min_rank": 150,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 668,
+              "min_rank": 571,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 666,
+              "min_rank": 20,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 642,
+              "min_rank": 214,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "电子科技大学",
+      "city": "成都",
+      "province": "四川",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 642,
+              "min_rank": 2498,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 639,
+              "min_rank": 2840,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 609,
+              "min_rank": 1321,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "西安交通大学",
+      "city": "西安",
+      "province": "陕西",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 646,
+              "min_rank": 2097,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 655,
+              "min_rank": 1278,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 599,
+              "min_rank": 10738,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 642,
+              "min_rank": 2498,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 613,
+              "min_rank": 7158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 626,
+              "min_rank": 4626,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 585,
+              "min_rank": 15115,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 631,
+              "min_rank": 417,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "上海财经大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 614,
+              "min_rank": 6939,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 625,
+              "min_rank": 4813,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 567,
+              "min_rank": 21967,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 623,
+              "min_rank": 681,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "中国政法大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 607,
+              "min_rank": 8610,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 628,
+              "min_rank": 502,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 620,
+              "min_rank": 807,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 623,
+              "min_rank": 681,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "中央财经大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 616,
+              "min_rank": 6508,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 619,
+              "min_rank": 5917,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 624,
+              "min_rank": 649,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 582,
+              "min_rank": 3632,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "北京邮电大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 652,
+              "min_rank": 1512,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 639,
+              "min_rank": 2840,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 614,
+              "min_rank": 6939,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 597,
+              "min_rank": 11263,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 628,
+              "min_rank": 4305,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 611,
+              "min_rank": 1216,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "太原理工大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 546,
+              "min_rank": 31909,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 48861,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 532,
+              "min_rank": 39578,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 551,
+              "min_rank": 29383,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 564,
+              "min_rank": 23271,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 518,
+              "min_rank": 48238,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 548,
+              "min_rank": 30900,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 524,
+              "min_rank": 44351,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 546,
+              "min_rank": 31909,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 3874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 571,
+              "min_rank": 5027,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 3874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 571,
+              "min_rank": 5027,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 540,
+              "min_rank": 10416,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第006组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 4499,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第007组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 565,
+              "min_rank": 5870,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第008组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 554,
+              "min_rank": 7669,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第009组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 579,
+              "min_rank": 3990,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "山西大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "双一流",
+      "tags": [
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 531,
+              "min_rank": 40170,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 571,
+              "min_rank": 20373,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 504,
+              "min_rank": 57634,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 43709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 540,
+              "min_rank": 35110,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 526,
+              "min_rank": 43091,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 529,
+              "min_rank": 41318,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 522,
+              "min_rank": 45645,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 532,
+              "min_rank": 39578,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第312组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 607,
+              "min_rank": 8610,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第313组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 544,
+              "min_rank": 32969,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第314组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 561,
+              "min_rank": 24667,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第315组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 574,
+              "min_rank": 19228,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第316组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 557,
+              "min_rank": 26540,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第317组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 544,
+              "min_rank": 32969,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第318组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 571,
+              "min_rank": 20373,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第319组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 572,
+              "min_rank": 19992,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第320组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 565,
+              "min_rank": 22830,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第321组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 572,
+              "min_rank": 19992,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第322组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 588,
+              "min_rank": 14075,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第323组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 16930,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第324组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 586,
+              "min_rank": 14786,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第325组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 581,
+              "min_rank": 16578,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第326组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 563,
+              "min_rank": 23758,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第327组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 589,
+              "min_rank": 13739,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第328组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 570,
+              "min_rank": 20780,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第329组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 18868,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第330组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 567,
+              "min_rank": 21967,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第331组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 578,
+              "min_rank": 17684,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第332组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 579,
+              "min_rank": 17314,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第333组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 569,
+              "min_rank": 21165,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第334组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 587,
+              "min_rank": 14435,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第335组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 583,
+              "min_rank": 15846,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第336组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 565,
+              "min_rank": 22830,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第337组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 578,
+              "min_rank": 17684,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第338组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 562,
+              "min_rank": 24202,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第339组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 578,
+              "min_rank": 17684,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第340组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 561,
+              "min_rank": 24667,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第341组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 566,
+              "min_rank": 22394,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第342组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 522,
+              "min_rank": 45645,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第343组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 568,
+              "min_rank": 21572,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第344组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 584,
+              "min_rank": 15465,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第345组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 603,
+              "min_rank": 9610,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第346组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 16930,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 586,
+              "min_rank": 3204,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 561,
+              "min_rank": 6430,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 541,
+              "min_rank": 10171,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 546,
+              "min_rank": 9173,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 568,
+              "min_rank": 5429,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第007组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 552,
+              "min_rank": 8034,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第008组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 546,
+              "min_rank": 9173,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第009组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 554,
+              "min_rank": 7669,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第010组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 550,
+              "min_rank": 8406,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第011组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 590,
+              "min_rank": 2792,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第012组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 598,
+              "min_rank": 2074,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第014组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 535,
+              "min_rank": 11462,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第015组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 585,
+              "min_rank": 3305,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第016组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 574,
+              "min_rank": 4632,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第017组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 549,
+              "min_rank": 8599,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第018组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 3874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第019组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 556,
+              "min_rank": 7292,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第020组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 597,
+              "min_rank": 2164,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第021组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 3874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第022组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 3874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第023组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 598,
+              "min_rank": 2074,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第024组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 591,
+              "min_rank": 2709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第025组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 568,
+              "min_rank": 5429,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第026组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 609,
+              "min_rank": 1321,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第027组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 586,
+              "min_rank": 3204,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第028组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 610,
+              "min_rank": 1270,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第029组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 2329,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第030组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 570,
+              "min_rank": 5154,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "中北大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 488,
+              "min_rank": 69326,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 586,
+              "min_rank": 14786,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 573,
+              "min_rank": 19575,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 61926,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 518,
+              "min_rank": 48238,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 43709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 569,
+              "min_rank": 21165,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 533,
+              "min_rank": 39021,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 515,
+              "min_rank": 50175,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 570,
+              "min_rank": 20780,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 534,
+              "min_rank": 38457,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 524,
+              "min_rank": 14004,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 530,
+              "min_rank": 12559,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 534,
+              "min_rank": 11668,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "太原科技大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 537,
+              "min_rank": 36748,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 524,
+              "min_rank": 44351,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 507,
+              "min_rank": 55564,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 494,
+              "min_rank": 64820,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 48861,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 538,
+              "min_rank": 36196,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 528,
+              "min_rank": 41878,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 53491,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 43709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 43709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 15758,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 523,
+              "min_rank": 14261,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 566,
+              "min_rank": 5712,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 572,
+              "min_rank": 4893,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "山西农业大学",
+      "city": "晋中",
+      "province": "山西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 476,
+              "min_rank": 78699,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 506,
+              "min_rank": 56271,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 464,
+              "min_rank": 88112,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 461,
+              "min_rank": 90514,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 475,
+              "min_rank": 79488,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 480,
+              "min_rank": 75532,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 464,
+              "min_rank": 88112,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 484,
+              "min_rank": 72345,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 513,
+              "min_rank": 51476,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第312组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 505,
+              "min_rank": 56932,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第313组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 482,
+              "min_rank": 73963,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 512,
+              "min_rank": 17068,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 532,
+              "min_rank": 12120,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 516,
+              "min_rank": 16018,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 543,
+              "min_rank": 9762,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "name": "山西医科大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 494,
+              "min_rank": 64820,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 18868,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 53491,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 504,
+              "min_rank": 57634,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 509,
+              "min_rank": 54166,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 574,
+              "min_rank": 19228,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 503,
+              "min_rank": 58353,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 508,
+              "min_rank": 54898,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 562,
+              "min_rank": 24202,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 496,
+              "min_rank": 63361,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第312组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 499,
+              "min_rank": 61190,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 519,
+              "min_rank": 15260,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 13773,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "山西师范大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "第348组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 495,
+              "min_rank": 64106,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第349组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 488,
+              "min_rank": 69326,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第350组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 527,
+              "min_rank": 42482,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第351组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 494,
+              "min_rank": 64820,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第352组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 491,
+              "min_rank": 67158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第353组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 507,
+              "min_rank": 55564,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第354组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 491,
+              "min_rank": 67158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第355组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 500,
+              "min_rank": 60425,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第356组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 495,
+              "min_rank": 64106,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第037组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 527,
+              "min_rank": 13288,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第038组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 484,
+              "min_rank": 24854,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第039组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 558,
+              "min_rank": 6960,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第040组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 543,
+              "min_rank": 9762,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第041组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 533,
+              "min_rank": 11874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第042组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 551,
+              "min_rank": 8229,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第043组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 534,
+              "min_rank": 11668,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第044组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 548,
+              "min_rank": 8802,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第045组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 541,
+              "min_rank": 10171,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "name": "山西财经大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "省重点",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 484,
+              "min_rank": 72345,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理·合作办学组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 487,
+              "min_rank": 70087,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 48861,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 61926,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 506,
+              "min_rank": 56271,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 524,
+              "min_rank": 44351,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 492,
+              "min_rank": 66383,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 43709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 15758,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·合作办学组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 496,
+              "min_rank": 21375,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 526,
+              "min_rank": 13534,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 522,
+              "min_rank": 14525,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 516,
+              "min_rank": 16018,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "name": "太原工业学院",
+      "city": "太原",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 485,
+              "min_rank": 71559,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 61926,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 505,
+              "min_rank": 56932,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 477,
+              "min_rank": 77883,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 505,
+              "min_rank": 56932,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 468,
+              "min_rank": 84997,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 489,
+              "min_rank": 68604,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 474,
+              "min_rank": 80265,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 455,
+              "min_rank": 95192,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 499,
+              "min_rank": 20534,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 480,
+              "min_rank": 26003,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "name": "太原师范学院",
+      "city": "晋中",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第320组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 505,
+              "min_rank": 56932,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第321组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 514,
+              "min_rank": 50811,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第322组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 487,
+              "min_rank": 70087,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第323组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 482,
+              "min_rank": 73963,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第324组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 481,
+              "min_rank": 74782,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第325组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 503,
+              "min_rank": 58353,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第326组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 491,
+              "min_rank": 67158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第327组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 486,
+              "min_rank": 70822,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第328组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 490,
+              "min_rank": 67880,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第329组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 501,
+              "min_rank": 59736,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第330组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 484,
+              "min_rank": 72345,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第331组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 472,
+              "min_rank": 81835,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第332组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 470,
+              "min_rank": 83433,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第333组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 485,
+              "min_rank": 71559,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第023组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 17574,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第024组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 546,
+              "min_rank": 9173,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第025组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 523,
+              "min_rank": 14261,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第026组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 521,
+              "min_rank": 14758,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第027组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 514,
+              "min_rank": 16518,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第028组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 533,
+              "min_rank": 11874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第029组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 500,
+              "min_rank": 20270,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第030组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 549,
+              "min_rank": 8599,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第031组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 545,
+              "min_rank": 9377,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第032组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 528,
+              "min_rank": 13016,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第033组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 17574,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第034组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 536,
+              "min_rank": 11238,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第035组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 512,
+              "min_rank": 17068,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第036组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 530,
+              "min_rank": 12559,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第037组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 538,
+              "min_rank": 10833,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "name": "山西中医药大学",
+      "city": "太原",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 582,
+              "min_rank": 16211,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 524,
+              "min_rank": 44351,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 491,
+              "min_rank": 67158,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 61926,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 481,
+              "min_rank": 74782,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 53491,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 489,
+              "min_rank": 68604,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 527,
+              "min_rank": 42482,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 500,
+              "min_rank": 60425,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 502,
+              "min_rank": 59009,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第312组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 495,
+              "min_rank": 64106,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第313组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 517,
+              "min_rank": 48861,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第314组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 485,
+              "min_rank": 71559,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第315组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 493,
+              "min_rank": 65575,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第316组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 484,
+              "min_rank": 72345,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 591,
+              "min_rank": 2709,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 547,
+              "min_rank": 8983,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 537,
+              "min_rank": 11024,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 540,
+              "min_rank": 10416,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第006组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 541,
+              "min_rank": 10171,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第007组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 516,
+              "min_rank": 16018,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第008组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 548,
+              "min_rank": 8802,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第009组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 511,
+              "min_rank": 17329,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "山西大同大学",
+      "city": "大同",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 471,
+              "min_rank": 82616,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 485,
+              "min_rank": 71559,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 524,
+              "min_rank": 44351,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 470,
+              "min_rank": 83433,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 487,
+              "min_rank": 70087,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 470,
+              "min_rank": 83433,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 518,
+              "min_rank": 48238,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 471,
+              "min_rank": 82616,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 477,
+              "min_rank": 77883,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 511,
+              "min_rank": 52818,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 473,
+              "min_rank": 81024,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第312组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 488,
+              "min_rank": 69326,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第313组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 473,
+              "min_rank": 81024,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第314组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 474,
+              "min_rank": 80265,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第315组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 474,
+              "min_rank": 80265,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第316组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 465,
+              "min_rank": 87339,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 506,
+              "min_rank": 18627,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 509,
+              "min_rank": 17830,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 543,
+              "min_rank": 9762,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 501,
+              "min_rank": 20000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 503,
+              "min_rank": 19461,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第006组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 501,
+              "min_rank": 20000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第007组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 468,
+              "min_rank": 29312,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第008组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 20809,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第009组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 540,
+              "min_rank": 10416,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第010组(历史·国家专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 529,
+              "min_rank": 12778,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第011组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 498,
+              "min_rank": 20809,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第012组(历史·定向组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 13773,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "name": "山西工学院",
+      "city": "大同",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 462,
+              "min_rank": 89712,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 452,
+              "min_rank": 97419,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 454,
+              "min_rank": 95956,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 485,
+              "min_rank": 24597,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "name": "山西工程科技职业大学",
+      "city": "晋中",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 442,
+              "min_rank": 104874,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 450,
+              "min_rank": 98899,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 462,
+              "min_rank": 89712,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 479,
+              "min_rank": 26259,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 505,
+              "min_rank": 18892,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "name": "山西警察学院",
+      "city": "太原",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 500,
+              "min_rank": 60425,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 478,
+              "min_rank": 77128,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 480,
+              "min_rank": 75532,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 518,
+              "min_rank": 15516,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "name": "忻州师范学院",
+      "city": "忻州",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第327组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 463,
+              "min_rank": 88938,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第328组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 480,
+              "min_rank": 75532,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第329组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 451,
+              "min_rank": 98179,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第330组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 457,
+              "min_rank": 93626,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第331组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 461,
+              "min_rank": 90514,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第332组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 467,
+              "min_rank": 85768,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第333组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 461,
+              "min_rank": 90514,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第334组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 445,
+              "min_rank": 102587,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第031组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 491,
+              "min_rank": 22825,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第032组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 499,
+              "min_rank": 20534,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第033组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 531,
+              "min_rank": 12365,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第034组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 494,
+              "min_rank": 21975,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第035组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 488,
+              "min_rank": 23730,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第036组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 481,
+              "min_rank": 25705,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第037组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 516,
+              "min_rank": 16018,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第038组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 502,
+              "min_rank": 19725,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "晋中学院",
+      "city": "晋中",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 467,
+              "min_rank": 85768,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 458,
+              "min_rank": 92858,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 451,
+              "min_rank": 98179,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 485,
+              "min_rank": 24597,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 514,
+              "min_rank": 16518,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 483,
+              "min_rank": 25125,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 507,
+              "min_rank": 18367,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "name": "运城学院",
+      "city": "运城",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 454,
+              "min_rank": 95956,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 448,
+              "min_rank": 100390,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 451,
+              "min_rank": 98179,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 490,
+              "min_rank": 67880,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 451,
+              "min_rank": 98179,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 478,
+              "min_rank": 77128,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 479,
+              "min_rank": 26259,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 496,
+              "min_rank": 21375,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 515,
+              "min_rank": 16281,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 478,
+              "min_rank": 26525,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第005组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 493,
+              "min_rank": 22260,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "name": "长治医学院",
+      "city": "长治",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 535,
+              "min_rank": 37878,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 467,
+              "min_rank": 85768,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 466,
+              "min_rank": 86533,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第305组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 501,
+              "min_rank": 59736,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第306组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 467,
+              "min_rank": 85768,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第307组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 539,
+              "min_rank": 35615,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第308组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 476,
+              "min_rank": 78699,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第309组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 526,
+              "min_rank": 43091,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第310组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 531,
+              "min_rank": 40170,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第311组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 477,
+              "min_rank": 77883,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第312组(物理·国家专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 482,
+              "min_rank": 73963,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第313组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 514,
+              "min_rank": 50811,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第314组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 527,
+              "min_rank": 42482,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第315组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 474,
+              "min_rank": 80265,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第316组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 472,
+              "min_rank": 81835,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 558,
+              "min_rank": 6960,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 492,
+              "min_rank": 22562,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 522,
+              "min_rank": 14525,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "name": "长治学院",
+      "city": "长治",
+      "province": "山西",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "第301组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 463,
+              "min_rank": 88938,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第302组(物理)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 450,
+              "min_rank": 98899,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第303组(物理·地方专项计划组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 451,
+              "min_rank": 98179,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第304组(物理·定向组)",
+          "category": "工学",
+          "subject_req": [
+            "物理",
+            "化学"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 473,
+              "min_rank": 81024,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第001组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 481,
+              "min_rank": 25705,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第002组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 482,
+              "min_rank": 25409,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第003组(历史)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 513,
+              "min_rank": 16784,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "第004组(历史·地方专项计划组)",
+          "category": "文学",
+          "subject_req": [
+            "历史"
+          ],
+          "scores": [
+            {
+              "year": 2025,
+              "min_score": 479,
+              "min_rank": 26259,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

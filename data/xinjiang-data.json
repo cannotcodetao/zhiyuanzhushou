@@ -1,0 +1,2902 @@
+{
+  "province": "新疆",
+  "exam_mode": "old",
+  "subjects": [
+    "文科",
+    "理科"
+  ],
+  "total_score": 750,
+  "batches": [
+    "本科一批",
+    "本科二批"
+  ],
+  "schools": [
+    {
+      "id": "1",
+      "name": "上海交通大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 610,
+              "min_rank": 42,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 605,
+              "min_rank": 30,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 20,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 660,
+              "min_rank": 42,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 665,
+              "min_rank": 5,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 663,
+              "min_rank": 14,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "中国人民大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 590,
+              "min_rank": 130,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 585,
+              "min_rank": 80,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 597,
+              "min_rank": 55,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 625,
+              "min_rank": 333,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 620,
+              "min_rank": 130,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 622,
+              "min_rank": 250,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "中国科学技术大学",
+      "city": "合肥",
+      "province": "安徽",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 640,
+              "min_rank": 189,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 645,
+              "min_rank": 28,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 658,
+              "min_rank": 25,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "中山大学",
+      "city": "广州",
+      "province": "广东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 575,
+              "min_rank": 290,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 570,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 145,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 600,
+              "min_rank": 609,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 595,
+              "min_rank": 445,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "北京大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 621,
+              "min_rank": 18,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 617,
+              "min_rank": 20,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 624,
+              "min_rank": 15,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 663,
+              "min_rank": 25,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 648,
+              "min_rank": 22,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 666,
+              "min_rank": 5,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "北京理工大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 605,
+              "min_rank": 519,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 610,
+              "min_rank": 220,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 430,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "北京航空航天大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 615,
+              "min_rank": 428,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 620,
+              "min_rank": 130,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 625,
+              "min_rank": 250,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "南京大学",
+      "city": "南京",
+      "province": "江苏",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 595,
+              "min_rank": 95,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 590,
+              "min_rank": 80,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 598,
+              "min_rank": 55,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 640,
+              "min_rank": 189,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 645,
+              "min_rank": 28,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 650,
+              "min_rank": 60,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "南开大学",
+      "city": "天津",
+      "province": "天津",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 570,
+              "min_rank": 350,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 145,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 590,
+              "min_rank": 799,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 588,
+              "min_rank": 550,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "厦门大学",
+      "city": "厦门",
+      "province": "福建",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 570,
+              "min_rank": 350,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 145,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 595,
+              "min_rank": 699,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 590,
+              "min_rank": 550,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "同济大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 575,
+              "min_rank": 290,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 570,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 580,
+              "min_rank": 145,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 615,
+              "min_rank": 428,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 610,
+              "min_rank": 220,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 615,
+              "min_rank": 430,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "哈尔滨工业大学",
+      "city": "哈尔滨",
+      "province": "黑龙江",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 610,
+              "min_rank": 463,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 615,
+              "min_rank": 170,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 618,
+              "min_rank": 330,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "四川大学",
+      "city": "成都",
+      "province": "四川",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 568,
+              "min_rank": 350,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 145,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 590,
+              "min_rank": 799,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 588,
+              "min_rank": 550,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "复旦大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 605,
+              "min_rank": 55,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 600,
+              "min_rank": 50,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 601,
+              "min_rank": 33,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 645,
+              "min_rank": 148,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 650,
+              "min_rank": 18,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 655,
+              "min_rank": 25,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "天津大学",
+      "city": "天津",
+      "province": "天津",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 590,
+              "min_rank": 799,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 595,
+              "min_rank": 445,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "name": "山东大学",
+      "city": "济南",
+      "province": "山东",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 565,
+              "min_rank": 400,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 560,
+              "min_rank": 300,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 570,
+              "min_rank": 230,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 590,
+              "min_rank": 799,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 588,
+              "min_rank": 550,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 595,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "name": "新疆大学",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 458,
+              "min_rank": 3795,
+              "enrollment": 198
+            },
+            {
+              "year": 2024,
+              "min_score": 455,
+              "min_rank": 4320,
+              "enrollment": 200
+            },
+            {
+              "year": 2025,
+              "min_score": 465,
+              "min_rank": 4580,
+              "enrollment": 194
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 399,
+              "min_rank": 17575,
+              "enrollment": 910
+            },
+            {
+              "year": 2024,
+              "min_score": 410,
+              "min_rank": 25570,
+              "enrollment": 920
+            },
+            {
+              "year": 2025,
+              "min_score": 449,
+              "min_rank": 34200,
+              "enrollment": 890
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "name": "武汉大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 575,
+              "min_rank": 290,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 570,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 587,
+              "min_rank": 90,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 600,
+              "min_rank": 609,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 595,
+              "min_rank": 445,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 598,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "浙江大学",
+      "city": "杭州",
+      "province": "浙江",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 595,
+              "min_rank": 95,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 590,
+              "min_rank": 80,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 55,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 645,
+              "min_rank": 148,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 650,
+              "min_rank": 18,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 655,
+              "min_rank": 25,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "name": "清华大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 620,
+              "min_rank": 24,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 615,
+              "min_rank": 20,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 625,
+              "min_rank": 11,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 667,
+              "min_rank": 8,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 670,
+              "min_rank": 2,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 663,
+              "min_rank": 14,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "name": "电子科技大学",
+      "city": "成都",
+      "province": "四川",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 595,
+              "min_rank": 699,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 600,
+              "min_rank": 355,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 621,
+              "min_rank": 250,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "name": "西安交通大学",
+      "city": "西安",
+      "province": "陕西",
+      "level": "985",
+      "tags": [
+        "985",
+        "211",
+        "双一流",
+        "C9"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 615,
+              "min_rank": 428,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 610,
+              "min_rank": 220,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 620,
+              "min_rank": 330,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "name": "上海财经大学",
+      "city": "上海",
+      "province": "上海",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "经济学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 560,
+              "min_rank": 430,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 555,
+              "min_rank": 300,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 562,
+              "min_rank": 230,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "经济学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 570,
+              "min_rank": 1342,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 1140,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 572,
+              "min_rank": 1800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "name": "中南财经政法大学",
+      "city": "武汉",
+      "province": "湖北",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "经济学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 550,
+              "min_rank": 557,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 545,
+              "min_rank": 430,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 538,
+              "min_rank": 720,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "经济学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 520,
+              "min_rank": 3852,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 515,
+              "min_rank": 4670,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 525,
+              "min_rank": 7900,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "name": "中国传媒大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "文学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 555,
+              "min_rank": 477,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 550,
+              "min_rank": 430,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 560,
+              "min_rank": 350,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "文学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 540,
+              "min_rank": 2649,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 535,
+              "min_rank": 2820,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 545,
+              "min_rank": 4700,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "中国政法大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "法学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 584,
+              "min_rank": 175,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 547,
+              "min_rank": 430,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 555,
+              "min_rank": 350,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "法学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 512,
+              "min_rank": 4247,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 507,
+              "min_rank": 5820,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 561,
+              "min_rank": 2550,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "name": "中国石油大学(北京)克拉玛依校区",
+      "city": "克拉玛依",
+      "province": "新疆",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 450,
+              "min_rank": 4330,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 445,
+              "min_rank": 5130,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 455,
+              "min_rank": 5550,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 420,
+              "min_rank": 14320,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 415,
+              "min_rank": 22920,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 425,
+              "min_rank": 51000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "name": "中央财经大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "经济学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 555,
+              "min_rank": 477,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 550,
+              "min_rank": 430,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 561,
+              "min_rank": 230,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "经济学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 565,
+              "min_rank": 1513,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 570,
+              "min_rank": 1140,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 1800,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "name": "北京外国语大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "文学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 570,
+              "min_rank": 350,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 565,
+              "min_rank": 200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 575,
+              "min_rank": 145,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "name": "北京邮电大学",
+      "city": "北京",
+      "province": "北京",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 580,
+              "min_rank": 1047,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 585,
+              "min_rank": 550,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 600,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "name": "石河子大学",
+      "city": "石河子",
+      "province": "新疆",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 450,
+              "min_rank": 4330,
+              "enrollment": 115
+            },
+            {
+              "year": 2024,
+              "min_score": 435,
+              "min_rank": 6490,
+              "enrollment": 120
+            },
+            {
+              "year": 2025,
+              "min_score": 476,
+              "min_rank": 3400,
+              "enrollment": 114
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 396,
+              "min_rank": 18246,
+              "enrollment": 710
+            },
+            {
+              "year": 2024,
+              "min_score": 397,
+              "min_rank": 28370,
+              "enrollment": 720
+            },
+            {
+              "year": 2025,
+              "min_score": 446,
+              "min_rank": 36500,
+              "enrollment": 703
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "西安电子科技大学",
+      "city": "西安",
+      "province": "陕西",
+      "level": "211",
+      "tags": [
+        "211",
+        "双一流"
+      ],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 565,
+              "min_rank": 1513,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 580,
+              "min_rank": 810,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 597,
+              "min_rank": 850,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "name": "伊犁师范大学",
+      "city": "伊宁",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "教育学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 430,
+              "min_rank": 5809,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 410,
+              "min_rank": 8500,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 440,
+              "min_rank": 7300,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "理学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 390,
+              "min_rank": 19255,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 380,
+              "min_rank": 34420,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 400,
+              "min_rank": 74000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "name": "喀什大学",
+      "city": "喀什",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "教育学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 420,
+              "min_rank": 6582,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 405,
+              "min_rank": 9600,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 435,
+              "min_rank": 7300,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "理学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 385,
+              "min_rank": 19994,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 375,
+              "min_rank": 34420,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 395,
+              "min_rank": 74000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "name": "塔里木大学",
+      "city": "阿拉尔",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 425,
+              "min_rank": 6197,
+              "enrollment": 190
+            },
+            {
+              "year": 2024,
+              "min_score": 301,
+              "min_rank": 17800,
+              "enrollment": 195
+            },
+            {
+              "year": 2025,
+              "min_score": 404,
+              "min_rank": 11550,
+              "enrollment": 200
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 380,
+              "min_rank": 20914,
+              "enrollment": 1120
+            },
+            {
+              "year": 2024,
+              "min_score": 264,
+              "min_rank": 71370,
+              "enrollment": 1150
+            },
+            {
+              "year": 2025,
+              "min_score": 322,
+              "min_rank": 156000,
+              "enrollment": 1170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "name": "新疆农业大学",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "管理学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 440,
+              "min_rank": 4967,
+              "enrollment": 82
+            },
+            {
+              "year": 2024,
+              "min_score": 430,
+              "min_rank": 6490,
+              "enrollment": 85
+            },
+            {
+              "year": 2025,
+              "min_score": 460,
+              "min_rank": 5050,
+              "enrollment": 80
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "农学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 396,
+              "min_rank": 18246,
+              "enrollment": 590
+            },
+            {
+              "year": 2024,
+              "min_score": 400,
+              "min_rank": 28370,
+              "enrollment": 610
+            },
+            {
+              "year": 2025,
+              "min_score": 443,
+              "min_rank": 36500,
+              "enrollment": 600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "name": "新疆医科大学",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "医学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 486,
+              "min_rank": 2278,
+              "enrollment": 25
+            },
+            {
+              "year": 2024,
+              "min_score": 470,
+              "min_rank": 3600,
+              "enrollment": 15
+            },
+            {
+              "year": 2025,
+              "min_score": 506,
+              "min_rank": 1700,
+              "enrollment": 20
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "医学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 408,
+              "min_rank": 15849,
+              "enrollment": 350
+            },
+            {
+              "year": 2024,
+              "min_score": 426,
+              "min_rank": 20420,
+              "enrollment": 309
+            },
+            {
+              "year": 2025,
+              "min_score": 421,
+              "min_rank": 54500,
+              "enrollment": 960
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "name": "新疆和田学院",
+      "city": "和田",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 405,
+              "min_rank": 7968,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 390,
+              "min_rank": 11700,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 415,
+              "min_rank": 10000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 365,
+              "min_rank": 22508,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 355,
+              "min_rank": 41070,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 375,
+              "min_rank": 94500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "name": "新疆工程学院",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 350,
+              "min_rank": 22508,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 340,
+              "min_rank": 48320,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 360,
+              "min_rank": 117000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "name": "新疆师范大学",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "教育学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 458,
+              "min_rank": 3795,
+              "enrollment": 285
+            },
+            {
+              "year": 2024,
+              "min_score": 425,
+              "min_rank": 7500,
+              "enrollment": 290
+            },
+            {
+              "year": 2025,
+              "min_score": 455,
+              "min_rank": 5550,
+              "enrollment": 280
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "理学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 396,
+              "min_rank": 18246,
+              "enrollment": 355
+            },
+            {
+              "year": 2024,
+              "min_score": 390,
+              "min_rank": 31320,
+              "enrollment": 360
+            },
+            {
+              "year": 2025,
+              "min_score": 423,
+              "min_rank": 51000,
+              "enrollment": 350
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "name": "新疆政法学院",
+      "city": "图木舒克",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "法学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 415,
+              "min_rank": 6990,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 400,
+              "min_rank": 10200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 425,
+              "min_rank": 8600,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "法学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 380,
+              "min_rank": 20914,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 365,
+              "min_rank": 37670,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 390,
+              "min_rank": 84000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "name": "新疆理工学院",
+      "city": "阿克苏",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "工学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 380,
+              "min_rank": 20914,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 370,
+              "min_rank": 37670,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 400,
+              "min_rank": 74000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "name": "新疆科技学院",
+      "city": "库尔勒",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 410,
+              "min_rank": 7474,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 395,
+              "min_rank": 10200,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 420,
+              "min_rank": 10000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 380,
+              "min_rank": 20914,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 365,
+              "min_rank": 37670,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 390,
+              "min_rank": 84000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "name": "新疆第二医学院",
+      "city": "克拉玛依",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(理科)",
+          "category": "医学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 400,
+              "min_rank": 17575,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 395,
+              "min_rank": 28370,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 410,
+              "min_rank": 64500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "新疆艺术学院",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "艺术学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 380,
+              "min_rank": 10527,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 375,
+              "min_rank": 13300,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 400,
+              "min_rank": 13250,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "name": "新疆警察学院",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "法学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 415,
+              "min_rank": 6990,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 340,
+              "min_rank": 17800,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 369,
+              "min_rank": 19250,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "法学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 350,
+              "min_rank": 22508,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 322,
+              "min_rank": 52170,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 345,
+              "min_rank": 129000,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "name": "新疆财经大学",
+      "city": "乌鲁木齐",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "经济学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 459,
+              "min_rank": 3701,
+              "enrollment": 245
+            },
+            {
+              "year": 2024,
+              "min_score": 435,
+              "min_rank": 6490,
+              "enrollment": 250
+            },
+            {
+              "year": 2025,
+              "min_score": 465,
+              "min_rank": 4580,
+              "enrollment": 240
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "经济学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 404,
+              "min_rank": 16734,
+              "enrollment": 285
+            },
+            {
+              "year": 2024,
+              "min_score": 408,
+              "min_rank": 25570,
+              "enrollment": 290
+            },
+            {
+              "year": 2025,
+              "min_score": 441,
+              "min_rank": 36500,
+              "enrollment": 280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "name": "昌吉学院",
+      "city": "昌吉",
+      "province": "新疆",
+      "level": "普通本科",
+      "tags": [],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "综合",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 405,
+              "min_rank": 7968,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 390,
+              "min_rank": 11700,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 415,
+              "min_rank": 10000,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "综合",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 360,
+              "min_rank": 22508,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 350,
+              "min_rank": 44620,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 365,
+              "min_rank": 105500,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "name": "西南政法大学",
+      "city": "重庆",
+      "province": "重庆",
+      "level": "普通本科",
+      "tags": [
+        "省重点"
+      ],
+      "majors": [
+        {
+          "name": "普通类(文科)",
+          "category": "法学",
+          "subject_req": [
+            "文科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 545,
+              "min_rank": 637,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 540,
+              "min_rank": 600,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 542,
+              "min_rank": 510,
+              "enrollment": null
+            }
+          ]
+        },
+        {
+          "name": "普通类(理科)",
+          "category": "法学",
+          "subject_req": [
+            "理科"
+          ],
+          "scores": [
+            {
+              "year": 2023,
+              "min_score": 510,
+              "min_rank": 4618,
+              "enrollment": null
+            },
+            {
+              "year": 2024,
+              "min_score": 505,
+              "min_rank": 5820,
+              "enrollment": null
+            },
+            {
+              "year": 2025,
+              "min_score": 510,
+              "min_rank": 12350,
+              "enrollment": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

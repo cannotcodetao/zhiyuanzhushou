@@ -279,7 +279,8 @@ body {
     user-select: none;
 }
 
-.subject-chip input[type="checkbox"] {
+.subject-chip input[type="checkbox"],
+.subject-chip input[type="radio"] {
     display: none;
 }
 

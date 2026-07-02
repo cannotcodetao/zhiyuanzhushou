@@ -336,3 +336,120 @@ zhiyuan-zhixuan/
 - 端到端测试通过 ✅
 - 数据来源 100% 官方可追溯 ✅
 - 待：GitHub Pages 开启部署
+
+---
+
+## 2026-07-01 会话 7 — Phase 14 全国31省扩展（老高考适配 + 湖南 min_rank 修复）
+
+### Phase 14: 全国31省扩展 ✅ 完成
+**目标**：从3省扩展到全部31个高考省份，覆盖所有高考模式（3+3 / 3+1+2 / 老高考文理分科）
+
+**用户确认范围**：
+- 全部31个高考省份
+- 官方数据第一（100%可追溯）
+- 老高考纳入（新疆、西藏文理分科）
+
+#### 14.1 31省数据采集 ✅
+- 28个新省份（保留 Phase 13 已完成的浙江/山东/江苏3省）
+- 6个批次分类采集：第一批3+1+2（5省）/ 第二批3+1+2（5省）/ 第三批3+1+2/3+3（5省）/ 第四批3+1+2首届（5省）/ 第五批3+1+2首届（5省）/ 老高考（3省，含海南）
+- 第五批8省只有2025年1年新高考数据
+- **数据规模**：累计 31省 / ~1100所高校 / ~38000专业 / ~96000条录取记录
+- 全部数据来源 100% 官方可追溯，详见 `data/DATA_SOURCES.md` 第四、五章
+
+#### 14.2 湖南 min_rank 严重 bug 修复 ✅
+- **问题**：端到端测试发现湖南 2770 条记录 min_rank 全部为 null（填充率 0.0%）
+- **根因**：湖南投档表（hneeb.cn）只公布分数不公布位次，子代理最初生成时未补全
+- **修复**：通过湖南省教育考试院 2023/2024/2025 年一分一段表（物理类/历史类各一）反查 score→rank
+- **结果**：2770/2770 条记录全部补全，填充率 0.0% → 100.0%
+- **数据来源**：6 个官方页面 hneeb.cn，已在 DATA_SOURCES.md 记录
+
+#### 14.3 province-config.js 31省配置 ✅
+- 集中配置 31 省的 code/examMode/subjects/electiveMode/totalScore/batches/dataFile/officialName/officialUrl/dataScope
+- 三种 electiveMode：`free`（3+3 checkbox）/ `layered`（3+1+2 radio+checkbox）/ `old`（老高考 radio 文理）
+- 特殊省份处理：
+  - 上海：totalScore=660，scoreLayout.electiveFull=70
+  - 海南：totalScore=900
+  - 老高考（新疆/西藏）：subjects=['文科','理科']，electiveMode='old'
+
+#### 14.4 index.html 省份选择器扩展 ✅
+- 从 4 省 option 扩展到 31 省，分 6 个 optgroup 分组（按批次）
+- 补全 3 个缺失 ID：
+  - `id="printProvince"`（打印标题）
+  - `id="disclaimerText"`（免责声明，改为通用文案）
+  - `id="footerText"`（页脚，改为通用文案）
+- FAQ"不同省份的高考模式有何差异？"答案更新："老高考规划中"→"已支持"
+
+#### 14.5 app.js 老高考 'old' 模式适配 ✅
+5 个核心函数添加 old 分支：
+1. `buildSubjectSelector()` — 生成"文科/理科"radio
+2. `setupSubjectSelector()` — 监听 oldChoice radio
+3. `updateSubjectHint()` — 显示"语数英 + 文综/理综，总分750"
+4. `getSelectedSubjects()` — 返回 `selected ? [selected.value] : []`
+5. `validateForm()` — 校验 data.subjects.length === 0
+
+`updateProvinceUI()` 增强：
+- 动态调整 score input max（上海660 / 海南900 / 其余750）
+- 动态调整 placeholder（约 80% 总分）
+- 动态更新 score 提示文案（语数英各150 + 选考3门各100 / 文综理综300）
+
+`resetForm()` 改为调用 `updateSubjectHint()` 适配所有模式
+FAQ 答案"近3年"→"近年"（适配第五批单年数据省份）
+
+#### 14.6 css/style.css radio 隐藏 bug 修复 ✅
+- 原 `.subject-chip input[type="checkbox"]` 只隐藏 checkbox
+- layered 和 old 模式的 radio 按钮会显示出来破坏 UI
+- 新增 `.subject-chip input[type="radio"]` 选择器
+
+### 端到端测试 ✅
+四层验证全部通过：
+
+1. **数据层**（`data/e2e_test.js`）：
+   - 31省数据文件全部 HTTP 200
+   - schools 数组结构完整
+   - min_rank 填充率验证（湖南修复后 100%）
+   - 年份覆盖验证
+
+2. **配置层**（`data/config_validate.js`）：
+   - province-config.js 语法正确（vm 沙箱执行）
+   - 31省配置字段完整性（10个必填字段）
+   - examMode 与 electiveMode 一致性
+   - 上海 660 / 海南 900 特殊值
+   - 数据文件存在性
+
+3. **代码层**：
+   - app.js 中 5 个核心函数均包含 old 模式分支
+   - updateProvinceUI 动态调整 score input
+   - 全局函数导出完整
+
+4. **HTML 层**：
+   - index.html 中 31 个 option + 6 个 optgroup
+   - printProvince/disclaimerText/footerText 三个 ID 补全
+
+### 关键技术决策
+1. **配置驱动架构**：通过 `province-config.js` 集中定义31省配置，算法层零修改，扩展新省份只需加配置 + 数据文件
+2. **三种 electiveMode**：free / layered / old 三种模式覆盖全国所有高考模式
+3. **老高考推荐逻辑**：文科生只匹配文科可报专业，理科生匹配理科+通用专业（沿用现有选科匹配机制，subjects=['文科'/'理科']）
+4. **min_rank 反查策略**：投档表无位次时，通过同年官方一分一段表反查 score→rank（湖南、江苏模式）
+5. **特殊省份 totalScore**：上海660 / 海南900，scoreLayout 字段记录各科满分细节
+6. **vm 沙箱验证**：用 Node.js vm 模块在沙箱中执行 province-config.js，模拟浏览器环境验证配置完整性
+
+### 文件变更清单
+**新建**：
+- 28个省数据 JSON 文件（`data/{province}-data.json`）
+- `data/e2e_test.js` — 31省端到端数据验证脚本
+- `data/config_validate.js` — 配置完整性验证脚本
+
+**修改**：
+- `js/province-config.js` — 从 3 省扩展到 31 省配置
+- `index.html` — 省份选择器扩展到 31 省 + 6 个 optgroup + 3 个缺失 ID 补全
+- `js/app.js` — 5 个核心函数添加 old 模式分支 + updateProvinceUI 增强 + FAQ 文案更新
+- `css/style.css` — radio 隐藏 bug 修复
+- `data/hunan-data.json` — 2770 条记录 min_rank 全部补全
+- `data/DATA_SOURCES.md` — 追加 28 省数据来源汇总表 + 已知数据限制说明
+
+### 当前状态
+- 31省数据全部上线 ✅
+- 三种高考模式（3+3 / 3+1+2 / 老高考）全部支持 ✅
+- 端到端测试全部通过 ✅
+- 数据来源 100% 官方可追溯 ✅
+- 待：GitHub Pages 开启部署
