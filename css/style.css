@@ -810,6 +810,94 @@ body {
     gap: 8px;
 }
 
+/* ===== 展开专业列表（历史能上的专业）===== */
+.btn-expand {
+    color: var(--primary);
+    border-color: rgba(30, 43, 250, 0.35);
+    background: var(--accent-light);
+}
+.btn-expand:hover {
+    background: rgba(30, 43, 250, 0.12);
+    border-color: var(--primary);
+}
+.btn-expand.expanded {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.major-list {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.major-item {
+    padding: 10px 12px;
+    background: var(--accent-light);
+    border: 1.5px solid rgba(30, 43, 250, 0.16);
+    border-radius: 10px;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.major-item-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+}
+
+.major-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--text);
+    font-size: 13.5px;
+}
+
+.major-category {
+    font-size: 11px;
+    color: var(--primary);
+    background: rgba(30, 43, 250, 0.1);
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    border: 1px solid rgba(30, 43, 250, 0.2);
+}
+
+.major-subject {
+    font-size: 11.5px;
+    color: var(--text-soft, #64748b);
+}
+
+.major-years {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--positive, #059669);
+}
+
+.year-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    background: rgba(5, 150, 105, 0.12);
+    color: var(--positive, #059669);
+    border: 1px solid rgba(5, 150, 105, 0.3);
+    border-radius: var(--radius-pill);
+    font-size: 10.5px;
+    font-weight: 500;
+}
+
+.major-item-scores {
+    margin-top: 6px;
+    font-size: 11.5px;
+    color: var(--text-soft, #64748b);
+    font-family: var(--font-display);
+}
+
 /* ===== 专业选择建议 ===== */
 .advice-section {
     background: var(--card-bg);

@@ -7,6 +7,7 @@
 let allData = null;          // 完整录取数据
 let recommendResult = null;  // 推荐结果
 let wishList = [];           // 志愿表
+let lastFormData = null;     // 最后一次提交的表单数据（供"展开专业"复用位次和选科）
 
 // ===== 1. 数据加载 =====
 
@@ -1268,14 +1269,98 @@ function createRecommendCard(item, tier, index) {
             </div>
             <div class="reason">${item.reason}</div>
             <div class="card-actions">
+                <button class="btn-small btn-expand" onclick="expandMajors('${item.schoolId}', this)">
+                    展开专业
+                </button>
                 <button class="btn-small ${isInWishList ? 'added' : ''}" onclick="toggleWish('${item.schoolId}', '${item.schoolName}', '${item.majorName}', ${item.probability})">
                     ${isInWishList ? '已加入志愿表' : '加入志愿表'}
                 </button>
             </div>
+            <div class="major-list" id="majorList-${item.schoolId}" style="display:none;"></div>
         </div>
     `;
 
     return card;
+}
+
+// ===== 展开/收起某大学的所有可报专业（位次法 + 选科匹配 + 近3年合并去重）=====
+function expandMajors(schoolId, btn) {
+    const listEl = document.getElementById(`majorList-${schoolId}`);
+    if (!listEl) return;
+
+    // 首次展开：计算并渲染专业列表
+    if (listEl.dataset.loaded !== 'true') {
+        const eligibleMajors = computeEligibleMajors(schoolId);
+        listEl.dataset.loaded = 'true';
+        listEl.dataset.count = eligibleMajors.length;
+
+        if (eligibleMajors.length === 0) {
+            listEl.innerHTML = '<p class="empty-text">该大学无其他选科匹配且位次达标的专业</p>';
+        } else {
+            listEl.innerHTML = eligibleMajors.map(m => {
+                const yearBadges = m.eligibleYears
+                    .sort((a, b) => b - a)
+                    .map(y => `<span class="year-badge">${y}</span>`).join('');
+                const scoreHistory = m.scores
+                    .sort((a, b) => b.year - a.year)
+                    .map(s => `${s.year}:${s.min_score}分/${s.min_rank ? s.min_rank + '名' : '-'}`).join(' | ');
+                const subjectReqText = m.subjectReq.length > 0 ? m.subjectReq.join(' + ') : '不限';
+                return `
+                    <div class="major-item">
+                        <div class="major-item-header">
+                            <span class="major-name">${m.name}</span>
+                            <span class="major-category">${m.category}</span>
+                            <span class="major-subject">选科：${subjectReqText}</span>
+                            <span class="major-years">可报：${yearBadges}</span>
+                        </div>
+                        <div class="major-item-scores">近3年录取：${scoreHistory}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+    }
+
+    // 切换显示
+    const count = listEl.dataset.count;
+    const isHidden = listEl.style.display === 'none' || !listEl.style.display;
+    listEl.style.display = isHidden ? 'block' : 'none';
+    btn.textContent = isHidden ? `收起专业(${count})` : `展开专业(${count})`;
+    btn.classList.toggle('expanded', isHidden);
+}
+
+// 计算某大学所有"能上"的专业（位次法 + 选科匹配 + 近3年合并去重）
+function computeEligibleMajors(schoolId) {
+    if (!lastFormData || !allData) return [];
+    const studentRank = lastFormData.rank;
+    const subjects = lastFormData.subjects;
+    const school = allData.schools.find(s => String(s.id) === String(schoolId));
+    if (!school) return [];
+
+    const eligible = [];
+    school.majors.forEach(major => {
+        // 选科匹配
+        if (!checkSubjectMatch(major.subject_req, subjects)) return;
+        // 近3年数据
+        const scores = (major.scores || []).filter(s => s.year >= 2023);
+        if (scores.length === 0) return;
+        // 位次法：找出所有 min_rank 存在且 studentRank <= min_rank 的年份
+        const eligibleYears = scores.filter(s => s.min_rank && studentRank <= s.min_rank);
+        if (eligibleYears.length === 0) return;
+        // 取最新可报年份的位次作为排序依据
+        const latestEligible = eligibleYears.sort((a, b) => b.year - a.year)[0];
+        eligible.push({
+            name: major.name,
+            category: major.category,
+            subjectReq: major.subject_req || [],
+            scores: scores,
+            eligibleYears: eligibleYears.map(s => s.year),
+            sortRank: latestEligible.min_rank
+        });
+    });
+
+    // 按可报位次排序（位次越大越容易上 → 从难到易）
+    eligible.sort((a, b) => a.sortRank - b.sortRank);
+    return eligible;
 }
 
 function renderAdvice(advice) {
@@ -1563,6 +1648,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert('未找到符合条件的推荐，请尝试调整选科或筛选条件');
             return;
         }
+
+        // 保存最后一次表单数据（供"展开专业"复用位次和选科）
+        lastFormData = formData;
 
         // 渲染结果
         renderResults(recommendResult, formData);
